@@ -8,5 +8,1044 @@
     {
         --custom_scroll_width: 5px;
         --custom_scroll_height: 5px;
+        --font_size_title_l: 44px;
+        --font_size_title: 36px;
+        --font_size_title_s: 22px;
+        --block_padding_l: 40px;
+        --block_padding: 30px;
+        --outside_gap: 80px;
+        --border_radius_xl: 40px;
+        --border_radius_l: 30px;
+        --border_radius_s: 10px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion
+    {
+        &.grid_row
+        {
+            --items_per_line: 1;
+        }
+    }
+
+
+    .accordion_item
+    {
+        .data
+        {
+            font-size: var(--font_size);
+        }
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        .logo
+        {
+            font-size: var(--font_size_s);
+
+            gap: var(--inner_gap_xs);
+
+
+            img
+            {
+                width: 72px;
+                height: 40px;
+            }
+
+
+            span
+            {
+                padding-left: var(--inner_gap_xs);
+            }
+        }
+
+
+        .menu
+        {
+            gap: var(--inner_gap);
+
+
+            .item
+            {
+                & > a
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .contacts
+        {
+            .phone
+            {
+                font-size: var(--font_size_l);
+            }
+
+
+            .whatsapp_link
+            {
+                font-size: var(--font_size_s);
+
+                height: 48px;
+
+                padding-inline: 52px var(--inner_gap_xs);
+
+
+                .icon
+                {
+                    width: 38px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+
+
+        .langs
+        {
+            margin-left: var(--inner_gap_xxs);
+
+
+            .btn
+            {
+                font-size: var(--font_size_s);
+
+                height: 48px;
+
+                padding-inline: var(--inner_gap_s);
+            }
+        }
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 720px;
+            }
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size);
+        }
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        padding-block: 180px var(--cont_padding);
+
+
+        .row + .row
+        {
+            margin-top: var(--block_padding_l);
+        }
+
+
+        .title
+        {
+            width: calc(100% - 380px - var(--outside_gap_s));
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size);
+
+            width: 380px;
+            padding-bottom: var(--inner_gap_xl);
+        }
+
+
+        .btns
+        {
+            gap: var(--inner_gap_xs);
+
+
+            .whatsapp_link
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: 64px var(--inner_gap_s);
+
+
+                .icon
+                {
+                    width: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+
+
+            .btn
+            {
+                font-size: var(--font_size);
+
+                height: 56px;
+
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+
+
+        .stats
+        {
+            font-size: var(--font_size);
+
+            width: 380px;
+        }
+
+
+        .video
+        {
+            margin-top: var(--outside_gap_s);
+
+
+            .icon
+            {
+                width: 100px;
+                padding-left: 4px;
+            }
+        }
+
+
+        .pluses
+        {
+            .item
+            {
+                font-size: var(--font_size);
+
+                min-height: 100px;
+                padding: var(--inner_gap);
+
+                gap: var(--inner_gap_xs);
+
+
+                .icon
+                {
+                    & + span
+                    {
+                        width: calc(100% - 26px - var(--inner_gap_xs));
+                        padding-left: var(--inner_gap_xs);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*-----------
+        About
+    -----------*/
+    .about
+    {
+        margin-top: -80px;
+
+        padding-block: 140px var(--outside_gap_s);
+
+
+        .cont
+        {
+            gap: var(--block_padding_l);
+        }
+
+
+        .title
+        {
+            width: 400px;
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size);
+
+            width: calc(100% - 400px - var(--block_padding_l));
+            padding-right: 0;
+        }
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services
+    {
+        .block_head
+        {
+            .desc
+            {
+                width: 380px;
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 3;
+        }
+
+
+        .service
+        {
+            .details
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .arrow
+            {
+                width: 52px;
+
+
+                svg
+                {
+                    width: 20px;
+                    height: 14px;
+                }
+            }
+
+
+            .hover
+            {
+                padding-block: var(--inner_gap_l) var(--inner_gap);
+
+
+                .btn
+                {
+                    font-size: var(--font_size);
+
+                    height: 56px;
+                }
+            }
+        }
+
+
+        .action
+        {
+            margin-top: var(--block_padding);
+
+            gap: var(--inner_gap_l);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+            padding-block: var(--inner_gap_xxs);
+
+
+            .label
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .whatsapp_link
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: 64px var(--inner_gap_s);
+
+
+                .icon
+                {
+                    width: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        .data
+        {
+            .block_head
+            {
+                .desc
+                {
+                    width: 312px;
+                }
+            }
+
+
+            .whatsapp_link
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: 64px var(--inner_gap_s);
+
+
+                .icon
+                {
+                    width: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+
+
+        .items
+        {
+            .item
+            {
+                padding-inline: var(--inner_gap_l) var(--block_padding_l);
+
+
+                .name
+                {
+                    font-size: var(--font_size_title_s);
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .stats
+        {
+            .grid_row
+            {
+                --gap_x: var(--inner_gap_l);
+            }
+
+
+            .item
+            {
+                gap: var(--inner_gap_s);
+
+
+                .line
+                {
+                    height: 2px;
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .action
+        {
+            margin-top: var(--block_padding);
+
+            gap: var(--inner_gap_l);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+            padding-block: var(--inner_gap_xxs);
+
+
+            .label
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .btn
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+
+
+
+    /*-----------------
+        Our clients
+    -----------------*/
+    .our_clients
+    {
+        .block_head
+        {
+            .desc
+            {
+                width: 480px;
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            min-height: 380px;
+
+
+            .info
+            {
+                gap: var(--inner_gap_s);
+                padding-block: var(--block_padding_l) var(--inner_gap_l);
+            }
+
+
+            .name
+            {
+                font-size: var(--font_size_title_s);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .link
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps
+    {
+        .block_head
+        {
+            width: 360px;
+        }
+
+
+        .data
+        {
+            width: calc(100% - 440px);
+        }
+
+
+        .items
+        {
+            gap: var(--block_padding_l);
+
+
+            .item
+            {
+                .name
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+
+                    width: 100%;
+                }
+
+
+                .exp
+                {
+                    width: 100%;
+                }
+
+
+                .whatsapp_link
+                {
+                    font-size: var(--font_size);
+
+                    min-height: 56px;
+
+                    padding-inline: 64px var(--inner_gap_s);
+
+
+                    .icon
+                    {
+                        width: 46px;
+                    }
+
+
+                    span
+                    {
+                        padding-inline: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Persons
+    -------------*/
+    .persons
+    {
+        .block_head
+        {
+            .desc
+            {
+                width: 500px;
+            }
+        }
+
+
+        .swiper
+        {
+            &:not(.swiper-initialized)
+            {
+                .swiper-wrapper
+                {
+                    gap: var(--spaceBetween-768);
+                }
+
+
+                .swiper-slide
+                {
+                    width: 400px;
+                }
+            }
+
+
+            .swiper-slide
+            {
+                visibility: visible;
+
+                width: 400px;
+
+                pointer-events: auto;
+
+                opacity: 1;
+            }
+        }
+
+
+        .person
+        {
+            .data
+            {
+                margin-top: calc(var(--block_padding_l) * -1);
+
+                padding-inline: var(--inner_gap_l);
+                padding-block: 0 var(--inner_gap_l);
+
+
+                .info
+                {
+                    margin-top: calc(var(--block_padding_l) * -1);
+                    margin-left: calc(var(--inner_gap_l) * -1);
+
+                    padding-inline: var(--inner_gap_l);
+
+
+                    .post
+                    {
+                        font-size: var(--font_size_s);
+                    }
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .features
+                {
+                    .label
+                    {
+                        font-size: var(--font_size);
+                    }
+
+
+                    .val
+                    {
+                        font-size: var(--font_size);
+                    }
+                }
+            }
+        }
+
+
+        .action
+        {
+            margin-top: var(--block_padding);
+
+            gap: var(--inner_gap_l);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+            padding-block: var(--inner_gap_xxs);
+
+
+            .label
+            {
+                font-size: var(--font_size);
+
+                max-width: calc(100% - 272px - var(--inner_gap_l));
+            }
+
+
+            .btn
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        .block_head
+        {
+            width: 280px;
+            min-height: 280px;
+        }
+
+
+        .slider
+        {
+            width: calc(100% - 340px);
+        }
+
+
+        .review
+        {
+            min-height: 280px;
+
+            gap: var(--inner_gap_l);
+
+
+            .author
+            {
+                font-size: var(--font_size_title_s);
+            }
+
+
+            .text
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .bottom
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .action
+        {
+            margin-top: var(--block_padding);
+
+            gap: var(--inner_gap_l);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+            padding-block: var(--inner_gap_xxs);
+
+
+            .label
+            {
+                font-size: var(--font_size);
+
+                max-width: calc(100% - 220px - var(--inner_gap_l));
+            }
+
+
+            .btn
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs
+    {
+        .grid_row.inline
+        {
+            display: grid;
+            overflow: auto;
+
+            width: calc(100% + var(--cont_padding_double));
+
+            gap: var(--inner_gap_s);
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 240px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block
+    {
+        .data
+        {
+            min-height: 400px;
+
+            padding-inline: var(--block_padding_l);
+            gap: var(--inner_gap_l);
+            padding-block: var(--outside_gap_s);
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size);
+
+            width: 420px;
+        }
+
+
+        .btns
+        {
+            gap: var(--inner_gap_xs);
+
+
+            .whatsapp_link
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: 64px var(--inner_gap_s);
+
+
+                .icon
+                {
+                    width: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+
+
+            .btn
+            {
+                font-size: var(--font_size);
+
+                height: 56px;
+
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        .cont + .cont
+        {
+            margin-top: var(--inner_gap_l);
+        }
+
+
+        .col
+        {
+            width: 100%;
+            margin-bottom: var(--block_padding_l);
+        }
+
+
+        .logo
+        {
+            font-size: var(--font_size);
+
+            gap: var(--inner_gap_s);
+
+
+            img
+            {
+                width: 80px;
+                height: 44px;
+            }
+
+
+            span
+            {
+                padding-left: var(--inner_gap_s);
+            }
+        }
+
+
+        .contacts
+        {
+            .whatsapp_link
+            {
+                font-size: var(--font_size);
+
+                min-height: 56px;
+
+                padding-inline: 64px var(--inner_gap_s);
+
+
+                .icon
+                {
+                    width: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+
+
+        .langs
+        {
+            a
+            {
+                font-size: var(--font_size);
+
+                min-width: 56px;
+                height: 48px;
+            }
+        }
+
+
+
+        .divider
+        {
+            margin-top: var(--outside_gap_s);
+        }
+
+
+        .copyright
+        {
+            width: auto;
+        }
+
+
+        .links
+        {
+            width: auto;
+
+            gap: var(--outside_gap_s);
+        }
     }
 }

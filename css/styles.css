@@ -167,6 +167,12 @@ button
     {
         margin-bottom: var(--outside_gap_s);
     }
+
+
+    &.no_m
+    {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -579,7 +585,6 @@ header
 
             padding-block: 6px;
             padding-inline: 48px 13px;
-            gap: 3px;
 
 
             .icon
@@ -1028,7 +1033,7 @@ aside
     border-radius: 0 0 var(--border_radius_xl) var(--border_radius_xl);
     background: var(--secondary_color);
 
-    padding-block: 207px 30px;
+    padding-block: 207px var(--inner_gap_xl);
 
 
     &:after
@@ -1139,7 +1144,6 @@ aside
 
             padding-block: 6px;
             padding-inline: 60px 17px;
-            gap: 6px;
 
 
             .icon
@@ -1328,6 +1332,8 @@ aside
 
         width: 100%;
 
+        padding-inline: var(--cont_padding);
+
 
         .grid_row
         {
@@ -1407,7 +1413,7 @@ aside
     border-radius: 0 0 var(--border_radius_l) var(--border_radius_l);
     background: var(--bg_grey);
 
-    padding-block: 197px 90px;
+    padding-block: 197px var(--outside_gap_s);
 
 
     .cont
@@ -1690,7 +1696,6 @@ aside
 
             padding-block: 6px;
             padding-inline: 60px 17px;
-            gap: 6px;
 
 
             .icon
@@ -1774,7 +1779,7 @@ aside
         flex-wrap: wrap;
         justify-content: space-between;
 
-        gap: var(--inner_gap_s);
+        column-gap: var(--inner_gap_s);
     }
 
 
@@ -1881,7 +1886,6 @@ aside
 
             padding-block: 6px;
             padding-inline: 60px 17px;
-            gap: 6px;
 
 
             .icon
@@ -2053,6 +2057,8 @@ aside
                 font-size: 23px;
                 font-weight: 600;
                 line-height: 110%;
+
+                padding-right: var(--outside_gap);
 
                 color: var(--secondary_color);
             }
@@ -2278,7 +2284,7 @@ aside
         border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
         background: var(--bg_grey);
 
-        padding-block: var(--outside_gap);
+        padding-block: var(--outside_gap) calc(var(--outside_gap) + var(--outside_gap_s));
     }
 
 
@@ -2539,6 +2545,8 @@ aside
 -----------*/
 .steps
 {
+    margin-top: calc(var(--outside_gap_s) * -1);
+
     color: var(--light_color);
     border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
     background: var(--secondary_color);
@@ -2558,6 +2566,9 @@ aside
 
     .block_head
     {
+        position: sticky;
+        top: var(--inner_gap);
+
         width: 376px;
         max-width: 100%;
 
@@ -2687,6 +2698,8 @@ aside
                 align-items: flex-start;
                 flex-wrap: wrap;
                 justify-content: space-between;
+
+                gap: var(--inner_gap_s);
             }
 
 
@@ -2741,7 +2754,6 @@ aside
 
                 padding-block: 6px;
                 padding-inline: 60px 17px;
-                gap: 6px;
 
 
                 .icon
@@ -2852,7 +2864,7 @@ aside
         --slidesPerView-0: auto;
         --spaceBetween-0: var(--inner_gap_xs);
         --slidesPerView-768: auto;
-        --spaceBetween-768: var(--cont_padding);
+        --spaceBetween-768: var(--inner_gap_s);
         --slidesPerView-1280: 3;
         --spaceBetween-1280: var(--inner_gap_s);
 
@@ -3233,7 +3245,7 @@ aside
             justify-content: space-between;
 
             column-gap: var(--inner_gap_xxs);
-            row-gap: var(--inner_gap);
+            row-gap: var(--inner_gap_xs);
         }
 
 
@@ -3253,7 +3265,7 @@ aside
             color: #7d7d7d;
 
             column-gap: var(--inner_gap_xxs);
-            row-gap: var(--inner_gap);
+            row-gap: var(--inner_gap_xs);
         }
 
 
@@ -4070,7 +4082,7 @@ footer
 
             color: currentColor;
             border: 1px solid #2e5760;
-            border-radius: 40px;
+            border-radius: var(--border_radius_l);
 
             padding-inline: var(--inner_gap_s);
         }
@@ -4107,6 +4119,38 @@ footer
             text-decoration: none;
 
             color: currentColor;
+        }
+    }
+
+
+
+    @media print,
+    (max-width: 1439px)
+    {
+        &
+        {
+            padding-block: var(--outside_gap) var(--outside_gap_s);
+
+
+            .menu
+            {
+                column-gap: var(--inner_gap_xs);
+            }
+
+
+            .contacts
+            {
+                width: 304px;
+                margin-left: var(--inner_gap_l);
+            }
+
+
+            .links
+            {
+                width: 636px;
+
+                gap: 80px;
+            }
         }
     }
 }
