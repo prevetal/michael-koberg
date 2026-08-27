@@ -3435,7 +3435,7 @@ header
             display: flex;
             flex: 1 0 auto;
             flex-direction: column;
-            gap: var(--inner_gap);
+            gap: var(--inner_gap_s);
 
             margin-top: -42px;
             padding-block: 0 var(--inner_gap_xl);
@@ -3456,7 +3456,7 @@ header
 
                 width: 340px;
                 max-width: 100%;
-                margin-top: -36px;
+                margin-block: -36px 4px;
                 margin-left: calc(var(--inner_gap_xl) * -1);
                 padding-block: var(--inner_gap_s) var(--inner_gap_xs);
                 padding-inline: var(--inner_gap_xl);
@@ -3497,12 +3497,26 @@ header
             {
                 display: none;
                 flex-direction: column;
-                gap: var(--inner_gap_xxs);
+                gap: var(--inner_gap_s);
 
 
                 &.show
                 {
                     display: flex;
+                }
+
+
+                &.always_show
+                {
+                    display: flex;
+                }
+
+
+                & > *
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
                 }
 
 
