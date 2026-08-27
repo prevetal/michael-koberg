@@ -399,9 +399,16 @@
 
         .item
         {
+            .title_wrap
+            {
+                padding-block: var(--inner_gap) var(--inner_gap_xxs);
+                padding-inline: var(--inner_gap);
+            }
+
+
             .title
             {
-                font-size: var(--font_size_s);
+                font-size: var(--font_size_xs);
 
 
                 &:has(.mob)
@@ -430,6 +437,8 @@
             .info
             {
                 width: 100%;
+
+                padding-inline: var(--inner_gap);
 
 
                 .desc

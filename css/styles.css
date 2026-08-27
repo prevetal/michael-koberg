@@ -2458,7 +2458,7 @@ header
 
         overflow: hidden;
 
-        padding-top: 44px;
+        padding-top: 45px;
 
 
         .bg
@@ -2520,10 +2520,11 @@ header
         .title_wrap
         {
             position: absolute;
-            top: -40px;
+            top: -45px;
             left: 0;
 
             width: fit-content;
+            max-width: calc(100% - 48px);
 
             border-top: 1px solid var(--border_color);
             border-left: 1px solid var(--border_color);
@@ -2532,6 +2533,25 @@ header
 
             padding-block: var(--inner_gap_l) 0;
             padding-inline: var(--inner_gap_l);
+
+
+            &:after
+            {
+                position: absolute;
+                top: -1px;
+                left: 100%;
+
+                display: block;
+
+                width: 45px;
+                margin-left: -10px;
+
+                content: '';
+
+                background: url(../images/bg_our_clients_corner.png) 0 0/ 100% 100% no-repeat;
+
+                aspect-ratio: 1 / 1;
+            }
         }
 
 
