@@ -38,10 +38,10 @@
 
         .data
         {
+            padding-inline: var(--inner_gap_s);
+
             font-size: var(--font_size_s);
             line-height: 140%;
-
-            padding-inline: var(--inner_gap_s);
         }
     }
 
@@ -117,10 +117,10 @@
 
         .desc
         {
+            padding-bottom: 0;
+
             font-size: var(--font_size_s);
             line-height: 140%;
-
-            padding-bottom: 0;
 
             border: none;
         }
@@ -143,9 +143,9 @@
 
         .stats
         {
-            font-size: var(--font_size_s);
-
             width: 100%;
+
+            font-size: var(--font_size_s);
         }
 
 
@@ -198,13 +198,13 @@
         {
             display: grid;
             overflow: auto;
+            gap: var(--inner_gap_s);
 
             width: calc(100% + var(--cont_padding_double));
-
-            gap: var(--inner_gap_s);
             margin-block: 0;
             margin-inline: calc(var(--cont_padding) * -1);
             padding-inline: var(--cont_padding);
+
             grid-auto-flow: column;
             grid-auto-columns: max-content;
             scroll-padding: 0 var(--cont_padding);
@@ -255,11 +255,11 @@
 
             .label
             {
-                font-size: var(--font_size_l);
-                line-height: 140%;
-
                 width: 100%;
                 max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
 
                 text-align: center;
 
@@ -355,11 +355,11 @@
 
             .label
             {
-                font-size: var(--font_size_l);
-                line-height: 140%;
-
                 width: 100%;
                 max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
 
                 text-align: center;
 
@@ -428,8 +428,8 @@
 
                 span
                 {
-                    padding-inline: var(--inner_gap_xs);
                     padding-block: 5px;
+                    padding-inline: var(--inner_gap_xs);
                 }
             }
 
@@ -437,7 +437,6 @@
             .info
             {
                 width: 100%;
-
                 padding-inline: var(--inner_gap);
 
 
@@ -541,14 +540,13 @@
         {
             .data
             {
-                padding-inline: var(--inner_gap);
                 padding-block: 0 var(--inner_gap);
+                padding-inline: var(--inner_gap);
 
 
                 .info
                 {
                     margin-left: calc(var(--inner_gap) * -1);
-
                     padding-inline: var(--inner_gap);
 
 
@@ -583,11 +581,11 @@
 
             .label
             {
-                font-size: var(--font_size_l);
-                line-height: 140%;
-
                 width: 100%;
                 max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
 
                 text-align: center;
 
@@ -675,11 +673,11 @@
 
             .label
             {
-                font-size: var(--font_size_l);
-                line-height: 140%;
-
                 width: 100%;
                 max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
 
                 text-align: center;
 
@@ -727,19 +725,18 @@
         .data
         {
             min-height: 592px;
+            padding-inline: var(--inner_gap_l);
 
             border: none;
-
-            padding-inline: var(--inner_gap_l);
         }
 
 
         .desc
         {
+            width: 100%;
+
             font-size: var(--font_size_s);
             line-height: 140%;
-
-            width: 100%;
         }
 
 
@@ -839,10 +836,10 @@
         {
             a
             {
-                font-size: var(--font_size_s);
-
                 min-width: 52px;
                 height: 44px;
+
+                font-size: var(--font_size_s);
             }
         }
 
@@ -856,14 +853,13 @@
 
         .links
         {
-            font-size: var(--font_size_s);
-            line-height: 140%;
-
             align-content: center;
             align-items: center;
             flex-direction: column;
-
             gap: var(--inner_gap_xs);
+
+            font-size: var(--font_size_s);
+            line-height: 140%;
         }
     }
 }

@@ -96,7 +96,6 @@
             bottom: 0;
 
             margin-top: var(--block_padding_l);
-
             padding-inline: 0;
 
 
@@ -140,7 +139,6 @@
     .about
     {
         margin-top: 0;
-
         padding-block: var(--outside_gap_s);
 
 

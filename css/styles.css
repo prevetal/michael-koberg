@@ -77,15 +77,15 @@ html
 
 body
 {
-    font-family: var(--font_family_primary);
-    font-size: var(--font_size);
-    font-weight: 400;
-    line-height: normal;
-
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height:         fill-available;
+
+    font-family: var(--font_family_primary);
+    font-size: var(--font_size);
+    font-weight: 400;
+    line-height: normal;
 
     color: var(--dark_color);
 
@@ -99,16 +99,16 @@ body
 
 button
 {
+    display: inline-block;
+
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
-
-    display: inline-block;
+    letter-spacing: inherit;
 
     cursor: pointer;
     vertical-align: top;
-    letter-spacing: inherit;
 
     color: inherit;
     border: none;
@@ -144,7 +144,6 @@ button
 {
     width: 100%;
     max-width: calc(var(--content_width) + var(--cont_padding_double));
-
     margin-inline: auto;
     padding-inline: var(--cont_padding);
 
@@ -196,6 +195,7 @@ video.cover
 {
     position: fixed;
     z-index: 50;
+    inset: 0;
 
     display: none;
 
@@ -204,8 +204,6 @@ video.cover
 
     opacity: 0;
     background: var(--dark_color);
-
-    inset: 0;
 
 
     &.show
@@ -302,7 +300,6 @@ video.cover
     {
         display: flex;
         flex-direction: column;
-
         gap: var(--inner_gap_s);
     }
 }
@@ -323,20 +320,20 @@ video.cover
         flex-wrap: wrap;
         justify-content: space-between;
 
-        cursor: pointer;
-
         padding-block: var(--inner_gap_xs);
         padding-inline: var(--inner_gap_l) var(--inner_gap_xs);
+
+        cursor: pointer;
 
 
         .title
         {
+            width: calc(100% - 35px - var(--inner_gap));
+
             font-family: var(--font_family_secondary);
             font-size: var(--font_size_l);
             font-weight: 600;
             line-height: 110%;
-
-            width: calc(100% - 35px - var(--inner_gap));
 
             color: #10313d;
         }
@@ -374,15 +371,15 @@ video.cover
 
     .data
     {
+        display: none;
+
+        padding-block: var(--inner_gap_xs) var(--inner_gap_l);
+        padding-inline: var(--inner_gap_l);
+
         font-size: var(--font_size_l);
         line-height: 130%;
 
-        display: none;
-
         color: #404040;
-
-        padding-inline: var(--inner_gap_l);
-        padding-block: var(--inner_gap_xs) var(--inner_gap_l);
 
 
         & > * + *
@@ -438,22 +435,21 @@ header
 
     .logo
     {
-        font-family: var(--font_family_secondary);
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 110%;
-
         display: flex;
         align-content: center;
         align-items: center;
         flex-wrap: wrap;
         justify-content: flex-start;
+        gap: var(--inner_gap);
+
+        font-family: var(--font_family_secondary);
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 110%;
 
         text-decoration: none;
 
         color: currentColor;
-
-        gap: var(--inner_gap);
 
 
         img
@@ -481,20 +477,20 @@ header
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
+        gap: var(--inner_gap_l);
 
         margin-inline: auto;
-        gap: var(--inner_gap_l);
 
 
         .item
         {
             & > a
             {
+                display: block;
+
                 font-family: var(--font_family_secondary);
                 font-size: var(--font_size_l);
                 line-height: 135%;
-
-                display: block;
 
                 text-decoration: none;
 
@@ -513,6 +509,7 @@ header
             display: none;
 
             min-width: 100%;
+            padding-block: var(--inner_gap);
 
             transition: opacity .2s linear, display .2s allow-discrete;
 
@@ -520,20 +517,18 @@ header
             background: var(--bg);
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 
-            padding-block: var(--inner_gap);
-
 
             a
             {
                 display: block;
 
+                padding-block: var(--inner_gap);
+                padding-inline: var(--inner_gap);
+
                 transition: color .2s linear;
                 text-decoration: none;
 
                 color: currentColor;
-
-                padding-block: var(--inner_gap);
-                padding-inline: var(--inner_gap);
 
 
                 &:hover,
@@ -553,7 +548,6 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: flex-start;
-
         gap: var(--inner_gap_s);
 
 
@@ -576,8 +570,6 @@ header
 
         .whatsapp_link
         {
-            line-height: 130%;
-
             position: relative;
 
             display: flex;
@@ -587,15 +579,16 @@ header
             justify-content: flex-start;
 
             height: 50px;
+            padding-block: 6px;
+            padding-inline: 48px 13px;
+
+            line-height: 130%;
 
             text-decoration: none;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-block: 6px;
-            padding-inline: 48px 13px;
 
 
             .icon
@@ -612,6 +605,7 @@ header
                 justify-content: center;
 
                 width: 39px;
+                margin-block: auto;
 
                 transition: .3s linear;
 
@@ -619,7 +613,6 @@ header
                 border-radius: 50%;
                 background: var(--secondary_color);
 
-                margin-block: auto;
                 aspect-ratio: 1 / 1;
 
 
@@ -636,9 +629,9 @@ header
 
             span
             {
-                transition: transform .3s linear;
-
                 padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .3s linear;
             }
 
 
@@ -671,25 +664,23 @@ header
 
         .btn
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-start;
+            gap: 6px;
 
             height: 50px;
+            padding-inline: var(--inner_gap_xl) var(--inner_gap);
 
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
             letter-spacing: -.36px;
 
             border: 1px solid #2e5760;
             border-radius: var(--border_radius_l);
-
-            gap: 6px;
-            padding-inline: var(--inner_gap_xl) var(--inner_gap);
 
 
             .icon
@@ -764,17 +755,16 @@ header
 
     display: flex;
     flex-direction: column;
+    gap: var(--inner_gap_s);
 
     width: 100%;
+    padding-block: 112px var(--block_padding_l);
+    padding-inline: var(--cont_padding);
 
     transition: transform .3s linear;
 
     border-radius: 0 0 30px 30px;
     background: var(--bg_grey);
-
-    padding-block: 112px var(--block_padding_l);
-    gap: var(--inner_gap_s);
-    padding-inline: var(--cont_padding);
 
 
     &.show
@@ -799,17 +789,17 @@ header
 
         a
         {
+            display: block;
+
+            padding-block: var(--inner_gap_s);
+
             font-size: var(--font_size);
             font-weight: 500;
             line-height: 135%;
 
-            display: block;
-
             text-decoration: none;
 
             color: currentColor;
-
-            padding-block: var(--inner_gap_s);
         }
     }
 
@@ -818,7 +808,6 @@ header
     {
         display: flex;
         flex-direction: column;
-
         gap: var(--inner_gap_s);
     }
 
@@ -842,10 +831,6 @@ header
 
     .whatsapp_link
     {
-        font-size: var(--font_size);
-        font-weight: 500;
-        line-height: 130%;
-
         position: relative;
 
         display: flex;
@@ -856,16 +841,19 @@ header
 
         width: 100%;
         min-height: 56px;
+        padding-block: 6px;
+        padding-inline: 64px var(--inner_gap_s);
+
+        font-size: var(--font_size);
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -.36px;
 
         text-decoration: none;
-        letter-spacing: -.36px;
 
         color: var(--secondary_color);
         border-radius: var(--border_radius_max);
         background: var(--primary_color);
-
-        padding-block: 6px;
-        padding-inline: 64px var(--inner_gap_s);
 
 
         .icon
@@ -882,6 +870,7 @@ header
             justify-content: center;
 
             width: 44px;
+            margin-block: auto;
 
             transition: .2s linear;
 
@@ -889,7 +878,6 @@ header
             border-radius: 50%;
             background: var(--secondary_color);
 
-            margin-block: auto;
             aspect-ratio: 1 / 1;
 
 
@@ -906,10 +894,10 @@ header
 
         span
         {
-            transition: transform .2s linear;
-
             margin-inline: auto;
             padding-inline: var(--inner_gap_xxs);
+
+            transition: transform .2s linear;
         }
 
 
@@ -936,20 +924,19 @@ header
 
     .btn
     {
+        width: 100%;
+        min-height: 56px;
+        padding-inline: var(--inner_gap_xl);
+
         font-size: var(--font_size);
         font-weight: 500;
         line-height: 130%;
-
-        width: 100%;
-        min-height: 56px;
+        letter-spacing: -.36px;
 
         transition: color .2s linear;
-        letter-spacing: -.36px;
 
         border: 1px solid #879ca0;
         border-radius: var(--border_radius_max);
-
-        padding-inline: var(--inner_gap_xl);
 
 
         @media (hover: hover) and (pointer: fine)
@@ -969,16 +956,11 @@ header
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
-
         gap: 10px;
 
 
         a
         {
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
@@ -987,16 +969,19 @@ header
 
             min-width: 60px;
             height: 42px;
+            padding-inline: var(--inner_gap_s);
+
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.3px;
 
             text-align: center;
             text-decoration: none;
-            letter-spacing: -.3px;
 
             color: currentColor;
             border: 1px solid #2e5760;
             border-radius: var(--border_radius_l);
-
-            padding-inline: var(--inner_gap_s);
         }
     }
 }
@@ -1010,10 +995,9 @@ header
 {
     display: flex;
     flex-direction: column;
+    gap: var(--inner_gap_s);
 
     margin-bottom: var(--block_head_offset);
-
-    gap: var(--inner_gap_s);
 
 
     &.row
@@ -1029,11 +1013,10 @@ header
         {
             display: flex;
             flex-direction: column;
+            gap: var(--inner_gap_s);
 
             width: 826px;
             max-width: 100%;
-
-            gap: var(--inner_gap_s);
         }
 
 
@@ -1054,20 +1037,18 @@ header
 
     .pre_title
     {
+        width: fit-content;
+        padding-block: 6px;
+        padding-inline: var(--inner_gap_s);
+
         font-family: var(--font_family_tertiary);
         font-weight: 500;
         line-height: 130%;
-
-        width: fit-content;
-
         letter-spacing: -.32px;
 
         color: var(--secondary_color);
         border: 1px solid var(--border_color);
         border-radius: 30px;
-
-        padding-block: 6px;
-        padding-inline: var(--inner_gap_s);
 
 
         span
@@ -1101,12 +1082,12 @@ header
 
     .title
     {
+        max-width: 100%;
+
         font-family: var(--font_family_secondary);
         font-size: var(--font_size_title);
         font-weight: 600;
         line-height: 110%;
-
-        max-width: 100%;
 
         color: var(--secondary_color);
     }
@@ -1114,10 +1095,10 @@ header
 
     .desc
     {
+        max-width: 100%;
+
         font-size: var(--font_size_l);
         line-height: 135%;
-
-        max-width: 100%;
 
         color: var(--secondary_color);
     }
@@ -1141,11 +1122,11 @@ header
 
         overflow: hidden;
 
+        padding-block: 207px var(--inner_gap_xl);
+
         color: var(--light_color);
         border-radius: 0 0 var(--border_radius_xl) var(--border_radius_xl);
         background: var(--secondary_color);
-
-        padding-block: 207px var(--inner_gap_xl);
 
 
         &:after
@@ -1198,24 +1179,24 @@ header
 
     .title
     {
+        width: calc(100% - 430px - var(--outside_gap_s));
+
         font-family: var(--font_family_secondary);
         font-size: var(--font_size_title_l);
         font-weight: 600;
         line-height: 110%;
-
-        width: calc(100% - 430px - var(--outside_gap_s));
     }
 
 
     .desc
     {
-        font-size: var(--font_size_l);
-        line-height: 135%;
-
         width: 430px;
         max-width: 100%;
         margin-top: var(--inner_gap);
         padding-bottom: 46px;
+
+        font-size: var(--font_size_l);
+        line-height: 135%;
 
         border-bottom: 1px solid #8c989b;
     }
@@ -1228,16 +1209,11 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: flex-start;
-
         gap: var(--inner_gap);
 
 
         .whatsapp_link
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             position: relative;
 
             display: flex;
@@ -1247,16 +1223,19 @@ header
             justify-content: flex-start;
 
             min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-block: 6px;
-            padding-inline: 60px 17px;
 
 
             .icon
@@ -1273,6 +1252,7 @@ header
                 justify-content: center;
 
                 width: 48px;
+                margin-block: auto;
 
                 transition: .2s linear;
 
@@ -1280,7 +1260,6 @@ header
                 border-radius: 50%;
                 background: var(--secondary_color);
 
-                margin-block: auto;
                 aspect-ratio: 1 / 1;
 
 
@@ -1297,10 +1276,10 @@ header
 
             span
             {
-                transition: transform .2s linear;
-
                 margin-inline: auto;
                 padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
             }
 
 
@@ -1327,19 +1306,18 @@ header
 
         .btn
         {
+            height: 60px;
+            padding-inline: var(--inner_gap_xl);
+
             font-size: var(--font_size_l);
             font-weight: 500;
             line-height: 130%;
-
-            height: 60px;
+            letter-spacing: -.36px;
 
             transition: color .2s linear;
-            letter-spacing: -.36px;
 
             border: 1px solid #879ca0;
             border-radius: var(--border_radius_max);
-
-            padding-inline: var(--inner_gap_xl);
 
 
             @media (hover: hover) and (pointer: fine)
@@ -1355,19 +1333,18 @@ header
 
     .stats
     {
-        font-size: var(--font_size_l);
-        line-height: 135%;
-
         display: flex;
         align-content: center;
         align-items: center;
         flex-wrap: nowrap;
         justify-content: flex-start;
+        gap: var(--inner_gap);
 
         width: 430px;
         max-width: 100%;
 
-        gap: var(--inner_gap);
+        font-size: var(--font_size_l);
+        line-height: 135%;
 
 
         .val
@@ -1423,6 +1400,7 @@ header
         {
             position: absolute;
             z-index: 3;
+            inset: 0;
 
             display: flex;
             align-content: center;
@@ -1439,7 +1417,6 @@ header
             background: var(--primary_color);
 
             aspect-ratio: 1 / 1;
-            inset: 0;
 
 
             svg
@@ -1461,7 +1438,6 @@ header
         left: 0;
 
         width: 100%;
-
         padding-inline: var(--cont_padding);
 
 
@@ -1474,26 +1450,25 @@ header
 
         .item
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-between;
+            gap: var(--inner_gap);
 
             min-height: 103px;
             padding: var(--inner_gap_l);
 
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
             letter-spacing: -.54px;
 
             color: var(--light_color);
             border-radius: 10px;
             background: rgba(0, 0, 0, .50);
 
-            gap: var(--inner_gap);
                     backdrop-filter: blur(27.25px);
             -webkit-backdrop-filter: blur(27.25px);
 
@@ -1545,11 +1520,10 @@ header
 .about
 {
     margin-top: -105px;
+    padding-block: 197px var(--outside_gap_s);
 
     border-radius: 0 0 var(--border_radius_l) var(--border_radius_l);
     background: var(--bg_grey);
-
-    padding-block: 197px var(--outside_gap_s);
 
 
     .cont
@@ -1559,20 +1533,19 @@ header
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: space-between;
-
         gap: 46px;
     }
 
 
     .title
     {
+        width: 511px;
+        max-width: 100%;
+
         font-family: var(--font_family_secondary);
         font-size: var(--font_size_title);
         font-weight: 600;
         line-height: 110%;
-
-        width: 511px;
-        max-width: 100%;
 
         color: var(--secondary_color);
     }
@@ -1580,11 +1553,11 @@ header
 
     .desc
     {
-        font-size: var(--font_size_l);
-        line-height: 140%;
-
         width: calc(100% - 511px - 46px);
         padding-right: 28px;
+
+        font-size: var(--font_size_l);
+        line-height: 140%;
     }
 }
 
@@ -1618,6 +1591,7 @@ header
 
         display: flex;
         flex-direction: column;
+        gap: var(--inner_gap_xl);
 
         min-height: 280px;
         padding: var(--inner_gap);
@@ -1628,8 +1602,6 @@ header
         border: 1px solid var(--border_color);
         border-radius: 15px;
         background: var(--bg_grey);
-
-        gap: var(--inner_gap_xl);
 
 
         .icon
@@ -1700,13 +1672,13 @@ header
 
         .details
         {
+            width: fit-content;
+            margin-top: auto;
+
             font-family: var(--font_family_tertiary);
             font-size: var(--font_size_l);
             font-weight: 500;
             line-height: 135%;
-
-            width: fit-content;
-            margin-top: auto;
 
             border-bottom: 1px solid;
         }
@@ -1715,19 +1687,19 @@ header
         .hover
         {
             position: absolute;
+            inset: 0;
 
             display: flex;
             flex-direction: column;
+
+            padding-block: var(--inner_gap_xl) var(--inner_gap);
+            padding-inline: var(--inner_gap);
 
             transition: opacity .2s linear;
 
             opacity: 0;
             border-radius: 15px;
             background: linear-gradient(310deg, var(--secondary_color) 14.18%, #194c4d 85.42%);
-
-            inset: 0;
-            padding-block: var(--inner_gap_xl) var(--inner_gap);
-            padding-inline: var(--inner_gap);
 
 
             .desc
@@ -1741,11 +1713,6 @@ header
 
             .btn
             {
-                font-family: var(--font_family_secondary);
-                font-size: var(--font_size_l);
-                font-weight: 500;
-                line-height: 130%;
-
                 display: flex;
                 align-content: center;
                 align-items: center;
@@ -1756,8 +1723,13 @@ header
                 height: 60px;
                 margin-top: auto;
 
-                text-align: center;
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_l);
+                font-weight: 500;
+                line-height: 130%;
                 letter-spacing: -.36px;
+
+                text-align: center;
 
                 color: var(--secondary_color);
                 border-radius: var(--border_radius_max);
@@ -1786,17 +1758,16 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: var(--inner_gap_xl);
 
         width: fit-content;
         margin-top: var(--block_padding);
+        padding-block: 10px;
+        padding-inline: 34px 10px;
 
         color: var(--light_color);
         border-radius: var(--border_radius_max);
         background: var(--secondary_color);
-
-        gap: var(--inner_gap_xl);
-        padding-inline: 34px 10px;
-        padding-block: 10px;
 
 
         .label
@@ -1809,10 +1780,6 @@ header
 
         .whatsapp_link
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             position: relative;
 
             display: flex;
@@ -1822,16 +1789,19 @@ header
             justify-content: flex-start;
 
             min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-block: 6px;
-            padding-inline: 60px 17px;
 
 
             .icon
@@ -1848,6 +1818,7 @@ header
                 justify-content: center;
 
                 width: 48px;
+                margin-block: auto;
 
                 transition: .2s linear;
 
@@ -1855,7 +1826,6 @@ header
                 border-radius: 50%;
                 background: var(--secondary_color);
 
-                margin-block: auto;
                 aspect-ratio: 1 / 1;
 
 
@@ -1872,10 +1842,10 @@ header
 
             span
             {
-                transition: transform .2s linear;
-
                 margin-inline: auto;
                 padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
             }
 
 
@@ -1990,9 +1960,9 @@ header
 
             .desc
             {
-                font-family: var(--font_family_tertiary);
-
                 width: 337px;
+
+                font-family: var(--font_family_tertiary);
 
                 color: #d9d9d9;
             }
@@ -2001,10 +1971,6 @@ header
 
         .whatsapp_link
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
@@ -2014,16 +1980,19 @@ header
             width: fit-content;
             min-height: 60px;
             margin-top: auto;
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-block: 6px;
-            padding-inline: 60px 17px;
 
 
             .icon
@@ -2040,6 +2009,7 @@ header
                 justify-content: center;
 
                 width: 48px;
+                margin-block: auto;
 
                 transition: .2s linear;
 
@@ -2047,7 +2017,6 @@ header
                 border-radius: 50%;
                 background: var(--secondary_color);
 
-                margin-block: auto;
                 aspect-ratio: 1 / 1;
 
 
@@ -2064,10 +2033,10 @@ header
 
             span
             {
-                transition: transform .2s linear;
-
                 margin-inline: auto;
                 padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
             }
 
 
@@ -2096,12 +2065,11 @@ header
         {
             position: absolute;
             z-index: 1;
+            inset: 0;
 
             display: block;
 
             border-radius: var(--border_radius);
-
-            inset: 0;
         }
     }
 
@@ -2110,12 +2078,11 @@ header
     {
         display: flex;
         flex-direction: column;
+        gap: var(--inner_gap_s);
 
         width: calc(50% - var(--inner_gap_s) / 2);
 
         counter-reset: number;
-
-        gap: var(--inner_gap_s);
 
 
         .item
@@ -2124,14 +2091,14 @@ header
 
             display: flex;
             flex-direction: column;
+            gap: var(--inner_gap_s);
+
+            padding-block: var(--inner_gap_l);
+            padding-inline: var(--inner_gap_l) var(--block_padding_l);
 
             border: 1px solid var(--border_color);
             border-radius: var(--border_radius);
             background: var(--bg_grey);
-
-            padding-block: var(--inner_gap_l);
-            padding-inline: var(--inner_gap_l) var(--block_padding_l);
-            gap: var(--inner_gap_s);
 
 
 
@@ -2192,12 +2159,12 @@ header
 
             .name
             {
+                padding-right: var(--outside_gap);
+
                 font-family: var(--font_family_secondary);
                 font-size: 23px;
                 font-weight: 600;
                 line-height: 110%;
-
-                padding-right: var(--outside_gap);
 
                 color: var(--secondary_color);
             }
@@ -2212,12 +2179,12 @@ header
 
             .number
             {
-                font-size: var(--font_size_xs);
-                line-height: 135%;
-
                 position: absolute;
                 right: var(--inner_gap);
                 bottom: var(--inner_gap_s);
+
+                font-size: var(--font_size_xs);
+                line-height: 135%;
 
                 white-space: nowrap;
 
@@ -2252,20 +2219,19 @@ header
         {
             display: flex;
             flex-direction: column;
+            gap: var(--inner_gap);
 
             color: var(--secondary_color);
-
-            gap: var(--inner_gap);
 
 
             .val
             {
+                width: fit-content;
+
                 font-family: var(--font_family_secondary);
                 font-size: var(--font_size_title);
                 font-weight: 700;
                 line-height: 110%;
-
-                width: fit-content;
 
                 text-transform: uppercase;
 
@@ -2371,17 +2337,16 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: var(--inner_gap_xl);
 
         width: fit-content;
         margin-top: var(--inner_gap_xl);
+        padding-block: 10px;
+        padding-inline: 34px 10px;
 
         color: var(--light_color);
         border-radius: var(--border_radius_max);
         background: var(--secondary_color);
-
-        gap: var(--inner_gap_xl);
-        padding-inline: 34px 10px;
-        padding-block: 10px;
 
 
         .label
@@ -2394,19 +2359,17 @@ header
 
         .btn
         {
+            min-height: 60px;
+            padding-inline: var(--inner_gap_xl);
+
             font-size: var(--font_size_l);
             font-weight: 500;
             line-height: 130%;
-
-            min-height: 60px;
-
             letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-inline: var(--inner_gap_xl);
         }
     }
 }
@@ -2420,10 +2383,10 @@ header
 {
     &.bg
     {
+        padding-block: var(--outside_gap) calc(var(--outside_gap) + var(--outside_gap_s));
+
         border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
         background: var(--bg_grey);
-
-        padding-block: var(--outside_gap) calc(var(--outside_gap) + var(--outside_gap_s));
     }
 
 
@@ -2437,9 +2400,9 @@ header
 
         .desc
         {
-            font-family: var(--font_family_tertiary);
-
             width: 620px;
+
+            font-family: var(--font_family_tertiary);
         }
     }
 
@@ -2465,6 +2428,7 @@ header
         {
             position: absolute;
             z-index: 1;
+            inset: 44px 0 0 0;
 
             overflow: hidden;
 
@@ -2473,8 +2437,6 @@ header
             border: 1px solid var(--border_color);
             border-radius: var(--border_radius);
             background: var(--light_color);
-
-            inset: 44px 0 0 0;
 
 
             &:before
@@ -2525,14 +2487,13 @@ header
 
             width: fit-content;
             max-width: calc(100% - 48px);
+            padding-block: var(--inner_gap_l) 0;
+            padding-inline: var(--inner_gap_l);
 
             border-top: 1px solid var(--border_color);
             border-left: 1px solid var(--border_color);
             border-top-left-radius: var(--border_radius);
             background: var(--light_color);
-
-            padding-block: var(--inner_gap_l) 0;
-            padding-inline: var(--inner_gap_l);
 
 
             &:after
@@ -2557,8 +2518,6 @@ header
 
         .title
         {
-            line-height: 135%;
-
             display: flex;
             align-content: stretch;
             align-items: stretch;
@@ -2567,6 +2526,8 @@ header
 
             width: fit-content;
 
+            line-height: 135%;
+
             border: 1px solid var(--border_color);
             border-radius: var(--border_radius_max);
             background: var(--bg_grey);
@@ -2574,8 +2535,8 @@ header
 
             span
             {
-                padding-inline: var(--inner_gap_s);
                 padding-block: 6px;
+                padding-inline: var(--inner_gap_s);
             }
 
 
@@ -2603,12 +2564,11 @@ header
 
             display: flex;
             flex-direction: column;
+            gap: var(--inner_gap_xs);
 
             width: calc(100% - 169px);
-
-            gap: var(--inner_gap_xs);
-            padding-inline: var(--inner_gap_l);
             padding-block: 34px var(--inner_gap_l);
+            padding-inline: var(--inner_gap_l);
         }
 
 
@@ -2640,10 +2600,6 @@ header
 
         .link
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
@@ -2653,15 +2609,18 @@ header
             width: fit-content;
             height: 60px;
             margin-top: auto;
+            padding-inline: var(--inner_gap_xl);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: #1e3b43;
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-inline: var(--inner_gap_xl);
         }
 
 
@@ -2711,12 +2670,11 @@ header
 .steps
 {
     margin-top: calc(var(--outside_gap_s) * -1);
+    padding-block: var(--outside_gap) calc(var(--outside_gap) + 50px);
 
     color: var(--light_color);
     border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
     background: var(--secondary_color);
-
-    padding-block: var(--outside_gap) calc(var(--outside_gap) + 50px);
 
 
     .cont
@@ -2734,10 +2692,10 @@ header
         position: sticky;
         top: var(--inner_gap);
 
+        gap: var(--inner_gap_l);
+
         width: 376px;
         max-width: 100%;
-
-        gap: var(--inner_gap_l);
 
 
         .pre_title
@@ -2768,10 +2726,9 @@ header
     {
         display: flex;
         flex-direction: column;
+        gap: var(--block_padding);
 
         counter-reset: number;
-
-        gap: var(--block_padding);
 
 
         .item
@@ -2780,7 +2737,6 @@ header
 
             display: flex;
             flex-direction: column;
-
             gap: var(--inner_gap_s);
 
 
@@ -2834,18 +2790,17 @@ header
 
             .name
             {
+                width: fit-content;
+                padding-block: 6px;
+                padding-inline: var(--inner_gap_s);
+
                 font-size: var(--font_size_l);
                 line-height: 135%;
-
-                width: fit-content;
 
                 color: var(--secondary_color);
                 border: 1px solid #2e5760;
                 border-radius: var(--border_radius_l);
                 background: var(--bg_grey);
-
-                padding-block: 6px;
-                padding-inline: var(--inner_gap_s);
 
 
                 span:before
@@ -2863,28 +2818,27 @@ header
                 align-items: flex-start;
                 flex-wrap: wrap;
                 justify-content: space-between;
-
                 gap: var(--inner_gap_s);
             }
 
 
             .desc
             {
+                width: calc(100% - 320px - var(--inner_gap_l));
+
                 font-size: var(--font_size_l);
                 line-height: 135%;
-
-                width: calc(100% - 320px - var(--inner_gap_l));
             }
 
 
             .exp
             {
-                font-size: calc(var(--font_size) - 1px);
-                line-height: 135%;
-
                 width: 320px;
                 max-width: 100%;
                 padding: var(--inner_gap_s);
+
+                font-size: calc(var(--font_size) - 1px);
+                line-height: 135%;
 
                 border: 1px solid #2e5760;
                 border-radius: 10px;
@@ -2894,10 +2848,6 @@ header
 
             .whatsapp_link
             {
-                font-size: var(--font_size_l);
-                font-weight: 500;
-                line-height: 130%;
-
                 position: relative;
 
                 display: flex;
@@ -2909,16 +2859,19 @@ header
                 width: fit-content;
                 min-height: 60px;
                 margin-top: var(--inner_gap_xxs);
+                padding-block: 6px;
+                padding-inline: 60px 17px;
+
+                font-size: var(--font_size_l);
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: -.36px;
 
                 text-decoration: none;
-                letter-spacing: -.36px;
 
                 color: var(--secondary_color);
                 border-radius: var(--border_radius_max);
                 background: var(--primary_color);
-
-                padding-block: 6px;
-                padding-inline: 60px 17px;
 
 
                 .icon
@@ -2935,6 +2888,7 @@ header
                     justify-content: center;
 
                     width: 48px;
+                    margin-block: auto;
 
                     transition: .2s linear;
 
@@ -2942,7 +2896,6 @@ header
                     border-radius: 50%;
                     background: var(--secondary_color);
 
-                    margin-block: auto;
                     aspect-ratio: 1 / 1;
 
 
@@ -2959,10 +2912,10 @@ header
 
                 span
                 {
-                    transition: transform .2s linear;
-
                     margin-inline: auto;
                     padding-inline: var(--inner_gap_xxs);
+
+                    transition: transform .2s linear;
                 }
 
 
@@ -3016,9 +2969,9 @@ header
 
         .desc
         {
-            font-family: var(--font_family_tertiary);
-
             width: 620px;
+
+            font-family: var(--font_family_tertiary);
         }
     }
 
@@ -3097,16 +3050,15 @@ header
             display: flex;
             flex: 1 0 auto;
             flex-direction: column;
+            gap: var(--inner_gap);
 
             margin-top: -42px;
+            padding-block: 0 var(--inner_gap_xl);
+            padding-inline: var(--inner_gap_xl);
 
             border: 1px solid var(--border_color);
             border-radius: var(--border_radius);
             background: var(--light_color);
-
-            gap: var(--inner_gap);
-            padding-inline: var(--inner_gap_xl);
-            padding-block: 0 var(--inner_gap_xl);
 
 
             .info
@@ -3115,19 +3067,18 @@ header
 
                 display: flex;
                 flex-direction: column;
+                gap: 5px;
 
                 width: 340px;
                 max-width: 100%;
                 margin-top: -36px;
                 margin-left: calc(var(--inner_gap_xl) * -1);
+                padding-block: var(--inner_gap_s) var(--inner_gap_xs);
+                padding-inline: var(--inner_gap_xl);
 
                 color: var(--light_color);
                 border-radius: 0 var(--border_radius) var(--border_radius) 0;
                 background: linear-gradient(90deg, #194b4d 0%, var(--secondary_color) 100%);
-
-                gap: 5px;
-                padding-block: var(--inner_gap_s) var(--inner_gap_xs);
-                padding-inline: var(--inner_gap_xl);
 
 
                 .name
@@ -3161,7 +3112,6 @@ header
             {
                 display: none;
                 flex-direction: column;
-
                 gap: var(--inner_gap_xxs);
 
 
@@ -3191,11 +3141,11 @@ header
 
             .spoler_btn
             {
-                font-weight: 600;
-                line-height: 120%;
-
                 width: fit-content;
                 margin-top: auto;
+
+                font-weight: 600;
+                line-height: 120%;
 
                 text-align: left;
 
@@ -3234,45 +3184,42 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: var(--inner_gap_xl);
 
         width: 100%;
         margin-top: 43px;
+        padding-block: 10px;
+        padding-inline: 34px 10px;
 
         color: var(--light_color);
         border-radius: var(--border_radius_max);
         background: var(--secondary_color);
 
-        gap: var(--inner_gap_xl);
-        padding-inline: 34px 10px;
-        padding-block: 10px;
-
 
         .label
         {
+            width: 866px;
+            max-width: calc(100% - 346px - var(--inner_gap_xl));
+
             font-family: var(--font_family_tertiary);
             font-size: var(--font_size_l);
             line-height: 135%;
-
-            width: 866px;
-            max-width: calc(100% - 346px - var(--inner_gap_xl));
         }
 
 
         .btn
         {
+            min-height: 60px;
+            padding-inline: var(--inner_gap_xl);
+
             font-size: var(--font_size_l);
             font-weight: 500;
             line-height: 130%;
-
-            min-height: 60px;
-
             letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-inline: var(--inner_gap_xl);
         }
     }
 }
@@ -3284,10 +3231,10 @@ header
 -------------*/
 .reviews
 {
+    padding-block: var(--outside_gap);
+
     border-radius: var(--border_radius_xl) var(--border_radius_xl) 0 0;
     background: var(--bg_grey);
-
-    padding-block: var(--outside_gap);
 
 
     .cont
@@ -3391,6 +3338,7 @@ header
     {
         display: flex;
         flex-direction: column;
+        gap: var(--inner_gap_xl);
 
         min-height: 320px;
         padding: var(--inner_gap_l);
@@ -3398,8 +3346,6 @@ header
         border: 1px solid var(--border_radius);
         border-radius: var(--border_radius);
         background: var(--light_color);
-
-        gap: var(--inner_gap_xl);
 
 
         .top
@@ -3417,9 +3363,6 @@ header
 
         .bottom
         {
-            font-size: var(--font_size_l);
-            line-height: 135%;
-
             display: flex;
             align-content: center;
             align-items: center;
@@ -3427,6 +3370,9 @@ header
             justify-content: space-between;
 
             margin-top: auto;
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
 
             color: #7d7d7d;
 
@@ -3485,36 +3431,31 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: var(--inner_gap_xl);
 
         width: 100%;
         margin-top: 35px;
+        padding-block: 10px;
+        padding-inline: 34px 10px;
 
         color: var(--light_color);
         border-radius: var(--border_radius_max);
         background: var(--secondary_color);
 
-        gap: var(--inner_gap_xl);
-        padding-inline: 34px 10px;
-        padding-block: 10px;
-
 
         .label
         {
+            width: 451px;
+            max-width: calc(100% - 256px - var(--inner_gap_xl));
+
             font-family: var(--font_family_tertiary);
             font-size: var(--font_size_l);
             line-height: 135%;
-
-            width: 451px;
-            max-width: calc(100% - 256px - var(--inner_gap_xl));
         }
 
 
         .btn
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
@@ -3522,16 +3463,19 @@ header
             justify-content: center;
 
             min-height: 60px;
+            padding-inline: var(--inner_gap_xl);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-align: center;
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-inline: var(--inner_gap_xl);
         }
     }
 }
@@ -3627,17 +3571,16 @@ header
         display: flex;
         overflow: hidden;
         flex-direction: column;
+        gap: var(--inner_gap_xl);
 
         min-height: 499px;
+        padding-block: 71px 54px;
+        padding-inline: var(--outside_gap_s);
 
         color: var(--light_color);
         border: 1px solid var(--border_color);
         border-radius: var(--border_radius);
         background: var(--secondary_color);
-
-        gap: var(--inner_gap_xl);
-        padding-block: 71px 54px;
-        padding-inline: var(--outside_gap_s);
 
 
         & > *
@@ -3670,24 +3613,24 @@ header
 
     .title
     {
+        width: 478px;
+        max-width: 100%;
+
         font-family: var(--font_family_secondary);
         font-size: var(--font_size_title);
         font-weight: 600;
         line-height: 110%;
-
-        width: 478px;
-        max-width: 100%;
     }
 
 
     .desc
     {
+        width: 556px;
+        max-width: 100%;
+
         font-family: var(--font_family_tertiary);
         font-size: var(--font_size_l);
         line-height: 135%;
-
-        width: 556px;
-        max-width: 100%;
     }
 
 
@@ -3698,18 +3641,13 @@ header
         align-items: center;
         flex-wrap: wrap;
         justify-content: flex-start;
+        gap: var(--inner_gap);
 
         margin-top: auto;
-
-        gap: var(--inner_gap);
 
 
         .whatsapp_link
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             position: relative;
 
             display: flex;
@@ -3717,19 +3655,22 @@ header
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-start;
+            gap: 6px;
 
             min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-block: 6px;
-            padding-inline: 60px 17px;
-            gap: 6px;
 
 
             .icon
@@ -3746,6 +3687,7 @@ header
                 justify-content: center;
 
                 width: 48px;
+                margin-block: auto;
 
                 transition: .2s linear;
 
@@ -3753,7 +3695,6 @@ header
                 border-radius: 50%;
                 background: var(--secondary_color);
 
-                margin-block: auto;
                 aspect-ratio: 1 / 1;
 
 
@@ -3770,10 +3711,10 @@ header
 
             span
             {
-                transition: transform .2s linear;
-
                 margin-inline: auto;
                 padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
             }
 
 
@@ -3800,19 +3741,18 @@ header
 
         .btn
         {
+            height: 60px;
+            padding-inline: var(--inner_gap_xl);
+
             font-size: var(--font_size_l);
             font-weight: 500;
             line-height: 130%;
-
-            height: 60px;
+            letter-spacing: -.36px;
 
             transition: color .2s linear;
-            letter-spacing: -.36px;
 
             border: 1px solid #879ca0;
             border-radius: var(--border_radius_max);
-
-            padding-inline: var(--inner_gap_xl);
 
 
             @media (hover: hover) and (pointer: fine)
@@ -3830,12 +3770,11 @@ header
     {
         position: absolute;
         z-index: 1;
+        inset: 0;
 
         display: block;
 
         pointer-events: none;
-
-        inset: 0;
     }
 }
 
@@ -3846,11 +3785,11 @@ header
 ------------*/
 footer
 {
+    padding-block: 100px var(--outside_gap);
+
     color: var(--light_color);
     border-radius: var(--border_radius_xl) var(--border_radius_xl) 0 0;
     background: var(--secondary_color);
-
-    padding-block: 100px var(--outside_gap);
 
 
     .cont
@@ -3883,31 +3822,29 @@ footer
     {
         display: flex;
         flex-direction: column;
+        gap: var(--block_padding);
 
         margin-right: auto;
-
-        gap: var(--block_padding);
     }
 
 
     .logo
     {
-        font-family: var(--font_family_secondary);
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 110%;
-
         display: flex;
         align-content: center;
         align-items: center;
         flex-wrap: wrap;
         justify-content: flex-start;
+        gap: var(--inner_gap);
+
+        font-family: var(--font_family_secondary);
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 110%;
 
         text-decoration: none;
 
         color: currentColor;
-
-        gap: var(--inner_gap);
 
 
         img
@@ -3958,9 +3895,9 @@ footer
 
         .title
         {
-            line-height: 135%;
-
             margin-bottom: 4px;
+
+            line-height: 135%;
 
             text-transform: uppercase;
 
@@ -3970,10 +3907,10 @@ footer
 
         .items
         {
-            line-height: 150%;
-
             display: flex;
             flex-direction: column;
+
+            line-height: 150%;
 
 
             a
@@ -3998,9 +3935,9 @@ footer
 
         .title
         {
-            line-height: 135%;
-
             margin-bottom: var(--inner_gap_xxs);
+
+            line-height: 135%;
 
             text-transform: uppercase;
 
@@ -4015,7 +3952,6 @@ footer
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-start;
-
             gap: var(--inner_gap_l);
         }
 
@@ -4044,7 +3980,6 @@ footer
             align-items: flex-start;
             flex-wrap: wrap;
             justify-content: flex-start;
-
             gap: var(--inner_gap_xs);
 
 
@@ -4097,9 +4032,9 @@ footer
 
         .email
         {
-            line-height: 135%;
-
             margin-top: var(--inner_gap_xxs);
+
+            line-height: 135%;
 
 
             a
@@ -4114,23 +4049,18 @@ footer
 
         .text
         {
-            line-height: 135%;
-
             display: flex;
             flex-direction: column;
+            gap: 1px;
 
             margin-top: var(--inner_gap_xl);
 
-            gap: 1px;
+            line-height: 135%;
         }
 
 
         .whatsapp_link
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             position: relative;
 
             display: flex;
@@ -4138,21 +4068,24 @@ footer
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-start;
+            gap: 6px;
 
             width: fit-content;
             min-height: 60px;
             margin-top: var(--block_padding);
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
             background: var(--primary_color);
-
-            padding-block: 6px;
-            padding-inline: 60px 17px;
-            gap: 6px;
 
 
             .icon
@@ -4169,6 +4102,7 @@ footer
                 justify-content: center;
 
                 width: 48px;
+                margin-block: auto;
 
                 transition: .2s linear;
 
@@ -4176,7 +4110,6 @@ footer
                 border-radius: 50%;
                 background: var(--secondary_color);
 
-                margin-block: auto;
                 aspect-ratio: 1 / 1;
 
 
@@ -4193,10 +4126,10 @@ footer
 
             span
             {
-                transition: transform .2s linear;
-
                 margin-inline: auto;
                 padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
             }
 
 
@@ -4235,16 +4168,11 @@ footer
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
-
         gap: 10px;
 
 
         a
         {
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-
             display: flex;
             align-content: center;
             align-items: center;
@@ -4253,43 +4181,45 @@ footer
 
             min-width: 60px;
             height: 50px;
+            padding-inline: var(--inner_gap_s);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
 
             text-align: center;
             text-decoration: none;
-            letter-spacing: -.36px;
 
             color: currentColor;
             border: 1px solid #2e5760;
             border-radius: var(--border_radius_l);
-
-            padding-inline: var(--inner_gap_s);
         }
     }
 
 
     .copyright
     {
-        line-height: 150%;
-
         width: 368px;
         max-width: 100%;
+
+        line-height: 150%;
     }
 
 
     .links
     {
-        line-height: 150%;
-
         display: flex;
         align-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
+        gap: 84px;
 
         width: 652px;
         max-width: 100%;
 
-        gap: 84px;
+        line-height: 150%;
 
 
         a
@@ -4325,9 +4255,9 @@ footer
 
             .links
             {
-                width: 636px;
-
                 gap: 80px;
+
+                width: 636px;
             }
         }
     }

@@ -50,9 +50,9 @@
     {
         .logo
         {
-            font-size: var(--font_size_s);
-
             gap: var(--inner_gap_xs);
+
+            font-size: var(--font_size_s);
 
 
             img
@@ -94,11 +94,10 @@
 
             .whatsapp_link
             {
-                font-size: var(--font_size_s);
-
                 height: 48px;
-
                 padding-inline: 52px var(--inner_gap_xs);
+
+                font-size: var(--font_size_s);
 
 
                 .icon
@@ -122,11 +121,10 @@
 
             .btn
             {
-                font-size: var(--font_size_s);
-
                 height: 48px;
-
                 padding-inline: var(--inner_gap_s);
+
+                font-size: var(--font_size_s);
             }
         }
     }
@@ -180,10 +178,10 @@
 
         .desc
         {
-            font-size: var(--font_size);
-
             width: 380px;
             padding-bottom: var(--inner_gap_xl);
+
+            font-size: var(--font_size);
         }
 
 
@@ -194,11 +192,10 @@
 
             .whatsapp_link
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
 
 
                 .icon
@@ -216,20 +213,19 @@
 
             .btn
             {
-                font-size: var(--font_size);
-
                 height: 56px;
-
                 padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
         }
 
 
         .stats
         {
-            font-size: var(--font_size);
-
             width: 380px;
+
+            font-size: var(--font_size);
         }
 
 
@@ -250,12 +246,12 @@
         {
             .item
             {
-                font-size: var(--font_size);
+                gap: var(--inner_gap_xs);
 
                 min-height: 100px;
                 padding: var(--inner_gap);
 
-                gap: var(--inner_gap_xs);
+                font-size: var(--font_size);
 
 
                 .icon
@@ -278,7 +274,6 @@
     .about
     {
         margin-top: -80px;
-
         padding-block: 140px var(--outside_gap_s);
 
 
@@ -296,10 +291,10 @@
 
         .desc
         {
-            font-size: var(--font_size);
-
             width: calc(100% - 400px - var(--block_padding_l));
             padding-right: 0;
+
+            font-size: var(--font_size);
         }
     }
 
@@ -353,9 +348,9 @@
 
                 .btn
                 {
-                    font-size: var(--font_size);
-
                     height: 56px;
+
+                    font-size: var(--font_size);
                 }
             }
         }
@@ -363,11 +358,11 @@
 
         .action
         {
-            margin-top: var(--block_padding);
-
             gap: var(--inner_gap_l);
-            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+            margin-top: var(--block_padding);
             padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
 
 
             .label
@@ -378,11 +373,10 @@
 
             .whatsapp_link
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
 
 
                 .icon
@@ -419,11 +413,10 @@
 
             .whatsapp_link
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
 
 
                 .icon
@@ -490,11 +483,11 @@
 
         .action
         {
-            margin-top: var(--block_padding);
-
             gap: var(--inner_gap_l);
-            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+            margin-top: var(--block_padding);
             padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
 
 
             .label
@@ -505,11 +498,10 @@
 
             .btn
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
         }
     }
@@ -544,6 +536,7 @@
             .info
             {
                 gap: var(--inner_gap_s);
+
                 padding-block: var(--block_padding_l) var(--inner_gap_l);
             }
 
@@ -562,11 +555,10 @@
 
             .link
             {
-                font-size: var(--font_size);
-
                 height: 56px;
-
                 padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
         }
     }
@@ -605,9 +597,9 @@
 
                 .desc
                 {
-                    font-size: var(--font_size);
-
                     width: 100%;
+
+                    font-size: var(--font_size);
                 }
 
 
@@ -619,11 +611,10 @@
 
                 .whatsapp_link
                 {
-                    font-size: var(--font_size);
-
                     min-height: 56px;
-
                     padding-inline: 64px var(--inner_gap_s);
+
+                    font-size: var(--font_size);
 
 
                     .icon
@@ -692,16 +683,14 @@
             .data
             {
                 margin-top: calc(var(--block_padding_l) * -1);
-
-                padding-inline: var(--inner_gap_l);
                 padding-block: 0 var(--inner_gap_l);
+                padding-inline: var(--inner_gap_l);
 
 
                 .info
                 {
                     margin-top: calc(var(--block_padding_l) * -1);
                     margin-left: calc(var(--inner_gap_l) * -1);
-
                     padding-inline: var(--inner_gap_l);
 
 
@@ -737,28 +726,27 @@
 
         .action
         {
-            margin-top: var(--block_padding);
-
             gap: var(--inner_gap_l);
-            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+            margin-top: var(--block_padding);
             padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
 
 
             .label
             {
-                font-size: var(--font_size);
-
                 max-width: calc(100% - 256px - var(--inner_gap_l));
+
+                font-size: var(--font_size);
             }
 
 
             .btn
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
         }
     }
@@ -785,9 +773,9 @@
 
         .review
         {
-            min-height: 280px;
-
             gap: var(--inner_gap_l);
+
+            min-height: 280px;
 
 
             .author
@@ -811,28 +799,27 @@
 
         .action
         {
-            margin-top: var(--block_padding);
-
             gap: var(--inner_gap_l);
-            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+            margin-top: var(--block_padding);
             padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
 
 
             .label
             {
-                font-size: var(--font_size);
-
                 max-width: calc(100% - 220px - var(--inner_gap_l));
+
+                font-size: var(--font_size);
             }
 
 
             .btn
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
         }
     }
@@ -848,13 +835,13 @@
         {
             display: grid;
             overflow: auto;
+            gap: var(--inner_gap_s);
 
             width: calc(100% + var(--cont_padding_double));
-
-            gap: var(--inner_gap_s);
             margin-block: 0;
             margin-inline: calc(var(--cont_padding) * -1);
             padding-inline: var(--cont_padding);
+
             grid-auto-flow: column;
             grid-auto-columns: max-content;
             scroll-padding: 0 var(--cont_padding);
@@ -899,19 +886,19 @@
     {
         .data
         {
-            min-height: 400px;
-
-            padding-inline: var(--block_padding_l);
             gap: var(--inner_gap_l);
+
+            min-height: 400px;
             padding-block: var(--outside_gap_s);
+            padding-inline: var(--block_padding_l);
         }
 
 
         .desc
         {
-            font-size: var(--font_size);
-
             width: 420px;
+
+            font-size: var(--font_size);
         }
 
 
@@ -922,11 +909,10 @@
 
             .whatsapp_link
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
 
 
                 .icon
@@ -944,11 +930,10 @@
 
             .btn
             {
-                font-size: var(--font_size);
-
                 height: 56px;
-
                 padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
         }
     }
@@ -975,9 +960,9 @@
 
         .logo
         {
-            font-size: var(--font_size);
-
             gap: var(--inner_gap_s);
+
+            font-size: var(--font_size);
 
 
             img
@@ -998,11 +983,10 @@
         {
             .whatsapp_link
             {
-                font-size: var(--font_size);
-
                 min-height: 56px;
-
                 padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
 
 
                 .icon
@@ -1023,10 +1007,10 @@
         {
             a
             {
-                font-size: var(--font_size);
-
                 min-width: 56px;
                 height: 48px;
+
+                font-size: var(--font_size);
             }
         }
 
@@ -1046,9 +1030,9 @@
 
         .links
         {
-            width: auto;
-
             gap: var(--outside_gap_s);
+
+            width: auto;
         }
     }
 }

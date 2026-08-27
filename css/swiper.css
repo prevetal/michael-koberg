@@ -47,10 +47,9 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
+    gap: 10px;
 
     margin-bottom: var(--inner_gap_l);
-
-    gap: 10px;
 
 
     .swiper-button-next,
@@ -72,6 +71,7 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    gap: var(--inner_gap_s);
 
     pointer-events: none;
 
@@ -79,7 +79,6 @@
     --swiper-pagination-bullet-inactive-color: var(--grey_color);
     --swiper-pagination-bullet-hover-color: var(--secondary_color);
     --swiper-pagination-bullet-active-color: var(--primary_color);
-    gap: var(--inner_gap_s);
 
 
     .swiper-pagination-bullet
