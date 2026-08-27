@@ -160,25 +160,46 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	$('.mob_menu .menu a.sub_link').click(function (e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+			.next('.sub')
+			.toggleClass('show')
+	})
+
+
+	// Header menu
+	$('.menu .item').mouseenter(function() {
+		$('body').addClass('sub_menu_open')
+	})
+
+	$('.menu .item').mouseleave(function() {
+		$('body').removeClass('sub_menu_open')
+	})
+
+
 	if (is_touch_device()) {
 		// Submenu on the touch screen
 		$('header .menu .item > a.sub_link').click(function (e) {
 			e.preventDefault()
 
-			const dropdown = $(this).next(),
-				isOpen = dropdown.hasClass('show')
+			const item = $(this).closest('.item'),
+				isOpen = item.hasClass('open')
 
-			$('header .menu .sub').removeClass('show')
+			$('header .menu .item').removeClass('open')
 
 			if (!isOpen) {
-				dropdown.addClass('show')
+				item.addClass('open')
+				$('body').addClass('sub_menu_open')
 			}
 		})
 
 		// Close the submenu when clicking outside it
 		document.addEventListener('click', e => {
 			if ($(e.target).closest('.menu').length === 0) {
-				$('header .menu .sub').removeClass('show')
+				$('header .menu .item').removeClass('open')
+				$('body').removeClass('sub_menu_open')
 			}
 		})
 	}

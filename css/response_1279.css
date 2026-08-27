@@ -78,7 +78,14 @@
             {
                 & > a
                 {
-                    font-size: var(--font_size);
+                    font-size: var(--font_size_s);
+                }
+
+
+                .sub
+                {
+                    min-height: 448px;
+                    padding-block: 148px var(--block_padding_l);
                 }
             }
         }
