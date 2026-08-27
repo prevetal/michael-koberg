@@ -160,7 +160,10 @@
     -------------------*/
     .first_section
     {
-        padding-block: 180px var(--cont_padding);
+        .bg
+        {
+            padding-block: 180px var(--cont_padding);
+        }
 
 
         .row + .row
@@ -561,7 +564,7 @@
             {
                 font-size: var(--font_size);
 
-                min-height: 56px;
+                height: 56px;
 
                 padding-inline: var(--inner_gap_l);
             }
@@ -745,7 +748,7 @@
             {
                 font-size: var(--font_size);
 
-                max-width: calc(100% - 272px - var(--inner_gap_l));
+                max-width: calc(100% - 256px - var(--inner_gap_l));
             }
 
 

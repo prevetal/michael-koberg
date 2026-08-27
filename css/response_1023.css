@@ -12,54 +12,362 @@
     ------------*/
     header
     {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        right: 100%;
-        left: auto;
+        .menu,
+        .contacts,
+        .langs
+        {
+            display: none;
+        }
 
-        width: 325px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 0;
 
-        transition: transform .3s linear;
-
-        background: var(--bg);
+        .mob_menu_btn
+        {
+            display: flex;
+        }
     }
 
 
-    header.show
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
     {
-        transform: translateX(100%);
+        &.row
+        {
+            .col
+            {
+                width: 560px;
+            }
+        }
     }
 
 
-    header .scroll
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
     {
-        display: flex;
-        overflow: auto;
-        flex-direction: column;
+        .bg
+        {
+            padding-block: 160px var(--cont_padding);
+        }
 
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding-block: var(--cont_padding);
 
-        overscroll-behavior-y: contain;
+        .title
+        {
+            width: 100%;
+        }
+
+
+        .desc
+        {
+            width: 100%;
+            margin-top: var(--inner_gap_l);
+        }
+
+
+        .stats
+        {
+            margin-top: var(--block_padding);
+        }
+
+
+        .video
+        {
+            .icon
+            {
+                width: 80px;
+
+
+                svg
+                {
+                    width: 24px;
+                    height: 30px;
+                }
+            }
+        }
+
+
+        .pluses
+        {
+            position: relative;
+            bottom: 0;
+
+            margin-top: var(--block_padding_l);
+
+            padding-inline: 0;
+
+
+            .grid_row
+            {
+                --items_per_line: 1;
+            }
+
+
+            .item
+            {
+                min-height: 0;
+
+                color: var(--dark_color);
+                border: 1px solid var(--border_color);
+                background: var(--light_color);
+
+
+                .icon
+                {
+                    img
+                    {
+                        display: none;
+                    }
+
+
+                    img + img
+                    {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*-----------
+        About
+    -----------*/
+    .about
+    {
+        margin-top: 0;
+
+        padding-block: var(--outside_gap_s);
+
+
+        .title
+        {
+            width: 100%;
+
+
+            br
+            {
+                display: none;
+            }
+        }
+
+
+        .desc
+        {
+            width: 100%;
+        }
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        .data
+        {
+            width: 100%;
+        }
+
+
+        .items
+        {
+            width: 100%;
+            margin-top: var(--inner_gap_l);
+        }
+
+
+        .stats
+        {
+            .grid_row
+            {
+                --items_per_line: 2;
+                --gap_x: var(--inner_gap_l);
+                --gap_y: var(--block_padding_l);
+            }
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
     }
 
 
 
     /*-----------------
-        Mob. header
+        Our clients
     -----------------*/
-    .mob_header
+    .our_clients
     {
-        display: block;
+        .block_head
+        {
+            .desc
+            {
+                width: 324px;
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps
+    {
+        .block_head
+        {
+            position: static;
+            top: 0;
+
+            width: 100%;
+
+
+            .pre_title
+            {
+                order: 0;
+
+                margin-top: 0;
+            }
+        }
+
+
+        .data
+        {
+            width: 100%;
+        }
+    }
+
+
+
+    /*-------------
+        Persons
+    -------------*/
+    .persons
+    {
+        .swiper
+        {
+            .swiper-slide
+            {
+                width: 340px;
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        .block_head
+        {
+            width: 100%;
+            min-height: 0;
+            margin-bottom: var(--block_head_offset);
+
+
+            .pre_title
+            {
+                order: 0;
+
+                margin-top: 0;
+            }
+        }
+
+
+
+        .slider
+        {
+            width: 100%;
+        }
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs
+    {
+        .grid_row.inline
+        {
+            & > *
+            {
+                width: 220px;
+            }
+        }
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding-block: var(--outside_gap) var(--block_padding_l);
+
+
+        .menu
+        {
+            width: 100%;
+        }
+
+
+        .contacts
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+            margin-left: 0;
+        }
+
+
+        .copyright
+        {
+            width: 100%;
+
+            text-align: center;
+        }
+
+
+        .links
+        {
+            justify-content: center;
+
+            width: 100%;
+            margin-top: var(--inner_gap);
+
+            text-align: center;
+        }
     }
 }

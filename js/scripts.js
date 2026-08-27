@@ -151,12 +151,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn, .overlay').click((e) => {
+	$('.mob_menu_btn').click((e) => {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').toggleClass('active')
+		$('.mob_menu_btn').toggleClass('active')
 		$('body').toggleClass('lock')
-		$('.mob_menu, .overlay').toggleClass('show')
+		$('.mob_menu').toggleClass('show')
 	})
 
 
