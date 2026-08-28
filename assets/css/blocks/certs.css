@@ -1,0 +1,139 @@
+/*-----------
+    Certs
+-----------*/
+.certs
+{
+    .block_head
+    {
+        .col
+        {
+            width: 620px;
+        }
+
+
+        .desc
+        {
+            font-family: var(--font_family_tertiary);
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 5;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .cert
+    {
+        display: block;
+
+        padding: 10px;
+
+        text-decoration: none;
+
+        color: currentColor;
+        border: 1px solid var(--border_color);
+        border-radius: 5px;
+        background: var(--light_color);
+
+
+        .thumb
+        {
+            display: block;
+
+            background: var(--bg_grey);
+
+            aspect-ratio: 1 / 1.441;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .certs
+    {
+        .grid_row.inline
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 240px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .certs
+    {
+        .grid_row.inline
+        {
+            & > *
+            {
+                width: 220px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .certs
+    {
+        .grid_row.inline
+        {
+            & > *
+            {
+                width: 192px;
+            }
+        }
+    }
+}

@@ -1,0 +1,319 @@
+/*------------------
+    Action block
+------------------*/
+.action_block
+{
+    .data
+    {
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        min-height: 499px;
+        padding-block: 71px 54px;
+        padding-inline: var(--outside_gap_s);
+
+        color: var(--light_color);
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--secondary_color);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:before
+        {
+            position: absolute;
+            z-index: 2;
+            top: -18.024%;
+            left: -36.363%;
+
+            display: block;
+
+            width: 627px;
+            height: 577px;
+
+            content: '';
+
+            background: rgba(59, 191, 168, .20);
+
+            filter: blur(200px);
+        }
+    }
+
+
+    .title
+    {
+        width: 478px;
+        max-width: 100%;
+
+        font-family: var(--font_family_secondary);
+        font-size: var(--font_size_title);
+        font-weight: 600;
+        line-height: 110%;
+    }
+
+
+    .desc
+    {
+        width: 556px;
+        max-width: 100%;
+
+        font-family: var(--font_family_tertiary);
+        font-size: var(--font_size_l);
+        line-height: 135%;
+    }
+
+
+    .btns
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--inner_gap);
+
+        margin-top: auto;
+
+
+        .whatsapp_link
+        {
+            position: relative;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 6px;
+
+            min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            text-decoration: none;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_max);
+            background: var(--primary_color);
+
+
+            .icon
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 6px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 48px;
+                min-width: 48px;
+                height: 48px;
+                margin-block: auto;
+
+                transition: .2s linear;
+
+                color: var(--primary_color);
+                border-radius: 50%;
+                background: var(--secondary_color);
+
+
+                svg
+                {
+                    display: block;
+
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+
+            span
+            {
+                margin-inline: auto;
+                padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
+            }
+
+
+            @media (hover: hover) and (pointer: fine)
+            {
+                &:hover
+                {
+                    .icon
+                    {
+                        left: calc(100% - 54px);
+
+                        transform: rotate(360deg);
+                    }
+
+
+                    span
+                    {
+                        transform: translateX(-54px);
+                    }
+                }
+            }
+        }
+
+
+        .btn
+        {
+            height: 60px;
+            padding-inline: var(--inner_gap_xl);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            transition: color .2s linear;
+
+            border: 1px solid #879ca0;
+            border-radius: var(--border_radius_max);
+
+
+            @media (hover: hover) and (pointer: fine)
+            {
+                &:hover
+                {
+                    color: var(--primary_color);
+                }
+            }
+        }
+    }
+
+
+    .bg
+    {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+
+        display: block;
+
+        pointer-events: none;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .action_block
+    {
+        .data
+        {
+            gap: var(--inner_gap_l);
+
+            min-height: 400px;
+            padding-block: var(--outside_gap_s);
+            padding-inline: var(--block_padding_l);
+        }
+
+
+        .desc
+        {
+            width: 420px;
+
+            font-size: var(--font_size);
+        }
+
+
+        .btns
+        {
+            gap: var(--inner_gap_xs);
+
+
+            .whatsapp_link
+            {
+                min-height: 56px;
+                padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
+
+
+                .icon
+                {
+                    width: 46px;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+
+
+            .btn
+            {
+                height: 56px;
+                padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .action_block
+    {
+        --cont_padding: 0;
+
+
+        .data
+        {
+            min-height: 592px;
+            padding-inline: var(--inner_gap_l);
+
+            border: none;
+        }
+
+
+        .desc
+        {
+            width: 100%;
+
+            font-size: var(--font_size_s);
+            line-height: 140%;
+        }
+
+
+        .btns
+        {
+            .whatsapp_link,
+            .btn
+            {
+                width: 100%;
+            }
+        }
+    }
+}

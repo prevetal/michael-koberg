@@ -1,0 +1,125 @@
+/*-----------------
+    Quike start
+-----------------*/
+.quike_start
+{
+    .block_head
+    {
+        .desc
+        {
+            width: 511px;
+        }
+    }
+
+
+    .grid_row
+    {
+        counter-reset: number;
+
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        min-height: 290px;
+        padding: var(--inner_gap);
+
+        border: 1px solid var(--border_color);
+        border-radius: 15px;
+        background: var(--light_color);
+
+
+        .top
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap_xs);
+        }
+
+
+        .number
+        {
+            padding-block: 6px;
+            padding-inline: var(--inner_gap_s);
+
+            line-height: 135%;
+
+            color: var(--light_color);
+            border-radius: 30px;
+            background: linear-gradient(94deg, #194c4d 17.16%, var(--secondary_color) 101.63%);
+
+
+            span
+            {
+                &:before
+                {
+                    content: counter(number);
+                    counter-increment: number;
+                }
+            }
+        }
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 50px;
+
+            border: 1px solid var(--border_color);
+            border-radius: 5px;
+            background: var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: 23px;
+            font-weight: 600;
+            line-height: 120%;
+        }
+
+
+        .btn
+        {
+            width: fit-content;
+            height: 60px;
+            margin-top: auto;
+            padding-inline: var(--inner_gap_xl);
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            border-radius: var(--border_radius_l);
+            background: var(--primary_color);
+        }
+    }
+}

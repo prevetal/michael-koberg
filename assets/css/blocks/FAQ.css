@@ -1,0 +1,19 @@
+/*---------
+    FAQ
+---------*/
+.FAQ
+{
+    .block_head
+    {
+        .col
+        {
+            width: 620px;
+        }
+
+
+        .desc
+        {
+            font-family: var(--font_family_tertiary);
+        }
+    }
+}

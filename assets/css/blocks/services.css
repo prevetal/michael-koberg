@@ -1,0 +1,505 @@
+/*--------------
+    Services
+--------------*/
+.services
+{
+    .block_head
+    {
+        .desc
+        {
+            width: 511px;
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 4;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_l);
+    }
+
+
+    .service
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        min-height: 280px;
+        padding: var(--inner_gap);
+
+        text-decoration: none;
+
+        color: var(--secondary_color);
+        border: 1px solid var(--border_color);
+        border-radius: 15px;
+        background: var(--bg_grey);
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 50px;
+
+            border: 1px solid var(--border_color);
+            border-radius: 5px;
+            background: var(--light_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 600;
+            line-height: 110%;
+        }
+
+
+        .arrow
+        {
+            position: absolute;
+            right: var(--inner_gap_xs);
+            bottom: var(--inner_gap_xs);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 56px;
+
+            color: var(--secondary_color);
+            border-radius: 50%;
+            background: var(--primary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            svg
+            {
+                display: block;
+
+                width: 22px;
+                height: 15px;
+            }
+        }
+
+
+        .hover
+        {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            flex-direction: column;
+
+            padding-block: var(--inner_gap_xl) var(--inner_gap);
+            padding-inline: var(--inner_gap);
+
+            transition: opacity .2s linear;
+
+            opacity: 0;
+            border-radius: 15px;
+            background: linear-gradient(310deg, var(--secondary_color) 14.18%, #194c4d 85.42%);
+
+
+            .desc
+            {
+                font-family: var(--font_family_tertiary);
+                line-height: 135%;
+
+                color: var(--light_color);
+            }
+
+
+            .btn
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 100%;
+                height: 60px;
+                margin-top: auto;
+
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_l);
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: -.36px;
+
+                text-align: center;
+
+                color: var(--secondary_color);
+                border-radius: var(--border_radius_max);
+                background: var(--primary_color);
+            }
+        }
+
+
+        @media (hover: hover) and (pointer: fine)
+        {
+            &:hover
+            {
+                .hover
+                {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    .action
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_xl);
+
+        width: fit-content;
+        margin-top: var(--block_padding);
+        padding-block: 10px;
+        padding-inline: 34px 10px;
+
+        color: var(--light_color);
+        border-radius: var(--border_radius_max);
+        background: var(--secondary_color);
+
+
+        .label
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+        }
+
+
+        .whatsapp_link
+        {
+            position: relative;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px 17px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            text-decoration: none;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_max);
+            background: var(--primary_color);
+
+
+            .icon
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 6px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 48px;
+                min-width: 48px;
+                height: 48px;
+                margin-block: auto;
+
+                transition: .2s linear;
+
+                color: var(--primary_color);
+                border-radius: 50%;
+                background: var(--secondary_color);
+
+
+                svg
+                {
+                    display: block;
+
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+
+            span
+            {
+                margin-inline: auto;
+                padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
+            }
+
+
+            @media (hover: hover) and (pointer: fine)
+            {
+                &:hover
+                {
+                    .icon
+                    {
+                        left: calc(100% - 54px);
+
+                        transform: rotate(360deg);
+                    }
+
+
+                    span
+                    {
+                        transform: translateX(-54px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .services
+    {
+        .block_head
+        {
+            .desc
+            {
+                width: 380px;
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 3;
+        }
+
+
+        .service
+        {
+            .arrow
+            {
+                width: 52px;
+
+
+                svg
+                {
+                    width: 20px;
+                    height: 14px;
+                }
+            }
+
+
+            .hover
+            {
+                padding-block: var(--inner_gap_l) var(--inner_gap);
+
+
+                .btn
+                {
+                    height: 56px;
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+
+            .label
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .whatsapp_link
+            {
+                min-height: 56px;
+                padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
+
+
+                .icon
+                {
+                    width: 46px;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .services
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .services
+    {
+        .block_head
+        {
+            .desc
+            {
+                width: 100%;
+            }
+        }
+
+
+        .grid_row.inline
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 286px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+
+
+        .service
+        {
+            min-height: 240px;
+        }
+
+
+        .action
+        {
+            padding: var(--inner_gap);
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
+
+                text-align: center;
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .whatsapp_link
+            {
+                width: 100%;
+            }
+        }
+    }
+}

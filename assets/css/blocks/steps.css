@@ -1,0 +1,407 @@
+/*-----------
+    Steps
+-----------*/
+.steps
+{
+    margin-top: calc(var(--outside_gap_s) * -1);
+    padding-block: var(--outside_gap) calc(var(--outside_gap) + 50px);
+
+    color: var(--light_color);
+    border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
+    background: var(--secondary_color);
+
+
+    .cont
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .block_head
+    {
+        position: sticky;
+        top: var(--inner_gap);
+
+        gap: var(--inner_gap_l);
+
+        width: 376px;
+        max-width: 100%;
+
+
+        .pre_title
+        {
+            order: 3;
+
+            margin-top: 10px;
+
+            color: var(--light_color);
+        }
+
+
+        .title,
+        .desc
+        {
+            color: var(--light_color);
+        }
+    }
+
+
+    .data
+    {
+        width: calc(100% - 480px);
+    }
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block_padding);
+
+        counter-reset: number;
+
+
+        .item
+        {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_s);
+
+
+            &:before
+            {
+                position: absolute;
+                z-index: 2;
+                top: 6px;
+                right: 100%;
+
+                display: block;
+
+                width: 10px;
+                margin-right: var(--inner_gap_xl);
+
+                content: '';
+                pointer-events: none;
+
+                border-radius: 50%;
+                background: var(--light_color);
+
+                aspect-ratio: 1 / 1;
+            }
+
+
+            &:after
+            {
+                position: absolute;
+                z-index: 1;
+                top: 6px;
+                right: 100%;
+
+                display: block;
+
+                width: 5px;
+                height: calc(100% + var(--block_padding));
+                margin-right: 33px;
+
+                content: '';
+                pointer-events: none;
+
+                background: #2e5760;
+            }
+
+
+            &:last-child:after
+            {
+                display: none;
+            }
+
+
+            .name
+            {
+                width: fit-content;
+                padding-block: 6px;
+                padding-inline: var(--inner_gap_s);
+
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: var(--secondary_color);
+                border: 1px solid #2e5760;
+                border-radius: var(--border_radius_l);
+                background: var(--bg_grey);
+
+
+                span:before
+                {
+                    content: counter(number);
+                    counter-increment: number;
+                }
+            }
+
+
+            .row
+            {
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: var(--inner_gap_s);
+            }
+
+
+            .desc
+            {
+                width: calc(100% - 320px - var(--inner_gap_l));
+
+                font-size: var(--font_size_l);
+                line-height: 135%;
+            }
+
+
+            .exp
+            {
+                width: 320px;
+                max-width: 100%;
+                padding: var(--inner_gap_s);
+
+                font-size: calc(var(--font_size) - 1px);
+                line-height: 135%;
+
+                border: 1px solid #2e5760;
+                border-radius: 10px;
+                background: linear-gradient(90deg, var(--secondary_color) 0%, #174648 100%);
+            }
+
+
+            .whatsapp_link
+            {
+                position: relative;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                width: fit-content;
+                min-height: 60px;
+                margin-top: var(--inner_gap_xxs);
+                padding-block: 6px;
+                padding-inline: 60px 17px;
+
+                font-size: var(--font_size_l);
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: -.36px;
+
+                text-decoration: none;
+
+                color: var(--secondary_color);
+                border-radius: var(--border_radius_max);
+                background: var(--primary_color);
+
+
+                .icon
+                {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 6px;
+
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    width: 48px;
+                    min-width: 48px;
+                    height: 48px;
+                    margin-block: auto;
+
+                    transition: .2s linear;
+
+                    color: var(--primary_color);
+                    border-radius: 50%;
+                    background: var(--secondary_color);
+
+
+                    svg
+                    {
+                        display: block;
+
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+
+                span
+                {
+                    margin-inline: auto;
+                    padding-inline: var(--inner_gap_xxs);
+
+                    transition: transform .2s linear;
+                }
+
+
+                @media (hover: hover) and (pointer: fine)
+                {
+                    &:hover
+                    {
+                        .icon
+                        {
+                            left: calc(100% - 54px);
+
+                            transform: rotate(360deg);
+                        }
+
+
+                        span
+                        {
+                            transform: translateX(-54px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .steps
+    {
+        .block_head
+        {
+            width: 360px;
+        }
+
+
+        .data
+        {
+            width: calc(100% - 440px);
+        }
+
+
+        .items
+        {
+            gap: var(--block_padding_l);
+
+
+            .item
+            {
+                .name
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .desc
+                {
+                    width: 100%;
+
+                    font-size: var(--font_size);
+                }
+
+
+                .exp
+                {
+                    width: 100%;
+                }
+
+
+                .whatsapp_link
+                {
+                    min-height: 56px;
+                    padding-inline: 64px var(--inner_gap_s);
+
+                    font-size: var(--font_size);
+
+
+                    .icon
+                    {
+                        width: 46px;
+                        min-width: 46px;
+                        height: 46px;
+                    }
+
+
+                    span
+                    {
+                        padding-inline: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .steps
+    {
+        .block_head
+        {
+            position: static;
+            top: 0;
+
+            width: 100%;
+
+
+            .pre_title
+            {
+                order: 0;
+
+                margin-top: 0;
+            }
+        }
+
+
+        .data
+        {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .steps
+    {
+        .items
+        {
+            .item
+            {
+                .name,
+                .desc,
+                .exp
+                {
+                    font-size: var(--font_size_s);
+                    line-height: 140%;
+                }
+
+
+                .whatsapp_link
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

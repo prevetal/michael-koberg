@@ -1,0 +1,63 @@
+/*------------------------
+    Service advantages
+------------------------*/
+.service_advantages
+{
+    .grid_row
+    {
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        padding: var(--inner_gap);
+
+        font-size: var(--font_size_l);
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -.54px;
+
+        border: 1px solid var(--border_color);
+        border-radius: 10px;
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 40px;
+
+            border: 1px solid var(--border_color);
+            border-radius: 5px;
+            background: var(--light_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+
+            & + div
+            {
+                width: 340px;
+                max-width: 100%;
+            }
+        }
+    }
+}
