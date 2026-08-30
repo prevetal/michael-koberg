@@ -47,7 +47,7 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 10px;
+    gap: var(--inner_gap_m);
 
     margin-bottom: var(--inner_gap_l);
 

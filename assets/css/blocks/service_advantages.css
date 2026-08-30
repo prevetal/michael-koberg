@@ -24,7 +24,7 @@
         letter-spacing: -.54px;
 
         border: 1px solid var(--border_color);
-        border-radius: 10px;
+        border-radius: var(--border_radius_xs);
 
 
         .icon

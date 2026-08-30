@@ -34,7 +34,7 @@
         padding: var(--inner_gap);
 
         border: 1px solid var(--border_color);
-        border-radius: 15px;
+        border-radius: var(--border_radius_s);
         background: var(--light_color);
 
 

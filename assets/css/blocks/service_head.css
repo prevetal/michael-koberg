@@ -55,6 +55,27 @@
         padding-top: var(--inner_gap);
 
 
+        &.l_w
+        {
+            gap: var(--inner_gap);
+
+            width: calc(100% - 540px - var(--outside_gap));
+
+
+            .breadcrumbs
+            {
+                margin-bottom: var(--inner_gap_s);
+            }
+
+
+            .title,
+            .desc
+            {
+                width: 698px;
+            }
+        }
+
+
         .title
         {
             width: 574px;
@@ -101,7 +122,7 @@
 
                 min-height: 60px;
                 padding-block: 6px;
-                padding-inline: 60px 17px;
+                padding-inline: 60px var(--inner_gap_s);
 
                 font-size: var(--font_size_l);
                 font-weight: 500;
@@ -205,6 +226,18 @@
                 }
             }
         }
+
+
+        .exp
+        {
+            width: 541px;
+            max-width: 100%;
+
+            font-size: var(--font_size_xs);
+            line-height: 135%;
+
+            color: #c8c8c8;
+        }
     }
 
 
@@ -214,5 +247,11 @@
         max-width: 100%;
 
         border-radius: var(--border_radius);
+
+
+        &.s_w
+        {
+            width: 540px;
+        }
     }
 }

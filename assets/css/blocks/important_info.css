@@ -186,7 +186,7 @@
         {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: var(--inner_gap_m);
 
 
             .item
@@ -206,7 +206,7 @@
 
                 color: #2f2f2f;
                 border: 1px solid #88c2ce;
-                border-radius: 15px;
+                border-radius: var(--border_radius_s);
                 background: var(--light_color);
 
 
@@ -276,8 +276,8 @@
 
         width: fit-content;
         margin-top: var(--inner_gap_xl);
-        padding-block: 10px;
-        padding-inline: 34px 10px;
+        padding-block: var(--inner_gap_m);
+        padding-inline: 34px var(--inner_gap_m);
 
         color: var(--light_color);
         border-radius: var(--border_radius_max);
@@ -307,7 +307,7 @@
 
             min-height: 60px;
             padding-block: 6px;
-            padding-inline: 60px 17px;
+            padding-inline: 60px var(--inner_gap_s);
 
             font-size: var(--font_size_l);
             font-weight: 500;

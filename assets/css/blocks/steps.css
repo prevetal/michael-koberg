@@ -56,7 +56,7 @@
         {
             order: 3;
 
-            margin-top: 10px;
+            margin-top: var(--inner_gap_m);
 
             color: var(--light_color);
         }
@@ -204,7 +204,7 @@
                 line-height: 135%;
 
                 border: 1px solid #2e5760;
-                border-radius: 10px;
+                border-radius: var(--border_radius_xs);
                 background: linear-gradient(90deg, var(--secondary_color) 0%, #174648 100%);
             }
 
@@ -245,7 +245,7 @@
                 min-height: 60px;
                 margin-top: var(--inner_gap_xxs);
                 padding-block: 6px;
-                padding-inline: 60px 17px;
+                padding-inline: 60px var(--inner_gap_s);
 
                 font-size: var(--font_size_l);
                 font-weight: 500;

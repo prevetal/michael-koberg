@@ -19,4 +19,31 @@
             }
         }
     }
+
+
+    .bottom
+    {
+        display: flex;
+        align-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: var(--block_padding_l);
+
+        font-family: var(--font_family_tertiary);
+        font-size: var(--font_size_l);
+        line-height: 135%;
+
+        color: #7d7d7d;
+
+
+        a
+        {
+            text-decoration: none;
+
+            color: currentColor;
+            border-bottom: 1px solid;
+        }
+    }
 }

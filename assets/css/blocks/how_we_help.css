@@ -1,0 +1,178 @@
+/*-----------------
+    How we help
+-----------------*/
+.how_we_help
+{
+    .cont
+    {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 521px;
+        max-width: 100%;
+
+
+        .block_head
+        {
+            .pre_title
+            {
+                margin-bottom: var(--inner_gap_xl);
+            }
+        }
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_s);
+
+            margin-top: auto;
+            padding: var(--inner_gap);
+
+            color: var(--light_color);
+            border-radius: var(--border_radius_s);
+            background: linear-gradient(315deg, #113138 9.34%, #194c4d 94.77%);
+
+
+            .title
+            {
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 120%;
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size_l);
+                line-height: 130%;
+                letter-spacing: -.54px;
+
+                color: #c8c8c8;
+            }
+
+
+            .btn
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: fit-content;
+                height: 60px;
+                margin-top: 14px;
+                padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size_l);
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: -.36px;
+
+                text-decoration: none;
+
+                color: var(--secondary_color);
+                border-radius: var(--border_radius_max);
+                background: var(--primary_color);
+            }
+        }
+    }
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        width: calc(100% - 556px);
+
+        counter-reset: number;
+
+
+        .item
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            padding: var(--inner_gap_s);
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_s);
+            background: var(--light_color);
+
+
+            .number
+            {
+                padding-block: 6px;
+                padding-inline: var(--inner_gap_s);
+
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                white-space: nowrap;
+
+                color: var(--light_color);
+                border-radius: 30px;
+                background: linear-gradient(90deg, #194b4d 0%, #12333a 100%);
+
+
+                span
+                {
+                    &:before
+                    {
+                        content: counter(number);
+                        counter-increment: number;
+                    }
+                }
+
+
+                & + *
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--inner_gap_m);
+
+                    width: calc(100% - 100px);
+                }
+            }
+
+
+            .name
+            {
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                font-weight: 600;
+                line-height: 135%;
+
+                color: var(--secondary_color);
+            }
+
+
+            .desc
+            {
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: #2f2f2f;
+            }
+        }
+    }
+}

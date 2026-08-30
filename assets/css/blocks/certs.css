@@ -33,7 +33,7 @@
     {
         display: block;
 
-        padding: 10px;
+        padding: var(--inner_gap_m);
 
         text-decoration: none;
 

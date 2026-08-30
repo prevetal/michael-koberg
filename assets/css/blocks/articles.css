@@ -20,6 +20,12 @@
         --items_per_line: 4;
         --gap_x: var(--inner_gap_s);
         --gap_y: var(--inner_gap_s);
+
+
+        &.big
+        {
+            --items_per_line: 3;
+        }
     }
 
 
@@ -40,13 +46,12 @@
         {
             display: block;
 
+            height: 190px;
             margin: -1px;
 
             border: 1px solid var(--border_color);
             border-radius: var(--border_radius);
             background: var(--secondary_color);
-
-            aspect-ratio: 1 / .595;
         }
 
 

@@ -115,7 +115,7 @@
 
             min-height: 60px;
             padding-block: 6px;
-            padding-inline: 60px 17px;
+            padding-inline: 60px var(--inner_gap_s);
 
             font-size: var(--font_size_l);
             font-weight: 500;
@@ -374,7 +374,7 @@
             letter-spacing: -.54px;
 
             color: var(--light_color);
-            border-radius: 10px;
+            border-radius: var(--border_radius_xs);
             background: rgba(0, 0, 0, .50);
 
                     backdrop-filter: blur(27.25px);

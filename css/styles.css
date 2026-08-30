@@ -44,13 +44,15 @@
     --inner_gap_l: 24px;
     --inner_gap: 20px;
     --inner_gap_s: 16px;
+    --inner_gap_m: 10px;
     --inner_gap_xs: 12px;
     --inner_gap_xxs: 8px;
     --border_radius_max: 100px;
     --border_radius_xl: 50px;
     --border_radius_l: 40px;
     --border_radius: 20px;
-    --border_radius_s: 12px;
+    --border_radius_s: 15px;
+    --border_radius_xs: 10px;
     --zero_px: calc(0 * 1px);
 }
 
@@ -227,6 +229,12 @@ button
     &.l_pad_bottom
     {
         padding-bottom: calc(var(--outside_gap) + var(--outside_gap_s));
+    }
+
+
+    &.no_pad_bottom
+    {
+        padding-bottom: 0;
     }
 
 
@@ -1325,7 +1333,7 @@ header
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 10px;
+        gap: var(--inner_gap_m);
 
 
         a
@@ -1829,7 +1837,7 @@ footer
             min-height: 60px;
             margin-top: var(--block_padding);
             padding-block: 6px;
-            padding-inline: 60px 17px;
+            padding-inline: 60px var(--inner_gap_s);
 
             font-size: var(--font_size_l);
             font-weight: 500;
@@ -1922,7 +1930,7 @@ footer
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 10px;
+        gap: var(--inner_gap_m);
 
 
         a

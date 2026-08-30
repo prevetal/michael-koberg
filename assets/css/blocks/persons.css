@@ -5,6 +5,12 @@
 {
     .block_head
     {
+        &.no_m
+        {
+            padding-bottom: var(--inner_gap);
+        }
+
+
         &.row
         {
             .col
@@ -249,8 +255,8 @@
 
         width: 100%;
         margin-top: 43px;
-        padding-block: 10px;
-        padding-inline: 34px 10px;
+        padding-block: var(--inner_gap_m);
+        padding-inline: 34px var(--inner_gap_m);
 
         color: var(--light_color);
         border-radius: var(--border_radius_max);
