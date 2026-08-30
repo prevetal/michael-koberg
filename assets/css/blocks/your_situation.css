@@ -1,0 +1,156 @@
+/*--------------------
+    Your situation
+--------------------*/
+.your_situation
+{
+    .grid_row
+    {
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        padding: var(--inner_gap) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap);
+
+        border: 1px solid var(--border_color);
+        border-radius: 15px;
+        background: var(--light_color);
+
+
+        &.primary
+        {
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+            .label
+            {
+                background: linear-gradient(273deg, #194c4d 7.69%, var(--secondary_color) 97.75%);
+            }
+
+
+            .name
+            {
+                color: var(--light_color);
+            }
+
+
+            .desc
+            {
+                color: #c8c8c8;
+            }
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border-radius: 50%;
+            background: #12343b;
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .label
+        {
+            width: fit-content;
+            margin-bottom: var(--inner_gap_xxs);
+            padding-block: 6px;
+            padding-inline: var(--inner_gap_s);
+
+            line-height: 135%;
+
+            color: var(--light_color);
+            border-radius: 30px;
+            background: linear-gradient(94deg, #194c4d 17.16%, var(--secondary_color) 101.63%);
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 120%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            width: 352px;
+            max-width: 100%;
+            padding-bottom: var(--inner_gap);
+
+            font-size: var(--font_size_l);
+            line-height: 130%;
+            letter-spacing: -.54px;
+
+            color: var(--grey_color_strong);
+
+
+            &.l_w
+            {
+                width: 100%;
+            }
+        }
+
+
+        .btn
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: fit-content;
+            height: 60px;
+            margin-top: auto;
+            padding-inline: var(--inner_gap_xl);
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            text-align: center;
+            text-decoration: none;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_l);
+            background: var(--primary_color);
+        }
+    }
+}

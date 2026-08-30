@@ -3,13 +3,6 @@
 -----------*/
 .about
 {
-    margin-top: -105px;
-    padding-block: 197px var(--outside_gap_s);
-
-    border-radius: 0 0 var(--border_radius_l) var(--border_radius_l);
-    background: var(--bg_grey);
-
-
     .cont
     {
         display: flex;
@@ -52,10 +45,6 @@
 {
     .about
     {
-        margin-top: -80px;
-        padding-block: 140px var(--outside_gap_s);
-
-
         .cont
         {
             gap: var(--block_padding_l);
@@ -85,10 +74,6 @@
 {
     .about
     {
-        margin-top: 0;
-        padding-block: var(--outside_gap_s);
-
-
         .title
         {
             width: 100%;

@@ -3,16 +3,36 @@
 -----------*/
 .steps
 {
-    margin-top: calc(var(--outside_gap_s) * -1);
-    padding-block: var(--outside_gap) calc(var(--outside_gap) + 50px);
+    overflow: clip;
 
-    color: var(--light_color);
-    border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
-    background: var(--secondary_color);
+
+    &:before
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 798px;
+        height: 745px;
+
+        content: '';
+        transform: translate(-48.872%, -33.154%);
+        pointer-events: none;
+
+        background: rgba(59, 191, 168, .20);
+
+        filter: blur(200px);
+    }
 
 
     .cont
     {
+        position: relative;
+        z-index: 3;
+
         display: flex;
         align-content: flex-start;
         align-items: flex-start;
@@ -153,13 +173,24 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 gap: var(--inner_gap_s);
+
+
+                .desc
+                {
+                    width: calc(100% - 320px - var(--inner_gap_l));
+                }
+
+
+                .exp
+                {
+                    width: 320px;
+                    max-width: 100%;
+                }
             }
 
 
             .desc
             {
-                width: calc(100% - 320px - var(--inner_gap_l));
-
                 font-size: var(--font_size_l);
                 line-height: 135%;
             }
@@ -167,8 +198,6 @@
 
             .exp
             {
-                width: 320px;
-                max-width: 100%;
                 padding: var(--inner_gap_s);
 
                 font-size: calc(var(--font_size) - 1px);
@@ -177,6 +206,28 @@
                 border: 1px solid #2e5760;
                 border-radius: 10px;
                 background: linear-gradient(90deg, var(--secondary_color) 0%, #174648 100%);
+            }
+
+
+            .bottom
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                margin-top: var(--inner_gap_l);
+
+                column-gap: var(--block_padding);
+                row-gap: var(--inner_gap);
+
+
+                .label
+                {
+                    font-size: var(--font_size_l);
+                    line-height: 135%;
+                }
             }
 
 
@@ -301,23 +352,31 @@
 
             .item
             {
+                &:after
+                {
+                    height: calc(100% + var(--block_padding_l));
+                }
+
+
                 .name
                 {
                     font-size: var(--font_size);
                 }
 
 
-                .desc
+                .row
                 {
-                    width: 100%;
-
-                    font-size: var(--font_size);
+                    .desc,
+                    .exp
+                    {
+                        width: 100%;
+                    }
                 }
 
 
-                .exp
+                .desc
                 {
-                    width: 100%;
+                    font-size: var(--font_size);
                 }
 
 

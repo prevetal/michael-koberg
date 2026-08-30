@@ -5,9 +5,12 @@
 {
     .block_head
     {
-        .desc
+        &.row
         {
-            width: 511px;
+            .desc
+            {
+                width: 511px;
+            }
         }
     }
 
@@ -99,7 +102,7 @@
         .name
         {
             font-family: var(--font_family_secondary);
-            font-size: 23px;
+            font-size: var(--font_size_title_xs);
             font-weight: 600;
             line-height: 120%;
         }

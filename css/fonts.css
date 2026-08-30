@@ -54,6 +54,32 @@
 }
 
 
+@font-face
+{
+    font-family: 'Inter Tight';
+    font-weight: 500;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/InterTight-Medium.woff2') format('woff2'),
+    url('../fonts/InterTight-Medium.woff') format('woff'),
+    url('../fonts/InterTight-Medium.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Inter Tight';
+    font-weight: 700;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/InterTight-Bold.woff2') format('woff2'),
+    url('../fonts/InterTight-Bold.woff') format('woff'),
+    url('../fonts/InterTight-Bold.ttf') format('truetype');
+}
+
+
 
 @font-face
 {
@@ -65,6 +91,19 @@
     src: url('../fonts/WixMadeforDisplay-Regular.woff2') format('woff2'),
     url('../fonts/WixMadeforDisplay-Regular.woff') format('woff'),
     url('../fonts/WixMadeforDisplay-Regular.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Wix Madefor Display';
+    font-weight: 500;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/WixMadeforDisplay-Medium.woff2') format('woff2'),
+    url('../fonts/WixMadeforDisplay-Medium.woff') format('woff'),
+    url('../fonts/WixMadeforDisplay-Medium.ttf') format('truetype');
 }
 
 

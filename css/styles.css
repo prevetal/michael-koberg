@@ -22,6 +22,7 @@
     --dark_color: #1d1d1d;
     --light_color: #fff;
     --grey_color: #7d7d7d;
+    --grey_color_strong: #404040;
     --font_size_xl: 20px;
     --font_size_l: 18px;
     --font_size: 16px;
@@ -30,6 +31,7 @@
     --font_size_title_l: 55px;
     --font_size_title: 45px;
     --font_size_title_s: 25px;
+    --font_size_title_xs: 23px;
     --font_family_primary: 'Inter', 'Arial', sans-serif;
     --font_family_secondary: 'Wix Madefor Display', 'Arial', sans-serif;
     --font_family_tertiary: 'Inter Tight', 'Arial', sans-serif;
@@ -159,6 +161,9 @@ button
 
 .block
 {
+    position: relative;
+    z-index: 3;
+
     margin-bottom: var(--outside_gap);
 
 
@@ -171,6 +176,63 @@ button
     &.no_m
     {
         margin-bottom: 0;
+    }
+
+
+    &.bg_light
+    {
+        padding-block: var(--outside_gap);
+
+        background: var(--bg);
+    }
+
+
+    &.bg_grey
+    {
+        padding-block: var(--outside_gap);
+
+        background: var(--bg_grey);
+    }
+
+
+    &.bg_secondary
+    {
+        padding-block: var(--outside_gap);
+
+        color: var(--light_color);
+        background: var(--secondary_color);
+    }
+
+
+    &.radius
+    {
+        border-radius: var(--border_radius_xl);
+    }
+
+
+    &.radius_top
+    {
+        border-top-left-radius: var(--border_radius_xl);
+        border-top-right-radius: var(--border_radius_xl);
+    }
+
+
+    &.radius_bottom
+    {
+        border-bottom-right-radius: var(--border_radius_xl);
+        border-bottom-left-radius: var(--border_radius_xl);
+    }
+
+
+    &.l_pad_bottom
+    {
+        padding-bottom: calc(var(--outside_gap) + var(--outside_gap_s));
+    }
+
+
+    &.top_indent
+    {
+        margin-top: calc(var(--outside_gap_s) * -1);
     }
 }
 
@@ -344,7 +406,7 @@ img.cover
         font-size: var(--font_size_l);
         line-height: 130%;
 
-        color: #404040;
+        color: var(--grey_color_strong);
 
 
         & > * + *

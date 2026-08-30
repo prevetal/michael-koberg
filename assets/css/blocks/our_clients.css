@@ -3,28 +3,22 @@
 -----------------*/
 .our_clients
 {
-    &.bg
-    {
-        padding-block: var(--outside_gap) calc(var(--outside_gap) + var(--outside_gap_s));
-
-        border-radius: var(--border_radius_l) var(--border_radius_l) 0 0;
-        background: var(--bg_grey);
-    }
-
-
     .block_head
     {
-        .col
+        &.row
         {
-            width: 826px;
-        }
+            .col
+            {
+                width: 826px;
+            }
 
 
-        .desc
-        {
-            width: 620px;
+            .desc
+            {
+                width: 620px;
 
-            font-family: var(--font_family_tertiary);
+                font-family: var(--font_family_tertiary);
+            }
         }
     }
 
@@ -197,7 +191,7 @@
         .name
         {
             font-family: var(--font_family_secondary);
-            font-size: 23px;
+            font-size: var(--font_size_title_xs);
             font-weight: 600;
             line-height: 110%;
 
@@ -215,7 +209,7 @@
 
             &.color2
             {
-                color: #404040;
+                color: var(--grey_color_strong);
             }
         }
 
@@ -363,9 +357,12 @@
     {
         .block_head
         {
-            .desc
+            &.row
             {
-                width: 324px;
+                .desc
+                {
+                    width: 324px;
+                }
             }
         }
     }

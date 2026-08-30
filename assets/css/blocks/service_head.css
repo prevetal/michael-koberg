@@ -3,16 +3,10 @@
 ------------------*/
 .service_head
 {
-    position: relative;
-
-    overflow: hidden;
+    overflow: clip;
 
     margin-bottom: var(--block_padding);
-    padding-block: 132px 56px;
-
-    color: var(--light_color);
-    border-radius: 0 0 var(--border_radius_xl) var(--border_radius_xl);
-    background: var(--secondary_color);
+    padding-block: 131px 56px !important;
 
 
     &:after
@@ -26,9 +20,9 @@
 
         width: 882px;
         height: 615px;
-        margin-left: -1409px;
 
         content: '';
+        transform: translateX(-1409px);
         pointer-events: none;
 
         border-radius: 882px;

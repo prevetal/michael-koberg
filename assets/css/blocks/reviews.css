@@ -3,12 +3,6 @@
 -------------*/
 .reviews
 {
-    padding-block: var(--outside_gap);
-
-    border-radius: var(--border_radius_xl) var(--border_radius_xl) 0 0;
-    background: var(--bg_grey);
-
-
     .cont
     {
         display: flex;
@@ -27,11 +21,25 @@
         margin-bottom: 0;
 
 
+        &.l_w
+        {
+            width: 418px;
+        }
+
+
         .pre_title
         {
             order: 3;
 
             margin-top: auto;
+        }
+
+
+        .desc
+        {
+            width: 377px;
+
+            font-family: var(--font_family_tertiary);
         }
     }
 
@@ -115,7 +123,7 @@
         min-height: 320px;
         padding: var(--inner_gap_l);
 
-        border: 1px solid var(--border_radius);
+        border: 1px solid var(--border_color);
         border-radius: var(--border_radius);
         background: var(--light_color);
 
@@ -156,7 +164,7 @@
         .author
         {
             font-family: var(--font_family_secondary);
-            font-size: 23px;
+            font-size: var(--font_size_title_xs);
             font-weight: 600;
             line-height: 110%;
 
@@ -191,7 +199,7 @@
             font-size: var(--font_size_l);
             line-height: 135%;
 
-            color: #404040;
+            color: var(--grey_color_strong);
         }
     }
 
@@ -213,6 +221,22 @@
         color: var(--light_color);
         border-radius: var(--border_radius_max);
         background: var(--secondary_color);
+
+
+        &.view2
+        {
+            padding: var(--inner_gap_xl);
+
+            border-radius: var(--border_radius);
+            background: linear-gradient(90deg, #194b4d 0%, #14393f 100%);
+
+
+            .label
+            {
+                width: auto;
+                max-width: calc(100% - 234px - var(--inner_gap_xl));
+            }
+        }
 
 
         .label

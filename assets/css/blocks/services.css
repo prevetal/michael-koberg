@@ -5,9 +5,12 @@
 {
     .block_head
     {
-        .desc
+        &.row
         {
-            width: 511px;
+            .desc
+            {
+                width: 511px;
+            }
         }
     }
 
@@ -300,9 +303,12 @@
     {
         .block_head
         {
-            .desc
+            &.row
             {
-                width: 380px;
+                .desc
+                {
+                    width: 380px;
+                }
             }
         }
 
@@ -412,9 +418,12 @@
     {
         .block_head
         {
-            .desc
+            &.row
             {
-                width: 100%;
+                .desc
+                {
+                    width: 100%;
+                }
             }
         }
 

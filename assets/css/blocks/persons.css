@@ -3,29 +3,22 @@
 -------------*/
 .persons
 {
-    position: relative;
-    z-index: 3;
-
-    margin-top: -50px;
-    padding-top: var(--outside_gap);
-
-    border-radius: var(--border_radius_xl) var(--border_radius_xl) 0 0;
-    background: var(--bg);
-
-
     .block_head
     {
-        .col
+        &.row
         {
-            width: 826px;
-        }
+            .col
+            {
+                width: 826px;
+            }
 
 
-        .desc
-        {
-            width: 620px;
+            .desc
+            {
+                width: 620px;
 
-            font-family: var(--font_family_tertiary);
+                font-family: var(--font_family_tertiary);
+            }
         }
     }
 
@@ -158,7 +151,7 @@
                 font-size: var(--font_size_l);
                 line-height: 130%;
 
-                color: #404040;
+                color: var(--grey_color_strong);
             }
 
 
@@ -264,6 +257,24 @@
         background: var(--secondary_color);
 
 
+        &.view2
+        {
+            flex-wrap: nowrap;
+            gap: var(--block_padding);
+
+            padding: 30px;
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+
         .label
         {
             width: 866px;
@@ -286,6 +297,7 @@
             letter-spacing: -.36px;
 
             transition: .2s linear;
+            white-space: nowrap;
 
             color: var(--secondary_color);
             border-radius: var(--border_radius_max);
@@ -314,9 +326,12 @@
     {
         .block_head
         {
-            .desc
+            &.row
             {
-                width: 500px;
+                .desc
+                {
+                    width: 500px;
+                }
             }
         }
 
@@ -529,6 +544,12 @@
             padding: var(--inner_gap);
 
             border-radius: var(--border_radius);
+
+
+            .view2
+            {
+                flex-wrap: wrap;
+            }
 
 
             .label

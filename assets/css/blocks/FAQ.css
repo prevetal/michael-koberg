@@ -5,15 +5,18 @@
 {
     .block_head
     {
-        .col
+        &.row
         {
-            width: 620px;
-        }
+            .col
+            {
+                width: 620px;
+            }
 
 
-        .desc
-        {
-            font-family: var(--font_family_tertiary);
+            .desc
+            {
+                font-family: var(--font_family_tertiary);
+            }
         }
     }
 }
