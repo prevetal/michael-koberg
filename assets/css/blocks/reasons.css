@@ -173,3 +173,187 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .reasons
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 752px;
+                }
+
+
+                .title
+                {
+                    width: 580px;
+                }
+            }
+        }
+
+
+        .list
+        {
+            .item
+            {
+                padding: var(--inner_gap_l);
+
+
+                .name
+                {
+                    width: 300px;
+                }
+
+
+                .desc
+                {
+                    width: calc(100% - 340px);
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+
+
+            .label
+            {
+                width: calc(100% - 312px - var(--inner_gap_xl));
+                max-width: calc(100% - 312px - var(--inner_gap_xl));
+
+                font-size: var(--font_size);
+            }
+
+
+            .btn
+            {
+                height: 56px;
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .reasons
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 568px;
+                }
+
+
+                .title,
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .list
+        {
+            .item
+            {
+                .name
+                {
+                    width: 260px;
+                }
+
+
+                .desc
+                {
+                    width: calc(100% - 300px);
+                }
+            }
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .reasons
+    {
+        .list
+        {
+            .item
+            {
+                padding: var(--inner_gap);
+
+
+                .name
+                {
+                    width: 100%;
+                }
+
+
+                .desc
+                {
+                    width: 100%;
+                    margin-top: var(--inner_gap_s);
+
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .action
+        {
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
+
+                text-align: center;
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .btn
+            {
+                width: 100%;
+            }
+        }
+    }
+}

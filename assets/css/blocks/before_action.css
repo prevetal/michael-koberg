@@ -232,3 +232,200 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .before_action
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    width: 700px;
+                }
+
+
+                .desc
+                {
+                    width: 704px;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .name
+            {
+                width: calc(100% - 40px);
+
+                font-size: var(--font_size);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            &.l_w
+            {
+                .name
+                {
+                    width: 224px;
+                }
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+
+            .label
+            {
+                width: 360px;
+                max-width: calc(100% - 246px - var(--inner_gap_xl));
+
+                font-size: var(--font_size);
+            }
+
+
+            .whatsapp_link
+            {
+                min-height: 56px;
+                padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
+
+
+                .icon
+                {
+                    width: 46px;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .before_action
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 460px;
+                }
+
+
+                .title,
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .item
+        {
+            &.l_w
+            {
+                --width_multiplier: 1;
+            }
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .before_action
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .action
+        {
+            padding: var(--inner_gap);
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
+
+                text-align: center;
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .whatsapp_link
+            {
+                width: 100%;
+            }
+        }
+    }
+}

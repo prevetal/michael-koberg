@@ -176,3 +176,143 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .how_we_help
+    {
+        .data
+        {
+            width: 360px;
+
+
+            .info
+            {
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .btn
+                {
+                    height: 56px;
+                    margin-top: var(--inner_gap_xs);
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .items
+        {
+            width: calc(100% - 400px);
+
+
+            .item
+            {
+                .number,
+                .name,
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .how_we_help
+    {
+        .data
+        {
+            width: 100%;
+            margin-bottom: var(--inner_gap_l);
+
+
+            .block_head
+            {
+                .pre_title
+                {
+                    margin-bottom: var(--inner_gap_s);
+                }
+            }
+        }
+
+
+        .items
+        {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .how_we_help
+    {
+        .data
+        {
+            .block_head
+            {
+                .pre_title
+                {
+                    margin-bottom: 0;
+                }
+            }
+
+
+            .info
+            {
+                .desc
+                {
+                    font-size: 15px;
+                }
+
+
+                .btn
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .items
+        {
+            width: 100%;
+
+
+            .item
+            {
+                .number
+                {
+                    & + *
+                    {
+                        width: 100%;
+                        margin-top: var(--inner_gap_s);
+                    }
+                }
+
+
+                .number,
+                .name,
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

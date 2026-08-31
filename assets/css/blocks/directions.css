@@ -639,6 +639,13 @@
                 text-align: center;
 
 
+                &.l_w
+                {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+
                 br
                 {
                     display: none;

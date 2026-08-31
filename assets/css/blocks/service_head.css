@@ -285,8 +285,12 @@
     {
         .data
         {
-            width: calc(100% - 416px - var(--block_padding));
-            padding-top: 0;
+            &,
+            &.l_w
+            {
+                width: calc(100% - 416px - var(--block_padding));
+                padding-top: 0;
+            }
 
 
             .desc
@@ -336,7 +340,11 @@
 
         .image
         {
-            width: 416px;
+            &,
+            &.s_w
+            {
+                width: 416px;
+            }
         }
     }
 }

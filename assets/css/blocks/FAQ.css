@@ -28,6 +28,7 @@
         align-items: flex-end;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: var(--inner_gap);
 
         margin-top: var(--block_padding_l);
 
@@ -44,6 +45,33 @@
 
             color: currentColor;
             border-bottom: 1px solid;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .FAQ
+    {
+        .bottom
+        {
+            font-size: var(--font_size);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .FAQ
+    {
+        .bottom
+        {
+            font-size: 15px;
         }
     }
 }

@@ -299,6 +299,12 @@
         {
             width: 280px;
             min-height: 280px;
+
+
+            &.l_w
+            {
+                width: 296px;
+            }
         }
 
 
@@ -343,6 +349,18 @@
             padding-inline: var(--block_padding) var(--inner_gap_xxs);
 
 
+            &.view2
+            {
+                padding: var(--inner_gap);
+
+
+                .label
+                {
+                    max-width: calc(100% - 193px - var(--inner_gap_xl));
+                }
+            }
+
+
             .label
             {
                 max-width: calc(100% - 220px - var(--inner_gap_l));
@@ -376,14 +394,25 @@
             margin-bottom: var(--block_head_offset);
 
 
+            &.l_w
+            {
+                width: 100%;
+            }
+
+
             .pre_title
             {
                 order: 0;
 
                 margin-top: 0;
             }
-        }
 
+
+            .desc
+            {
+                width: 100%;
+            }
+        }
 
 
         .slider
