@@ -282,3 +282,256 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .work_situations
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    width: 640px;
+                }
+
+
+                .desc
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .data
+        {
+            .items_large
+            {
+                width: calc(100% - 348px - var(--inner_gap_s));
+            }
+
+
+            .items_small
+            {
+                width: 348px;
+            }
+
+
+            .item
+            {
+                .image
+                {
+                    width: 189px;
+                }
+
+
+                .info
+                {
+                    width: calc(100% - 187px);
+                }
+
+
+                .name
+                {
+                    font-size: var(--font_size_l);
+                }
+
+
+                .label,
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .link
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .items_large &
+                {
+                    padding: var(--inner_gap_l);
+                }
+            }
+        }
+
+
+        .we_dont_do
+        {
+            margin-top: var(--block_padding);
+            padding: var(--inner_gap_l);
+
+
+            .info
+            {
+                width: 300px;
+
+
+                .title
+                {
+                    font-size: 28px;
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+
+
+            .items
+            {
+                max-width: calc(100% - 300px - var(--block_padding));
+
+
+                .item
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .work_situations
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .data
+        {
+            .items_large,
+            .items_small
+            {
+                width: 100%;
+            }
+        }
+
+
+        .we_dont_do
+        {
+            padding: var(--inner_gap);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .work_situations
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .data
+        {
+            .item
+            {
+                .items_large &
+                {
+                    padding: var(--inner_gap);
+                }
+
+
+                .info
+                {
+                    width: 100%;
+                }
+
+
+                .name
+                {
+                    font-size: var(--font_size);
+
+                    border-radius: var(--border_radius);
+                }
+
+
+                .label,
+                .desc
+                {
+                    font-size: 15px;
+                }
+
+
+                .image
+                {
+                    position: relative;
+                    inset: auto;
+
+                    width: calc(100% + 2px + var(--inner_gap) * 2);
+                    height: 198px;
+                    margin-block: 0 calc(var(--inner_gap) * -1 - 1px);
+                    margin-inline: calc(var(--inner_gap) * -1 - 1px);
+                }
+            }
+        }
+
+
+        .we_dont_do
+        {
+            .info
+            {
+                width: 100%;
+                margin-bottom: var(--inner_gap_xl);
+
+
+                .title
+                {
+                    font-size: var(--font_size_title);
+                }
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+
+
+            .items
+            {
+                width: 100%;
+                max-width: 100%;
+
+
+                .item
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

@@ -553,12 +553,24 @@
             }
 
 
+            .label
+            {
+                font-size: var(--font_size);
+            }
+
+
             .whatsapp_link
             {
                 min-height: 56px;
                 padding-inline: 64px var(--inner_gap_s);
 
                 font-size: var(--font_size);
+
+
+                .label + &
+                {
+                    margin-top: var(--inner_gap);
+                }
 
 
                 .icon
@@ -716,6 +728,12 @@
             }
 
 
+            .label
+            {
+                font-size: var(--font_size_s);
+            }
+
+
             .whatsapp_link
             {
                 width: 100%;
@@ -727,6 +745,9 @@
         {
             .item
             {
+                padding: var(--inner_gap);
+
+
                 .desc
                 {
                     font-size: var(--font_size_s);

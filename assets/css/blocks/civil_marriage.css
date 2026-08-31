@@ -269,3 +269,252 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .civil_marriage
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    width: 700px;
+                }
+
+
+                .desc
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .text_block
+        {
+            font-size: var(--font_size);
+        }
+
+
+        .data
+        {
+            .info
+            {
+                .title
+                {
+                    font-size: 28px;
+                }
+
+
+                .items
+                {
+                    .item
+                    {
+                        font-size: var(--font_size);
+                    }
+                }
+            }
+
+
+            .important
+            {
+                gap: var(--inner_gap);
+
+                padding: var(--inner_gap_l);
+
+
+                .title
+                {
+                    font-size: 28px;
+                }
+
+
+                .desc
+                {
+                    gap: var(--inner_gap);
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+
+            .label
+            {
+                width: 360px;
+                max-width: calc(100% - 246px - var(--inner_gap_xl));
+
+                font-size: var(--font_size);
+            }
+
+
+            .whatsapp_link
+            {
+                min-height: 56px;
+                padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
+
+
+                .icon
+                {
+                    width: 46px;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .civil_marriage
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+
+
+                .title,
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .data
+        {
+            --items_per_line: 1;
+
+
+            .info
+            {
+                .items
+                {
+                    gap: var(--inner_gap_m);
+                }
+            }
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .civil_marriage
+    {
+        .text_block
+        {
+            font-size: 15px;
+
+            --items_per_line: 1;
+        }
+
+
+        .data
+        {
+            .info
+            {
+                .title
+                {
+                    font-size: var(--font_size_title);
+                }
+
+
+                .items
+                {
+                    .item
+                    {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+
+            .important
+            {
+                .title
+                {
+                    font-size: var(--font_size_title);
+                }
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .action
+        {
+            padding: var(--inner_gap);
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
+
+                text-align: center;
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .whatsapp_link
+            {
+                width: 100%;
+            }
+        }
+    }
+}
