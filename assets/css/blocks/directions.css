@@ -37,6 +37,10 @@
 
     .item
     {
+        display: flex;
+        flex-direction: column;
+
+
         .name
         {
             width: fit-content;
@@ -63,6 +67,7 @@
             display: flex;
             align-content: stretch;
             align-items: stretch;
+            flex: 1 0 auto;
             flex-wrap: wrap;
             justify-content: flex-start;
         }
@@ -380,6 +385,270 @@
 
                     background: #e7f7bb;
                 }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .directions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    width: 480px;
+
+
+                    &.l_w
+                    {
+                        width: 580px;
+                    }
+                }
+
+
+                .desc
+                {
+                    width: 568px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .item
+        {
+            .name
+            {
+                margin-bottom: -98px;
+                padding-block: var(--inner_gap_xs) 110px;
+            }
+
+
+            .data
+            {
+                padding: var(--inner_gap_l);
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .for_whom
+                {
+                    .label,
+                    .item
+                    {
+                        font-size: var(--font_size);
+                    }
+                }
+
+
+                .link
+                {
+                    height: 56px;
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+
+            .label
+            {
+                width: 360px;
+                max-width: calc(100% - 246px - var(--inner_gap_xl));
+
+                font-size: var(--font_size);
+            }
+
+
+            .whatsapp_link
+            {
+                min-height: 56px;
+                padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
+
+
+                .icon
+                {
+                    width: 46px;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .directions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .desc
+                {
+                    width: 460px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .directions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .title
+                {
+                    &,
+                    &.l_w
+                    {
+                        width: 100%;
+                    }
+                }
+
+
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .name
+            {
+                width: 100%;
+                min-width: 0;
+                padding-inline: var(--inner_gap);
+            }
+
+
+            .data
+            {
+                width: 100%;
+                padding-block: var(--inner_gap) calc(var(--block_padding_l) + var(--inner_gap));
+                padding-inline: var(--inner_gap);
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+
+
+                .for_whom
+                {
+                    .label,
+                    .item
+                    {
+                        font-size: 15px;
+                    }
+                }
+
+
+                .link
+                {
+                    width: 100%;
+                }
+            }
+
+
+            .image
+            {
+                width: 100%;
+                margin-top: -32px;
+
+                aspect-ratio: 1 / .607;
+            }
+        }
+
+
+        .action
+        {
+            padding: var(--inner_gap);
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
+
+                text-align: center;
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .whatsapp_link
+            {
+                width: 100%;
             }
         }
     }

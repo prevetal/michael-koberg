@@ -459,6 +459,19 @@
             border-radius: var(--border_radius);
 
 
+            &.view2
+            {
+                flex-wrap: wrap;
+
+
+                .label
+                {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+
             .label
             {
                 width: 100%;

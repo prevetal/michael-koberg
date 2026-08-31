@@ -652,12 +652,7 @@
 
         .btns
         {
-            .whatsapp_link
-            {
-                width: 100%;
-            }
-
-
+            .whatsapp_link,
             .btn
             {
                 width: 100%;

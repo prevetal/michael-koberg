@@ -44,8 +44,8 @@
     --inner_gap_l: 24px;
     --inner_gap: 20px;
     --inner_gap_s: 16px;
-    --inner_gap_m: 10px;
     --inner_gap_xs: 12px;
+    --inner_gap_m: 10px;
     --inner_gap_xxs: 8px;
     --border_radius_max: 100px;
     --border_radius_xl: 50px;
@@ -2040,12 +2040,23 @@ footer
         --font_size_title_l: 44px;
         --font_size_title: 36px;
         --font_size_title_s: 22px;
+        --font_size_title_xs: 20px;
         --block_padding_l: 40px;
         --block_padding: 30px;
         --outside_gap: 80px;
         --border_radius_xl: 40px;
         --border_radius_l: 30px;
         --border_radius_s: 10px;
+    }
+
+
+
+    /*-----------------
+        Breadcrumbs
+    -----------------*/
+    .breadcrumbs
+    {
+        font-size: var(--font_size_s);
     }
 
 
@@ -2386,6 +2397,7 @@ footer
         --font_size_title_l: 32px;
         --font_size_title: 25px;
         --font_size_title_s: 18px;
+        --font_size_title_xs: 18px;
         --block_padding_l: 32px;
         --block_padding: 28px;
         --outside_gap: 60px;

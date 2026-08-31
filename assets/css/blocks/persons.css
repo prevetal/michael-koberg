@@ -469,6 +469,15 @@
 {
     .persons
     {
+        .block_head
+        {
+            &.no_m
+            {
+                padding-bottom: 0;
+            }
+        }
+
+
         .swiper
         {
             display: flex;
@@ -552,7 +561,7 @@
             border-radius: var(--border_radius);
 
 
-            .view2
+            &.view2
             {
                 flex-wrap: wrap;
             }
@@ -579,6 +588,8 @@
             .btn
             {
                 width: 100%;
+
+                white-space: normal;
             }
         }
     }

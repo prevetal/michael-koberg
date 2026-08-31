@@ -255,3 +255,147 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    .service_head
+    {
+        .data
+        {
+            width: calc(100% - 583px - var(--block_padding));
+        }
+
+
+        .image
+        {
+            width: 583px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .service_head
+    {
+        .data
+        {
+            width: calc(100% - 416px - var(--block_padding));
+            padding-top: 0;
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .btns
+            {
+                gap: var(--inner_gap_xs);
+
+
+                .whatsapp_link
+                {
+                    min-height: 56px;
+                    padding-inline: 64px var(--inner_gap_s);
+
+                    font-size: var(--font_size);
+
+
+                    .icon
+                    {
+                        width: 46px;
+                        min-width: 46px;
+                        height: 46px;
+                    }
+
+
+                    span
+                    {
+                        padding-inline: 0;
+                    }
+                }
+
+
+                .btn
+                {
+                    height: 56px;
+                    padding-inline: var(--inner_gap_l);
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .image
+        {
+            width: 416px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .service_head
+    {
+        padding-block: 120px 0 !important;
+
+
+        .data
+        {
+            width: 100%;
+
+
+            .desc
+            {
+                width: 100%;
+            }
+        }
+
+
+        .image
+        {
+            width: calc(100% + var(--cont_padding_double));
+            max-width: calc(100% + var(--cont_padding_double));
+            margin-inline: calc(var(--cont_padding) * -1);
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .service_head
+    {
+        .data
+        {
+            .desc
+            {
+                line-height: 140%;
+            }
+
+
+            .btns
+            {
+                .whatsapp_link,
+                .btn
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

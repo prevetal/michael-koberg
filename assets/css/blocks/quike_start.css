@@ -126,3 +126,182 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .quike_start
+    {
+        .block_head
+        {
+            &.row
+            {
+                .desc
+                {
+                    width: 452px;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .icon
+            {
+                width: 45px;
+                padding: 10px;
+            }
+
+
+            .btn
+            {
+                height: 56px;
+                padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .quike_start
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 548px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .item
+        {
+            .icon
+            {
+                width: 45px;
+                padding: 10px;
+            }
+
+
+            .btn
+            {
+                height: 56px;
+                padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .quike_start
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 286px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+
+
+        .item
+        {
+            min-height: 264px;
+
+
+            .number
+            {
+                padding-block: 4px;
+
+                font-size: var(--font_size_s);
+            }
+
+
+            .icon
+            {
+                width: 40px;
+                padding: 8px;
+            }
+
+
+
+            .btn
+            {
+                width: 100%;
+
+                font-size: 15px;
+            }
+        }
+    }
+}

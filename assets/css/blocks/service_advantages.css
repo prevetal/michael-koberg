@@ -61,3 +61,51 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .service_advantages
+    {
+        .item
+        {
+            gap: var(--inner_gap_s);
+
+            font-size: var(--font_size);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .service_advantages
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_y: var(--inner_gap_m);
+        }
+
+
+        .item
+        {
+            gap: var(--inner_gap_m);
+
+            padding: var(--inner_gap_s);
+
+            font-size: var(--font_size_s);
+            line-height: 140%;
+
+
+            .icon
+            {
+                width: 30px;
+                padding: 7px;
+            }
+        }
+    }
+}
