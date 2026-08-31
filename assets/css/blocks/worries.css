@@ -56,6 +56,25 @@
             background: var(--light_color);
 
 
+            &:after
+            {
+                position: absolute;
+                top: -1px;
+                right: -1px;
+
+                display: block;
+
+                width: 70px;
+
+                content: '';
+                pointer-events: none;
+
+                background: url(../../../images/bg_worries_corner.png) 0 0/100% 100% no-repeat, var(--bg_grey);
+
+                aspect-ratio: 1 / 1;
+            }
+
+
             &.l_w
             {
                 --width_multiplier: 2;
@@ -99,6 +118,7 @@
             .number
             {
                 position: absolute;
+                z-index: 2;
                 top: 0;
                 right: 0;
 
@@ -109,7 +129,8 @@
                 justify-content: center;
 
                 min-width: 40px;
-                padding: 6px 15px;
+                padding-block: 6px;
+                padding-inline: var(--inner_gap_s);
 
                 text-align: center;
 

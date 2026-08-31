@@ -44,6 +44,25 @@
         background: var(--bg_grey);
 
 
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_before_action_corner.png) 0 0/100% 100% no-repeat, var(--bg);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
         &.l_w
         {
             --width_multiplier: 1.333;
@@ -52,7 +71,7 @@
             .name
             {
                 width: 280px;
-                max-width: 100%;
+                max-width: calc(100% - 56px);
             }
         }
 
@@ -60,6 +79,7 @@
         .icon
         {
             position: absolute;
+            z-index: 2;
             top: 0;
             right: 0;
 
@@ -89,7 +109,7 @@
 
         .name
         {
-            width: calc(100% - var(--inner_gap));
+            width: calc(100% - 56px);
 
             font-family: var(--font_family_tertiary);
             font-size: var(--font_size_l);
@@ -260,14 +280,7 @@
 
         .item
         {
-            .name
-            {
-                width: calc(100% - 40px);
-
-                font-size: var(--font_size);
-            }
-
-
+            .name,
             .desc
             {
                 font-size: var(--font_size);

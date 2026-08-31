@@ -26,9 +26,34 @@
         background: var(--light_color);
 
 
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_your_situation_corner.png) 0 0/100% 100% no-repeat, var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
         &.primary
         {
             background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+            &:after
+            {
+                background-image: url(../../../images/bg_your_situation_corner_primary.png);
+            }
 
 
             .label
@@ -53,6 +78,7 @@
         .icon
         {
             position: absolute;
+            z-index: 2;
             top: 0;
             right: 0;
 
@@ -259,6 +285,12 @@
     {
         .item
         {
+            &:after
+            {
+                width: 54px;
+            }
+
+
             .icon
             {
                 width: 40px;

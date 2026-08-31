@@ -265,21 +265,22 @@
 
                 display: block;
 
-                width: 116px;
-                height: 90px;
+                width: 60px;
 
                 content: '';
                 pointer-events: none;
 
-                background: url(../../../images/bg_advantages_corner.svg) 0 0/100% 100% no-repeat;
+                background: url(../../../images/bg_advantages_corner.png) 0 0/100% 100% no-repeat, var(--bg);
+
+                aspect-ratio: 1 / 1;
             }
 
 
             .icon
             {
                 position: absolute;
-                top: 9px;
-                right: 20px;
+                top: 0;
+                right: 0;
 
                 display: flex;
                 align-content: center;

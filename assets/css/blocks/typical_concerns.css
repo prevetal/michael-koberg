@@ -47,6 +47,7 @@
         &:before
         {
             position: absolute;
+            z-index: 2;
             top: 50px;
             right: var(--inner_gap_xs);
 
@@ -65,9 +66,29 @@
         }
 
 
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 66px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_typical_concerns_corner.png) 0 0/100% 100% no-repeat, var(--bg);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
         .number
         {
             position: absolute;
+            z-index: 2;
             top: 0;
             right: 0;
 
@@ -268,11 +289,12 @@
         }
 
 
-        .item{
-            .desc
+        .item
         {
-            font-size: 15px;
-        }
+            .desc
+            {
+                font-size: 15px;
+            }
         }
     }
 }
