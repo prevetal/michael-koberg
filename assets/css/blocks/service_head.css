@@ -361,7 +361,11 @@
 
         .data
         {
-            width: 100%;
+            &,
+            &.l_w
+            {
+                width: 100%;
+            }
 
 
             .desc
@@ -373,10 +377,14 @@
 
         .image
         {
-            width: calc(100% + var(--cont_padding_double));
-            max-width: calc(100% + var(--cont_padding_double));
-            margin-inline: calc(var(--cont_padding) * -1);
-            margin-top: var(--block_padding_l);
+            &,
+            &.s_w
+            {
+                width: calc(100% + var(--cont_padding_double));
+                max-width: calc(100% + var(--cont_padding_double));
+                margin-inline: calc(var(--cont_padding) * -1);
+                margin-top: var(--block_padding_l);
+            }
         }
     }
 }
