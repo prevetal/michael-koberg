@@ -23,6 +23,10 @@
     <rect y="8" width="27" height="2" rx="1" fill="currentColor"></rect>
     <rect y="16" width="27" height="2" rx="1" fill="currentColor"></rect>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 12" id="ic_notice">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.125 1.66893e-06C0.826632 1.66893e-06 0.540485 0.118527 0.329506 0.329505C0.118528 0.540484 1.66893e-06 0.826632 1.66893e-06 1.125C1.66893e-06 1.42337 0.118528 1.70952 0.329506 1.9205C0.540485 2.13147 0.826632 2.25 1.125 2.25C1.42337 2.25 1.70952 2.13147 1.9205 1.9205C2.13147 1.70952 2.25 1.42337 2.25 1.125C2.25 0.826632 2.13147 0.540484 1.9205 0.329505C1.70952 0.118527 1.42337 1.66893e-06 1.125 1.66893e-06Z" fill="currentColor"></path>
+    <path d="M1.125 10.8501L1.125 4.8501" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" id="ic_star">
     <path d="M9.30101 0L11.4967 6.75749H18.6019L12.8536 10.9338L15.0493 17.6913L9.30101 13.515L3.55275 17.6913L5.74839 10.9338L0.000128746 6.75749H7.10537L9.30101 0Z" fill="currentColor"></path>
   </symbol>

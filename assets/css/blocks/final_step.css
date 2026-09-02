@@ -1,0 +1,374 @@
+/*----------------
+    Final step
+----------------*/
+.final_step
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 986px;
+            }
+
+
+            .desc
+            {
+                width: 828px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 4;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        padding: var(--inner_gap);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+
+
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_before_action_corner.png) 0 0/100% 100% no-repeat, var(--bg);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        &.l_w
+        {
+            --width_multiplier: 1.333;
+
+
+            .name
+            {
+                width: 280px;
+                max-width: calc(100% - 56px);
+            }
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border-radius: 50%;
+            background: var(--secondary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            width: calc(100% - 56px);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 135%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+        }
+    }
+
+
+    .check_advance
+    {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_s);
+
+        margin-top: var(--outside_gap);
+
+
+        .data
+        {
+            width: calc(100% - 541px - var(--inner_gap_s));
+
+
+            .block_head
+            {
+                gap: var(--inner_gap);
+
+                margin-bottom: var(--inner_gap_xl);
+
+
+                .title
+                {
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 110%;
+                }
+
+
+                .desc
+                {
+                    width: 670px;
+                }
+            }
+
+
+            .items
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+
+                & > *
+                {
+                    position: relative;
+
+                    display: flex;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    gap: var(--inner_gap_xs);
+
+                    padding-block: var(--inner_gap_m);
+                    padding-inline: var(--inner_gap_s);
+
+                    font-family: var(--font_family_tertiary);
+                    font-size: var(--font_size_l);
+                    line-height: 135%;
+
+                    color: #2f2f2f;
+                    border: 1px solid var(--border_color);
+                    border-radius: var(--border_radius_s);
+                    background: var(--light_color);
+                }
+
+
+                .icon
+                {
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    width: 19px;
+                    margin-block: 2px;
+
+                    color: var(--light_color);
+                    border-radius: 50%;
+                    background: var(--secondary_color);
+
+                    aspect-ratio: 1 / 1;
+
+
+                    img
+                    {
+                        display: block;
+
+                        width: 9px;
+                        height: 7px;
+                    }
+
+
+                    & + *
+                    {
+                        width: calc(100% - 19px - var(--inner_gap_xs));
+                    }
+                }
+            }
+        }
+
+
+        .image
+        {
+            display: block;
+
+            width: 541px;
+            max-width: 100%;
+
+            border-radius: var(--border_radius_s);
+            background: var(--bg_grey);
+        }
+    }
+
+
+    .action
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_xl);
+
+        width: fit-content;
+        margin-top: var(--block_padding_l);
+        padding-block: var(--inner_gap_m);
+        padding-inline: 34px var(--inner_gap_m);
+
+        color: var(--light_color);
+        border-radius: var(--border_radius_max);
+        background: var(--secondary_color);
+
+
+        .label
+        {
+            width: 598px;
+            max-width: calc(100% - 287px - var(--inner_gap_xl));
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+        }
+
+
+        .whatsapp_link
+        {
+            position: relative;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px var(--inner_gap_s);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            text-decoration: none;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_max);
+            background: var(--primary_color);
+
+
+            .icon
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 6px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 48px;
+                min-width: 48px;
+                height: 48px;
+                margin-block: auto;
+
+                transition: .2s linear;
+
+                color: var(--primary_color);
+                border-radius: 50%;
+                background: var(--secondary_color);
+
+
+                svg
+                {
+                    display: block;
+
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+
+            span
+            {
+                margin-inline: auto;
+                padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
+            }
+
+
+            @media (hover: hover) and (pointer: fine)
+            {
+                &:hover
+                {
+                    .icon
+                    {
+                        left: calc(100% - 54px);
+
+                        transform: rotate(360deg);
+                    }
+
+
+                    span
+                    {
+                        transform: translateX(-54px);
+                    }
+                }
+            }
+        }
+    }
+}
