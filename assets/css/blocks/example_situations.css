@@ -1,0 +1,206 @@
+/*------------------------
+    Example situations
+------------------------*/
+.example_situations
+{
+    .block_head
+    {
+        &.row
+        {
+            .title
+            {
+                width: 565px;
+            }
+        }
+    }
+
+
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        counter-reset: number;
+
+        grid-template-columns: 541px auto;
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        padding-block: var(--inner_gap_l) var(--inner_gap);
+        padding-inline: var(--inner_gap_l);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: var(--light_color);
+
+
+        &.l_h
+        {
+            grid-row: span 2;
+        }
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_example_situations_corner.png) 0 0/100% 100% no-repeat, var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border-radius: 50%;
+            background: var(--secondary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .number
+        {
+            width: fit-content;
+            margin-bottom: var(--inner_gap_m);
+            padding-block: 6px;
+            padding-inline: var(--inner_gap_s);
+
+            line-height: 135%;
+
+            color: var(--secondary_color);
+            border: 1px solid var(--border_color);
+            border-radius: 30px;
+            background: var(--bg_grey);
+
+
+            span
+            {
+                &:before
+                {
+                    content: counter(number);
+                    counter-increment: number;
+                }
+            }
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #404040;
+        }
+
+
+        .done
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            margin-top: 5px;
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #404040;
+
+
+            & > *
+            {
+                position: relative;
+
+                padding-left: 24px;
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+
+                    display: block;
+
+                    width: 12px;
+                    height: 10px;
+
+                    content: '';
+
+                    background: url(../images/ic_check.svg) 0 0/100% 100% no-repeat;
+                }
+            }
+        }
+    }
+
+
+    .exp
+    {
+        width: 519px;
+        max-width: 100%;
+        margin-top: var(--block_padding);
+
+        font-family: var(--font_family_tertiary);
+        font-size: var(--font_size_l);
+        line-height: 135%;
+
+        color: #7d7d7d;
+    }
+}

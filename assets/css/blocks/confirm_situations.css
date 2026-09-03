@@ -1,0 +1,143 @@
+/*------------------------
+    Confirm situations
+------------------------*/
+.confirm_situations
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 875px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        padding: var(--inner_gap_l);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: var(--light_color);
+
+
+        .head
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap_xl);
+
+
+            & > div
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_s);
+
+                width: calc(100% - 200px - var(--inner_gap_xl));
+            }
+        }
+
+
+        .image
+        {
+            display: block;
+
+            width: 200px;
+            max-width: 100%;
+            height: 113px;
+
+            border-radius: var(--border_radius_xs);
+            background: var(--bg_grey);
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: #10313d;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_s);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+
+            ol
+            {
+                counter-reset: li;
+
+
+                & > li
+                {
+                    position: relative;
+
+                    display: block;
+                    overflow: hidden;
+
+                    padding-left: 24px;
+
+                    list-style-type: none;
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        content: counter(li) '.';
+                        counter-increment: li;
+                    }
+                }
+            }
+        }
+
+
+        .btn
+        {
+            width: fit-content;
+            height: 59px;
+            margin-top: auto;
+            padding-inline: var(--inner_gap_l);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_l);
+            background: var(--primary_color);
+        }
+    }
+}

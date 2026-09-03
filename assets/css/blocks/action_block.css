@@ -82,6 +82,12 @@
         font-family: var(--font_family_tertiary);
         font-size: var(--font_size_l);
         line-height: 135%;
+
+
+        &.l_w
+        {
+            width: 624px;
+        }
     }
 
 

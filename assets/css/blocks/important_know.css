@@ -16,6 +16,12 @@
             .title
             {
                 width: 601px;
+
+
+                &.l_w
+                {
+                    width: 100%;
+                }
             }
 
 
@@ -29,6 +35,8 @@
 
     .grid_row
     {
+        counter-reset: number;
+
         --items_per_line: 2;
         --gap_x: var(--inner_gap_s);
         --gap_y: var(--inner_gap_s);
@@ -70,6 +78,12 @@
             background: var(--bg_grey);
 
 
+            &.s_w
+            {
+                width: 225px;
+            }
+
+
             &.right
             {
                 right: 0;
@@ -101,11 +115,24 @@
                 padding-right: 115px;
 
 
+                &.l_w
+                {
+                    width: 100%;
+                    padding-right: 245px;
+                }
+
+
                 &.right
                 {
                     margin-left: auto;
                     padding-right: var(--inner_gap_l);
                     padding-left: 115px;
+
+
+                    &.l_w
+                    {
+                        padding-left: 245px;
+                    }
                 }
             }
 
@@ -237,6 +264,7 @@
         .name
         {
             width: calc(100% - 50px - var(--inner_gap_l));
+            max-width: 100%;
 
             font-family: var(--font_family_secondary);
             font-size: var(--font_size_title_xs);
@@ -249,6 +277,27 @@
             .l_w &
             {
                 width: 100%;
+            }
+
+
+            &.s_w
+            {
+                width: 355px;
+            }
+
+
+            .number
+            {
+                white-space: nowrap;
+
+                color: #296668;
+
+
+                &:before
+                {
+                    content: counter(number, decimal-leading-zero) '/';
+                    counter-increment: number;
+                }
             }
         }
 
@@ -327,6 +376,25 @@
         color: var(--light_color);
         border-radius: var(--border_radius_max);
         background: var(--secondary_color);
+
+
+        &.view2
+        {
+            flex-wrap: nowrap;
+            gap: var(--block_padding);
+
+            width: 100%;
+            padding: var(--inner_gap_l);
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 700px;
+                max-width: 100%;
+            }
+        }
 
 
         .label

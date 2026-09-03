@@ -10,6 +10,12 @@
             .col
             {
                 width: 620px;
+
+
+                &.l_w
+                {
+                    width: 986px;
+                }
             }
 
 
@@ -37,6 +43,18 @@
         line-height: 135%;
 
         color: #7d7d7d;
+
+
+        .last_update
+        {
+            &.s_w
+            {
+                width: 275px;
+                max-width: 100%;
+
+                text-align: right;
+            }
+        }
 
 
         a
@@ -72,6 +90,17 @@
         .bottom
         {
             font-size: 15px;
+        }
+
+
+        .last_update
+        {
+            &.s_w
+            {
+                width: 100%;
+
+                text-align: left;
+            }
         }
     }
 }

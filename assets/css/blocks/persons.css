@@ -268,7 +268,7 @@
             flex-wrap: nowrap;
             gap: var(--block_padding);
 
-            padding: 30px;
+            padding: var(--inner_gap_xl);
 
             border-radius: var(--border_radius);
 
