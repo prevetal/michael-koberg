@@ -518,17 +518,26 @@
             margin-bottom: var(--block_head_offset);
 
 
-            .pre_title
+            .grid &
             {
-                position: relative;
+                width: 368px;
             }
 
 
-            .col
+            &.row
             {
-                gap: var(--inner_gap_xl);
+                .pre_title
+                {
+                    position: relative;
+                }
 
-                width: 760px;
+
+                .col
+                {
+                    gap: var(--inner_gap_xl);
+
+                    width: 760px;
+                }
             }
         }
 
@@ -537,6 +546,12 @@
         {
             width: 100%;
             margin-top: 0;
+
+
+            .grid &
+            {
+                width: calc(100% - 368px - var(--outside_gap_s));
+            }
 
 
             .item
@@ -572,6 +587,35 @@
                 font-size: var(--font_size);
             }
         }
+
+
+        .need_lawyer
+        {
+            .block_head
+            {
+                width: 368px;
+            }
+
+
+            .data
+            {
+                width: calc(100% - 348px - var(--outside_gap));
+            }
+
+
+            .text
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .btn
+            {
+                height: 56px;
+
+                font-size: var(--font_size);
+            }
+        }
     }
 }
 
@@ -582,19 +626,42 @@
 {
     .stages
     {
+        .grid
+        {
+            gap: 0;
+        }
+
+
         .block_head
         {
-            .col
+            .grid &
             {
-                gap: var(--inner_gap_l);
+                width: 100%;
+            }
 
-                width: 500px;
+
+            &.row
+            {
+                .col
+                {
+                    gap: var(--inner_gap_l);
+
+                    width: 500px;
+                }
             }
         }
 
 
         .items
         {
+            .grid &
+            {
+                width: 100%;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+
             .item
             {
                 gap: var(--block_padding_l);
@@ -624,6 +691,22 @@
                 {
                     width: calc(100% - 240px - var(--block_padding_l));
                 }
+            }
+        }
+
+
+        .need_lawyer
+        {
+            .block_head
+            {
+                width: 100%;
+                margin-bottom: var(--block_head_offset);
+            }
+
+
+            .data
+            {
+                width: 100%;
             }
         }
     }
@@ -662,9 +745,23 @@
                 }
 
 
+                .grid &
+                {
+                    &:before,
+                    &:after
+                    {
+                        left: 0;
+                    }
+                }
+
+
                 .name
                 {
-                    width: 100%;
+                    &,
+                    &.s_w
+                    {
+                        width: 100%;
+                    }
 
 
                     & > span
@@ -678,17 +775,18 @@
 
                 .info
                 {
-                    width: 100%;
+                    &,
+                    &.l_w
+                    {
+                        width: 100%;
+                    }
                 }
 
 
-                .item
+                .label,
+                .hidden
                 {
-                    .label,
-                    .hidden
-                    {
-                        font-size: 15px;
-                    }
+                    font-size: 15px;
                 }
             }
         }
@@ -703,6 +801,21 @@
                 line-height: 140%;
 
                 --items_per_line: 1;
+            }
+        }
+
+
+        .need_lawyer
+        {
+            .text
+            {
+                font-size: 15px;
+            }
+
+
+            .btn
+            {
+                width: 100%;
             }
         }
     }

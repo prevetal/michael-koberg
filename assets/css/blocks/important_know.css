@@ -263,8 +263,7 @@
 
         .name
         {
-            width: calc(100% - 50px - var(--inner_gap_l));
-            max-width: 100%;
+            max-width: calc(100% - 40px - var(--inner_gap_l));
 
             font-family: var(--font_family_secondary);
             font-size: var(--font_size_title_xs);
@@ -427,6 +426,7 @@
             line-height: 130%;
             letter-spacing: -.36px;
 
+            white-space: nowrap;
             text-decoration: none;
 
             color: var(--secondary_color);
@@ -720,6 +720,13 @@
 
         .item
         {
+            &.m_w,
+            &.l_w
+            {
+                --width_multiplier: 1;
+            }
+
+
             .info
             {
                 height: auto;
@@ -727,13 +734,21 @@
 
                 .l_w &
                 {
-                    width: 100%;
-                    padding-inline: var(--inner_gap);
+                    &,
+                    &.l_w
+                    {
+                        width: 100%;
+                        padding-inline: var(--inner_gap);
+                    }
 
 
                     &.right
                     {
-                        padding-inline: var(--inner_gap);
+                        &,
+                        &.l_w
+                        {
+                            padding-inline: var(--inner_gap);
+                        }
                     }
                 }
             }
@@ -748,10 +763,14 @@
 
             .image
             {
-                position: relative;
+                &,
+                &.s_w
+                {
+                    position: relative;
 
-                width: 100%;
-                height: 198px;
+                    width: 100%;
+                    height: 198px;
+                }
             }
 
 
@@ -784,6 +803,18 @@
             padding: var(--inner_gap);
 
             border-radius: var(--border_radius);
+
+
+            &.view2
+            {
+                flex-wrap: wrap;
+
+
+                .label
+                {
+                    width: 100%;
+                }
+            }
 
 
             .label

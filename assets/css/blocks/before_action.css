@@ -309,7 +309,7 @@
             .label
             {
                 width: 360px;
-                max-width: calc(100% - 246px - var(--inner_gap_xl));
+                max-width: calc(100% - 246px - var(--inner_gap_l));
 
                 font-size: var(--font_size);
             }

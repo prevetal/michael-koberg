@@ -141,3 +141,121 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .confirm_situations
+    {
+        .item
+        {
+            .head
+            {
+                gap: var(--inner_gap_l);
+
+
+                & > div
+                {
+                    order: 2;
+
+                    width: 100%;
+                }
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .btn
+            {
+                height: 56px;
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .confirm_situations
+    {
+        .grid_row
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 286px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+
+
+        .item
+        {
+            gap: var(--inner_gap);
+
+            padding: var(--inner_gap);
+
+
+            .image
+            {
+                width: 100%;
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+
+
+            .btn
+            {
+                width: 100%;
+            }
+        }
+    }
+}
