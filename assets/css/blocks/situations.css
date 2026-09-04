@@ -301,3 +301,187 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .situations
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 780px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto 400px;
+        }
+
+
+        .item
+        {
+            .desc,
+            .notice
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--block_padding) var(--inner_gap_xxs);
+
+
+            .label
+            {
+                width: 360px;
+                max-width: calc(100% - 246px - var(--inner_gap_xl));
+
+                font-size: var(--font_size);
+            }
+
+
+            .whatsapp_link
+            {
+                min-height: 56px;
+                padding-inline: 64px var(--inner_gap_s);
+
+                font-size: var(--font_size);
+
+
+                .icon
+                {
+                    width: 46px;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+
+                span
+                {
+                    padding-inline: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .situations
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 524px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: 1fr;
+        }
+
+
+        .action
+        {
+            width: 100%;
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .situations
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap);
+
+
+            .label
+            {
+                max-width: calc(100% - 52px);
+                padding-block: 4px;
+
+                font-size: var(--font_size_xs);
+            }
+
+
+            .desc,
+            .notice
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .action
+        {
+            padding: var(--inner_gap);
+
+            border-radius: var(--border_radius);
+
+
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: var(--font_size_l);
+                line-height: 140%;
+
+                text-align: center;
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .whatsapp_link
+            {
+                width: 100%;
+            }
+        }
+    }
+}

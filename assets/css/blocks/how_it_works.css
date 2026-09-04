@@ -78,6 +78,8 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         gap: var(--inner_gap_m);
+
+        counter-reset: number;
     }
 
 
@@ -161,6 +163,16 @@
                 border: 1px solid #2e5760;
                 border-radius: 30px;
                 background: #f5f6f7;
+
+
+                span
+                {
+                    &:before
+                    {
+                        content: counter(number);
+                        counter-increment: number;
+                    }
+                }
             }
         }
 
@@ -348,6 +360,247 @@
 
                     background: #e7f7bb;
                 }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .how_it_works
+    {
+        .row
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+
+
+        .item
+        {
+            gap: var(--inner_gap_l);
+
+
+            .number
+            {
+                .text
+                {
+                    font-size: var(--font_size);
+                }
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+
+
+                small
+                {
+                    font-size: var(--font_size_xs);
+                }
+            }
+        }
+
+
+        .data
+        {
+            .block_head
+            {
+                width: 100%;
+
+
+                .title
+                {
+                    font-size: 28px;
+                }
+
+
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+
+
+            .info
+            {
+                gap: var(--inner_gap_l);
+
+                width: 100%;
+
+
+                .items
+                {
+                    font-size: var(--font_size);
+
+
+                    & > *
+                    {
+                        padding-block: var(--inner_gap_xxs);
+                        padding-inline: var(--inner_gap_s);
+                    }
+                }
+            }
+        }
+
+
+        .action
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+
+
+            .label
+            {
+                max-width: calc(100% - 308px - var(--inner_gap_l));
+
+                font-size: var(--font_size);
+            }
+
+
+            .btn
+            {
+                min-height: 56px;
+                padding-inline: var(--inner_gap_l);
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .how_it_works
+    {
+        .action
+        {
+            margin-top: var(--block_padding_l);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .how_it_works
+    {
+        .item
+        {
+            &,
+            &.l_w
+            {
+                width: 286px;
+                min-width: 0;
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .data
+        {
+            .block_head
+            {
+                .title
+                {
+                    font-size: var(--font_size_title);
+                }
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+
+
+            .info
+            {
+                .items
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .action
+        {
+            .label
+            {
+                width: 100%;
+                max-width: 100%;
+
+                font-size: 15px;
+                line-height: 140%;
+
+                text-align: center;
+
+                color: var(--light_color);
+
+
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .btn
+            {
+                width: 100%;
             }
         }
     }

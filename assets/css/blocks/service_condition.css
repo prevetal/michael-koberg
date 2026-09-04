@@ -140,3 +140,154 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .service_condition
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 772px;
+                }
+            }
+        }
+
+
+        .items
+        {
+            width: calc(100% - 360px - var(--inner_gap_s));
+
+
+            .item
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .important
+        {
+            width: 360px;
+
+
+            .thumb
+            {
+                height: 248px;
+            }
+
+
+            .info
+            {
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .link
+                {
+                    height: 56px;
+
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .service_condition
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 536px;
+                }
+            }
+        }
+
+
+        .items
+        {
+            width: 100%;
+        }
+
+
+        .important
+        {
+            width: 100%;
+
+
+            .thumb
+            {
+                height: auto;
+
+                aspect-ratio: 1 / .369;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .service_condition
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .items
+        {
+            .item
+            {
+                padding: var(--inner_gap_s);
+
+                font-size: 15px;
+            }
+        }
+
+
+        .important
+        {
+            .thumb
+            {
+                height: 266px;
+
+                aspect-ratio: auto;
+            }
+
+
+            .info
+            {
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
