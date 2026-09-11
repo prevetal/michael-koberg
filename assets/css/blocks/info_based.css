@@ -1,0 +1,152 @@
+/*----------------
+    Info based
+----------------*/
+.info_based
+{
+    .cont
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_xl);
+    }
+
+
+    .block_head
+    {
+        width: 511px;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+
+    .text_block
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        width: calc(100% - 511px - var(--inner_gap_xl));
+
+        font-family: var(--font_family_tertiary);
+        font-size: var(--font_size_l);
+        line-height: 135%;
+
+        color: #404040;
+
+
+        ul
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+
+            & > li
+            {
+                position: relative;
+
+                display: block;
+                overflow: hidden;
+
+                padding-left: 20px;
+
+                list-style-type: none;
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: .5lh;
+                    left: 4px;
+
+                    display: block;
+
+                    width: 5px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    border-radius: 50%;
+                    background: currentColor;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .info_based
+    {
+        .cont
+        {
+            gap: var(--block_padding);
+        }
+
+
+        .block_head
+        {
+            width: 400px;
+        }
+
+
+        .text_block
+        {
+            gap: var(--inner_gap_l);
+
+            width: calc(100% - 400px - var(--block_padding));
+
+            font-size: var(--font_size);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .info_based
+    {
+        .cont
+        {
+            gap: 0;
+        }
+
+
+        .block_head
+        {
+            width: 100%;
+            margin-bottom: var(--block_head_offset);
+        }
+
+
+        .text_block
+        {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .info_based
+    {
+        .text_block
+        {
+            gap: var(--inner_gap);
+
+            font-size: 15px;
+        }
+    }
+}

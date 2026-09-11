@@ -1,0 +1,433 @@
+/*--------------------
+    Misconceptions
+--------------------*/
+.misconceptions
+{
+    .block_head
+    {
+        &.row
+        {
+            .title
+            {
+                width: 688px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        counter-reset: number;
+
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+
+        &.m_w
+        {
+            width: 541px;
+            max-width: calc(100% - var(--gap_x));
+        }
+
+
+        &.l_w
+        {
+            width: calc(100% - 541px - var(--gap_x) * 2);
+        }
+
+
+        .image
+        {
+            position: absolute;
+            z-index: 5;
+            top: -1px;
+            left: -1px;
+
+            display: block;
+
+            width: 319px;
+            max-width: calc(100% + 2px);
+            height: calc(100% + 2px);
+
+            border-radius: var(--border_radius_s);
+            background: var(--bg_grey);
+
+
+            &.s_w
+            {
+                width: 225px;
+            }
+
+
+            &.right
+            {
+                right: 0;
+                left: auto;
+            }
+        }
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_s);
+
+            height: 100%;
+            padding: var(--inner_gap_l);
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_s);
+            background: radial-gradient(75.06% 36.9% at 2.6% 0%, rgba(221, 5, 5, .10) 0%, rgba(221, 5, 5, .00) 100%), var(--light_color);
+
+
+
+            .l_w &
+            {
+                width: calc(100% - 223px);
+                padding-right: 115px;
+
+
+                &.l_w
+                {
+                    width: 100%;
+                    padding-right: 245px;
+                }
+
+
+                &.right
+                {
+                    margin-left: auto;
+                    padding-right: var(--inner_gap_l);
+                    padding-left: 115px;
+
+
+                    &.l_w
+                    {
+                        padding-left: 245px;
+                    }
+                }
+            }
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: var(--inner_gap_l);
+            right: var(--inner_gap_l);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 50px;
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_xs);
+            background: var(--light_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .number
+        {
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 135%;
+
+            color: #dd0505;
+
+
+            span:before
+            {
+                content: counter(number);
+                counter-increment: number;
+            }
+        }
+
+
+        .name
+        {
+            width: 430px;
+            max-width: 100%;
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 120%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #3e3e3e;
+        }
+
+
+        .link
+        {
+            width: fit-content;
+            margin-top: -6px;
+
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            color: var(--secondary_color);
+
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 6.5%;
+            text-underline-offset: 0;
+            text-underline-position: from-font;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .misconceptions
+    {
+        .item
+        {
+            &.l_w
+            {
+                width: calc(100% - 400px - var(--gap_x) * 2);
+            }
+
+
+            &.m_w
+            {
+                width: 400px;
+            }
+
+
+            .image
+            {
+                &,
+                &.s_w
+                {
+                    width: 189px;
+                }
+            }
+
+
+            .info
+            {
+                padding: var(--inner_gap);
+
+
+                .l_w &
+                {
+                    width: calc(100% - 168px);
+                    padding-right: 40px;
+
+
+                    &.l_w
+                    {
+                        padding-right: 209px;
+                    }
+
+
+                    &.right
+                    {
+                        padding-right: var(--inner_gap);
+                        padding-left: 40px;
+
+
+                        &.l_w
+                        {
+                            padding-left: 207px;
+                        }
+                    }
+                }
+            }
+
+
+            .number,
+            .desc,
+            .link
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .icon
+            {
+                top: var(--inner_gap_m);
+                right: var(--inner_gap_m);
+
+                width: 48px;
+                padding: 2px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .misconceptions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+
+
+                .title
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            &.m_w,
+            &.l_w
+            {
+                width: calc(100% / var(--items_per_line) * var(--width_multiplier, 1) - var(--gap_x));
+
+                --width_multiplier: 2;
+            }
+
+
+            .name
+            {
+                br
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .misconceptions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col,
+                .title
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            &.m_w,
+            &.l_w
+            {
+                --width_multiplier: 1;
+            }
+
+
+            .info
+            {
+                height: auto;
+
+
+                .l_w &
+                {
+                    &,
+                    &.l_w
+                    {
+                        width: 100%;
+                        padding-inline: var(--inner_gap);
+                    }
+
+
+                    &.right
+                    {
+                        &,
+                        &.l_w
+                        {
+                            padding-inline: var(--inner_gap);
+                        }
+                    }
+                }
+            }
+
+
+            .icon
+            {
+                width: 40px;
+                padding: 10px;
+            }
+
+
+            .number,
+            .desc,
+            .link
+            {
+                font-size: 15px;
+            }
+
+
+            .image
+            {
+                &,
+                &.s_w
+                {
+                    position: relative;
+
+                    width: 100%;
+                    height: 120px;
+                }
+            }
+        }
+    }
+}

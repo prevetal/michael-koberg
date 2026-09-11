@@ -358,7 +358,7 @@
                                 content: '';
                                 transform: translateY(-50%);
 
-                                background: url(../../../images/ic_check_light.svg) 0 0/100% 100% no-repeat;
+                                background: url(../../../images/ic_check_white.svg) 0 0/100% 100% no-repeat;
                             }
                         }
                     }

@@ -249,122 +249,9 @@
 
     .action
     {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: var(--inner_gap_xl);
-
-        width: fit-content;
-        margin-top: var(--block_padding);
-        padding-block: var(--inner_gap_m);
-        padding-inline: 34px var(--inner_gap_m);
-
-        color: var(--light_color);
-        border-radius: var(--border_radius_max);
-        background: var(--secondary_color);
-
-
-        .label
+        .info
         {
-            width: 285px;
-            max-width: calc(100% - 281px - var(--inner_gap_xl));
-
-            font-family: var(--font_family_tertiary);
-            font-size: var(--font_size_l);
-            line-height: 135%;
-        }
-
-
-        .whatsapp_link
-        {
-            position: relative;
-
-            display: flex;
-            align-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-
-            min-height: 60px;
-            padding-block: 6px;
-            padding-inline: 60px var(--inner_gap_s);
-
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-            letter-spacing: -.36px;
-
-            text-decoration: none;
-
-            color: var(--secondary_color);
-            border-radius: var(--border_radius_max);
-            background: var(--primary_color);
-
-
-            .icon
-            {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 6px;
-
-                display: flex;
-                align-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                justify-content: center;
-
-                width: 48px;
-                min-width: 48px;
-                height: 48px;
-                margin-block: auto;
-
-                transition: .2s linear;
-
-                color: var(--primary_color);
-                border-radius: 50%;
-                background: var(--secondary_color);
-
-
-                svg
-                {
-                    display: block;
-
-                    width: 16px;
-                    height: 16px;
-                }
-            }
-
-
-            span
-            {
-                margin-inline: auto;
-                padding-inline: var(--inner_gap_xxs);
-
-                transition: transform .2s linear;
-            }
-
-
-            @media (hover: hover) and (pointer: fine)
-            {
-                &:hover
-                {
-                    .icon
-                    {
-                        left: calc(100% - 54px);
-
-                        transform: rotate(360deg);
-                    }
-
-
-                    span
-                    {
-                        transform: translateX(-54px);
-                    }
-                }
-            }
+            width: 284px;
         }
     }
 }
@@ -421,42 +308,9 @@
 
         .action
         {
-            gap: var(--inner_gap_l);
-
-            margin-top: var(--block_padding);
-            padding-block: var(--inner_gap_xxs);
-            padding-inline: var(--block_padding) var(--inner_gap_xxs);
-
-
-            .label
+            .info
             {
                 width: 240px;
-                max-width: calc(100% - 246px - var(--inner_gap_l));
-
-                font-size: var(--font_size);
-            }
-
-
-            .whatsapp_link
-            {
-                min-height: 56px;
-                padding-inline: 64px var(--inner_gap_s);
-
-                font-size: var(--font_size);
-
-
-                .icon
-                {
-                    width: 46px;
-                    min-width: 46px;
-                    height: 46px;
-                }
-
-
-                span
-                {
-                    padding-inline: 0;
-                }
             }
         }
     }
@@ -488,13 +342,6 @@
             {
                 width: 100%;
             }
-        }
-
-
-        .action
-        {
-            width: 100%;
-            margin-top: var(--block_padding_l);
         }
     }
 }
@@ -530,38 +377,6 @@
                 {
                     font-size: 15px;
                 }
-            }
-        }
-
-
-        .action
-        {
-            padding: var(--inner_gap);
-
-            border-radius: var(--border_radius);
-
-
-            .label
-            {
-                width: 100%;
-                max-width: 100%;
-
-                font-size: var(--font_size_l);
-                line-height: 140%;
-
-                text-align: center;
-
-
-                br
-                {
-                    display: none;
-                }
-            }
-
-
-            .whatsapp_link
-            {
-                width: 100%;
             }
         }
     }

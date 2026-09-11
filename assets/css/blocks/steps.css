@@ -54,11 +54,15 @@
 
         .pre_title
         {
-            order: 3;
-
-            margin-top: var(--inner_gap_m);
-
             color: var(--light_color);
+
+
+            &.bottom
+            {
+                order: 3;
+
+                margin-top: var(--inner_gap_m);
+            }
         }
 
 
@@ -216,11 +220,10 @@
                 align-items: center;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-
-                margin-top: var(--inner_gap_l);
-
                 column-gap: var(--block_padding);
                 row-gap: var(--inner_gap);
+
+                margin-top: var(--inner_gap_l);
 
 
                 .label

@@ -310,57 +310,18 @@
 
     .action
     {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: var(--inner_gap_xl);
-
-        margin-top: var(--block_padding_l);
-
-        color: var(--light_color);
+        padding: 0;
 
 
-        .label
+        .info
         {
             width: 788px;
-            max-width: calc(100% - 353px - var(--inner_gap_xl));
-
-            font-family: var(--font_family_tertiary);
-            font-size: var(--font_size_l);
-            line-height: 135%;
-
-            color: #c8c8c8;
         }
 
 
-        .btn
+        .desc
         {
-            min-height: 60px;
-            padding-inline: var(--inner_gap_xl);
-
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-            letter-spacing: -.36px;
-
-            transition: .2s linear;
-
-            color: var(--secondary_color);
-            border-radius: var(--border_radius_max);
-            background: var(--primary_color);
-
-
-            @media (hover: hover) and (pointer: fine)
-            {
-                &:hover
-                {
-                    transform: scale(1.02);
-
-                    background: #e7f7bb;
-                }
-            }
+            font-family: var(--font_family_tertiary);
         }
     }
 }
@@ -484,45 +445,6 @@
                 }
             }
         }
-
-
-        .action
-        {
-            gap: var(--inner_gap_l);
-
-            margin-top: var(--block_padding);
-
-
-            .label
-            {
-                max-width: calc(100% - 308px - var(--inner_gap_l));
-
-                font-size: var(--font_size);
-            }
-
-
-            .btn
-            {
-                min-height: 56px;
-                padding-inline: var(--inner_gap_l);
-
-                font-size: var(--font_size);
-            }
-        }
-    }
-}
-
-
-
-@media print,
-(max-width: 1023px)
-{
-    .how_it_works
-    {
-        .action
-        {
-            margin-top: var(--block_padding_l);
-        }
     }
 }
 
@@ -572,35 +494,6 @@
                 {
                     font-size: 15px;
                 }
-            }
-        }
-
-
-        .action
-        {
-            .label
-            {
-                width: 100%;
-                max-width: 100%;
-
-                font-size: 15px;
-                line-height: 140%;
-
-                text-align: center;
-
-                color: var(--light_color);
-
-
-                br
-                {
-                    display: none;
-                }
-            }
-
-
-            .btn
-            {
-                width: 100%;
             }
         }
     }

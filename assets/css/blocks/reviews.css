@@ -135,7 +135,6 @@
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-between;
-
             column-gap: var(--inner_gap_xxs);
             row-gap: var(--inner_gap_xs);
         }
@@ -148,6 +147,8 @@
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-between;
+            column-gap: var(--inner_gap_xxs);
+            row-gap: var(--inner_gap_xs);
 
             margin-top: auto;
 
@@ -155,9 +156,6 @@
             line-height: 135%;
 
             color: #7d7d7d;
-
-            column-gap: var(--inner_gap_xxs);
-            row-gap: var(--inner_gap_xs);
         }
 
 
@@ -204,86 +202,21 @@
     }
 
 
+
     .action
     {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: var(--inner_gap_xl);
-
-        width: 100%;
-        margin-top: 35px;
-        padding-block: var(--inner_gap_m);
-        padding-inline: 34px var(--inner_gap_m);
-
-        color: var(--light_color);
-        border-radius: var(--border_radius_max);
-        background: var(--secondary_color);
-
-
         &.view2
         {
-            padding: var(--inner_gap_xl);
-
-            border-radius: var(--border_radius);
-            background: linear-gradient(90deg, #194b4d 0%, #14393f 100%);
-
-
-            .label
+            .info
             {
-                width: auto;
-                max-width: calc(100% - 234px - var(--inner_gap_xl));
+                width: 100%;
             }
         }
 
 
-        .label
+        .info
         {
-            width: 451px;
-            max-width: calc(100% - 256px - var(--inner_gap_xl));
-
-            font-family: var(--font_family_tertiary);
-            font-size: var(--font_size_l);
-            line-height: 135%;
-        }
-
-
-        .btn
-        {
-            display: flex;
-            align-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            min-height: 60px;
-            padding-inline: var(--inner_gap_xl);
-
-            font-size: var(--font_size_l);
-            font-weight: 500;
-            line-height: 130%;
-            letter-spacing: -.36px;
-
-            transition: .2s linear;
-            text-align: center;
-            text-decoration: none;
-
-            color: var(--secondary_color);
-            border-radius: var(--border_radius_max);
-            background: var(--primary_color);
-
-
-            @media (hover: hover) and (pointer: fine)
-            {
-                &:hover
-                {
-                    transform: scale(1.02);
-
-                    background: #e7f7bb;
-                }
-            }
+            width: 348px;
         }
     }
 }
@@ -338,45 +271,6 @@
                 font-size: var(--font_size);
             }
         }
-
-
-        .action
-        {
-            gap: var(--inner_gap_l);
-
-            margin-top: var(--block_padding);
-            padding-block: var(--inner_gap_xxs);
-            padding-inline: var(--block_padding) var(--inner_gap_xxs);
-
-
-            &.view2
-            {
-                padding: var(--inner_gap);
-
-
-                .label
-                {
-                    max-width: calc(100% - 193px - var(--inner_gap_xl));
-                }
-            }
-
-
-            .label
-            {
-                max-width: calc(100% - 220px - var(--inner_gap_l));
-
-                font-size: var(--font_size);
-            }
-
-
-            .btn
-            {
-                min-height: 56px;
-                padding-inline: var(--inner_gap_l);
-
-                font-size: var(--font_size);
-            }
-        }
     }
 }
 
@@ -418,6 +312,12 @@
         .slider
         {
             width: 100%;
+
+
+            .swiper-controls
+            {
+                display: none;
+            }
         }
     }
 }
@@ -477,51 +377,6 @@
             {
                 font-size: var(--font_size_s);
                 line-height: 140%;
-            }
-        }
-
-
-        .action
-        {
-            padding: var(--inner_gap);
-
-            border-radius: var(--border_radius);
-
-
-            &.view2
-            {
-                flex-wrap: wrap;
-
-
-                .label
-                {
-                    width: 100%;
-                    max-width: 100%;
-                }
-            }
-
-
-            .label
-            {
-                width: 100%;
-                max-width: 100%;
-
-                font-size: var(--font_size_l);
-                line-height: 140%;
-
-                text-align: center;
-
-
-                br
-                {
-                    display: none;
-                }
-            }
-
-
-            .btn
-            {
-                width: 100%;
             }
         }
     }

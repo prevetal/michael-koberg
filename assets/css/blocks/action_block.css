@@ -84,6 +84,12 @@
         line-height: 135%;
 
 
+        &.s_w
+        {
+            width: 530px;
+        }
+
+
         &.l_w
         {
             width: 624px;
