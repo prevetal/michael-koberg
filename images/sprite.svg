@@ -5,6 +5,9 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 4" id="ic_arr_ver">
     <path d="M4.00027 4L-1.27146e-07 1.58735e-08L8 7.15256e-07L4.00027 4Z" fill="currentColor"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" id="ic_arrow_diagonal">
+    <path d="M12.5 0.5L0.5 12.5M2.5 0.5H12.5V10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 15" id="ic_arrow_hor">
     <path d="M21.7071 8.07106C22.0976 7.68054 22.0976 7.04737 21.7071 6.65685L15.3431 0.292885C14.9526 -0.0976396 14.3195 -0.0976396 13.9289 0.292885C13.5384 0.683409 13.5384 1.31657 13.9289 1.7071L19.5858 7.36395L13.9289 13.0208C13.5384 13.4113 13.5384 14.0445 13.9289 14.435C14.3195 14.8255 14.9526 14.8255 15.3431 14.435L21.7071 8.07106ZM0 7.36395V8.36395H21V7.36395V6.36395H0V7.36395Z" fill="currentColor"></path>
   </symbol>

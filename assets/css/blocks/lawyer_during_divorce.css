@@ -1,0 +1,378 @@
+/*---------------------------
+    Lawyer during divorce
+---------------------------*/
+.lawyer_during_divorce
+{
+    .cont
+    {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: var(--inner_gap_xl);
+        row-gap: var(--inner_gap_s);
+    }
+
+
+    .data
+    {
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        gap: var(--block_padding);
+
+        width: 541px;
+        max-width: 100%;
+        min-height: 440px;
+        padding: var(--block_padding);
+
+        color: var(--light_color);
+        border-radius: var(--border_radius);
+        background: linear-gradient(90deg, rgba(59, 191, 168, .20) 0%, rgba(59, 191, 168, .00) 100%), var(--secondary_color);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        .block_head
+        {
+            gap: var(--inner_gap_xl);
+
+
+            .pre_title
+            {
+                order: 2;
+
+                color: var(--light_color);
+            }
+
+
+            .title
+            {
+                color: var(--light_color);
+            }
+        }
+
+
+        .info
+        {
+            margin-top: auto;
+            padding: var(--inner_gap);
+
+            border: 1px solid var(--border_color_secondary);
+            border-radius: var(--border_radius_s);
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+            & > *
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_xs);
+            }
+
+
+            & > * + *
+            {
+                margin-top: var(--inner_gap_l);
+                padding-top: var(--inner_gap_l);
+
+                border-top: 1px solid var(--border_color_secondary);
+            }
+
+
+            .name
+            {
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 120%;
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size_l);
+                line-height: 130%;
+                letter-spacing: -.54px;
+
+                color: #c8c8c8;
+            }
+        }
+
+
+        .image
+        {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+
+            display: block;
+
+            border-radius: var(--border_radius);
+
+
+            &:before
+            {
+                position: absolute;
+                inset: 0;
+
+                display: block;
+
+                content: '';
+
+                background: linear-gradient(90deg, rgba(59, 191, 168, .20) 0%, rgba(59, 191, 168, .00) 100%);
+            }
+        }
+    }
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        width: calc(100% - 541px - var(--inner_gap_xl));
+
+
+        .item
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            padding: var(--inner_gap);
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+
+
+            .name
+            {
+                position: relative;
+
+                padding-left: 30px;
+
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 110%;
+
+                color: var(--secondary_color);
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: .5lh;
+                    left: 0;
+
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    width: 20px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    border-radius: 50%;
+                    background: url(../../../images/ic_check_white.svg) 50%/8px 6px no-repeat, var(--secondary_color);
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+
+
+            .desc
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: #2f2f2f;
+
+
+                b,
+                strong
+                {
+                    font-weight: 600;
+                }
+
+
+                ol
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--inner_gap_s);
+
+                    counter-reset: li;
+
+
+                    & > li
+                    {
+                        position: relative;
+
+                        display: block;
+                        overflow: hidden;
+
+                        padding-left: 20px;
+
+                        list-style-type: none;
+
+
+                        &:before
+                        {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            content: counter(li) '.';
+                            counter-increment: li;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .lawyer_during_divorce
+    {
+        .cont
+        {
+            column-gap: var(--inner_gap_s);
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap_xl);
+
+            width: 430px;
+            padding: var(--inner_gap_xl);
+
+
+            .info
+            {
+                & > *
+                {
+                    gap: var(--inner_gap_m);
+                }
+
+
+                & > * + *
+                {
+                    margin-top: var(--inner_gap);
+                    padding-top: var(--inner_gap);
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .items
+        {
+            width: calc(100% - 430px - var(--inner_gap_s));
+
+
+            .item
+            {
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .lawyer_during_divorce
+    {
+        .data,
+        .items
+        {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .lawyer_during_divorce
+    {
+        .data
+        {
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_l);
+
+
+            .block_head
+            {
+                gap: var(--inner_gap);
+
+
+                .pre_title
+                {
+                    order: 0;
+                }
+            }
+
+
+            .info
+            {
+                padding: var(--inner_gap_s);
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .items
+        {
+            .item
+            {
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

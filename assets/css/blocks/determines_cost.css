@@ -1,0 +1,376 @@
+/*---------------------
+    Determines cost
+---------------------*/
+.determines_cost
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 627px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 5;
+        --gap_x: var(--inner_gap_xl);
+        --gap_y: var(--inner_gap_xl);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        padding-left: var(--inner_gap);
+
+        border-left: 2px solid #c4d3d8;
+
+
+        &:before
+        {
+            position: absolute;
+            top: 0;
+            left: -2px;
+
+            display: block;
+
+            width: 2px;
+            height: 20%;
+
+            content: '';
+
+            background: var(--secondary_color);
+        }
+
+
+        &:nth-child(2)
+        {
+            &:before
+            {
+                top: 20%;
+            }
+        }
+
+
+        &:nth-child(3)
+        {
+            &:before
+            {
+                top: 40%;
+            }
+        }
+
+
+        &:nth-child(4)
+        {
+            &:before
+            {
+                top: 60%;
+            }
+        }
+
+
+        &:nth-child(5)
+        {
+            &:before
+            {
+                top: 80%;
+            }
+        }
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 40px;
+            margin-bottom: 4px;
+
+            border: 1px solid var(--border_color);
+            border-radius: 5px;
+            background: var(--secondary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            margin-top: auto;
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 120%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_l);
+            line-height: 130%;
+            letter-spacing: -.54px;
+
+            color: var(--grey_color_strong);
+        }
+    }
+
+
+    .bottom
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: var(--block_padding_l);
+    }
+
+
+    .information
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        width: 460px;
+        max-width: 100%;
+
+
+        .desc
+        {
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .link
+        {
+            width: fit-content;
+
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            color: var(--secondary_color);
+
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 6.5%;
+            text-underline-offset: 0;
+            text-underline-position: from-font;
+        }
+    }
+
+
+    .action
+    {
+        margin: 0;
+
+
+        .info
+        {
+            width: 180px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .determines_cost
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 600px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 240px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+
+
+        .item
+        {
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .information
+        {
+            .desc,
+            .link
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .action
+        {
+            .info
+            {
+                width: 128px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .determines_cost
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .bottom
+        {
+            gap: var(--block_padding_l);
+        }
+
+
+        .information
+        {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .determines_cost
+    {
+        .grid_row
+        {
+            & > *
+            {
+                width: 220px;
+            }
+        }
+
+
+        .item
+        {
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .information
+        {
+            .desc,
+            .link
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .action
+        {
+            .info
+            {
+                width: 100%;
+            }
+        }
+    }
+}

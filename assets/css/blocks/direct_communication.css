@@ -160,7 +160,7 @@
         width: 541px;
         max-width: 100%;
 
-        border: 1px solid #296668;
+        border: 1px solid var(--border_color_secondary);
         border-radius: var(--border_radius);
 
 
@@ -225,7 +225,7 @@
 
         padding: var(--inner_gap_xl);
 
-        border: 1px solid #296668;
+        border: 1px solid var(--border_color_secondary);
         border-radius: var(--border_radius_s);
         background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 65%);
 
@@ -270,7 +270,7 @@
 
             width: 46px;
 
-            border: 1px solid #296668;
+            border: 1px solid var(--border_color_secondary);
             border-radius: 50%;
             border-radius: 40px;
             background: var(--gradient-diagonal, linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%));

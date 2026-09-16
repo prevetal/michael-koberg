@@ -92,7 +92,7 @@
                 padding-block: var(--inner_gap_xs);
                 padding-inline: 14px;
 
-                border: 1px solid var(--stroke-on-dark, #296668);
+                border: 1px solid var(--stroke-on-dark, var(--border_color_secondary));
                 border-radius: var(--border_radius_s);
                 background: var(--gradient, linear-gradient(90deg, #194b4d 0%, #12333a 100%));
             }

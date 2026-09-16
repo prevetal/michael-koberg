@@ -6,6 +6,7 @@
     --bg: #fff;
     --bg_grey: #f5f6f7;
     --border_color: #c4d3d8;
+    --border_color_secondary: #296668;
     --cont_padding: 24px;
     --cont_padding_double: calc(var(--cont_padding) * 2);
     --cont_padding_half: calc(var(--cont_padding) * .5);

@@ -1,0 +1,357 @@
+/*---------------------
+    Debt collection
+---------------------*/
+.debt_collection
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 891px;
+            }
+        }
+    }
+
+
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        counter-reset: number;
+
+        grid-template-columns: auto 431px;
+    }
+
+
+    .item
+    {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--light_color);
+
+
+        .thumb
+        {
+            display: block;
+
+            width: 227px;
+            max-width: 100%;
+            margin: -1px;
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_s);
+            background: var(--bg_grey);
+        }
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_s);
+
+            width: calc(100% - 225px);
+            padding-block: var(--inner_gap_l);
+            padding-inline: var(--inner_gap) var(--inner_gap_l);
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 120%;
+
+            color: var(--secondary_color);
+
+
+            .number
+            {
+                color: var(--border_color_secondary);
+
+
+                &:before
+                {
+                    content: counter(number, decimal-leading-zero) '/';
+                    counter-increment: number;
+                }
+            }
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #3e3e3e;
+        }
+    }
+
+
+    .data
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        padding: var(--inner_gap_l);
+
+        color: var(--light_color);
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+        grid-row: span 2;
+
+
+        .icon
+        {
+            position: absolute;
+            top: var(--inner_gap_m);
+            right: var(--inner_gap_m);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 26px;
+
+            color: var(--secondary_color);
+            border-radius: 50%;
+            background: var(--primary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            svg
+            {
+                display: block;
+
+                width: 3px;
+                height: 12px;
+            }
+        }
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 120%;
+        }
+
+
+        ul
+        {
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+
+            & > li
+            {
+                position: relative;
+
+                display: block;
+                overflow: hidden;
+
+                padding-left: 23px;
+
+                list-style-type: none;
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: .5lh;
+                    left: 6px;
+
+                    display: block;
+
+                    width: 5px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    border-radius: 50%;
+                    background: currentColor;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #c8c8c8;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .debt_collection
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 680px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto 360px;
+        }
+
+
+        .item
+        {
+            .thumb
+            {
+                width: 222px;
+            }
+
+
+            .info
+            {
+                width: calc(100% - 220px);
+                padding-block: var(--inner_gap);
+                padding-inline: var(--inner_gap);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .data
+        {
+            ul,
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .debt_collection
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 448px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .data
+        {
+            order: 3;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .debt_collection
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .thumb
+            {
+                width: calc(100% + 2px);
+                height: 100px;
+            }
+
+
+            .info
+            {
+                width: 100%;
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .data
+        {
+            padding: var(--inner_gap);
+
+
+            ul,
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

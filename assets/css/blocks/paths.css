@@ -148,7 +148,7 @@
             line-height: 135%;
 
             color: #c8c8c8;
-            border-bottom: 1px solid #296668;
+            border-bottom: 1px solid var(--border_color_secondary);
 
 
             .title
@@ -240,7 +240,7 @@
 
                 border: 1px solid var(--border_color);
                 border-radius: 50%;
-                background: #296668;
+                background: var(--border_color_secondary);
 
                 aspect-ratio: 1 / 1;
 
@@ -368,7 +368,7 @@
 
             padding: var(--inner_gap_xl);
 
-            border: 1px solid #296668;
+            border: 1px solid var(--border_color_secondary);
             border-radius: var(--border_radius);
             background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
 
@@ -434,7 +434,7 @@
 
                     padding: var(--inner_gap);
 
-                    border: 1px solid #296668;
+                    border: 1px solid var(--border_color_secondary);
                     border-radius: var(--border_radius_xs);
                     background: linear-gradient(90deg, #194b4d 0%, #12333a 100%);
                 }

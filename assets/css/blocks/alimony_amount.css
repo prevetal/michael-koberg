@@ -1,0 +1,368 @@
+/*--------------------
+    Alimony amount
+--------------------*/
+.alimony_amount
+{
+    .grid_row
+    {
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        padding: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--light_color);
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .image
+        {
+            display: block;
+
+            height: 170px;
+
+            border-radius: var(--border_radius_xs);
+            background: var(--bg_grey);
+        }
+
+
+        .items
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            margin-block: calc(var(--inner_gap_m) * -1);
+
+
+            & > *
+            {
+                position: relative;
+
+                padding-block: var(--inner_gap_xs);
+                padding-inline: 45px var(--inner_gap_s);
+
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: var(--grey_color_strong);
+                border: 1px solid var(--border_color);
+                border-radius: var(--border_radius_s);
+                background: var(--bg_grey);
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: calc(var(--inner_gap_xs) + .5lh);
+                    left: var(--inner_gap_s);
+
+                    display: block;
+
+                    width: 19px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    border-radius: 50%;
+                    background: url(../../../images/ic_cross.svg) 50% no-repeat, #cd0404;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .desc
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 135%;
+
+            color: var(--grey_color_strong);
+
+
+            b,
+            strong
+            {
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .info2
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        padding: var(--inner_gap_xl);
+
+        color: var(--light_color);
+        border: 1px solid #c4d3d8;
+        border-radius: var(--border_radius);
+        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+        }
+
+
+        .items
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_m);
+
+
+            & > *
+            {
+                position: relative;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                padding-block: var(--inner_gap_m);
+                padding-inline: 45px var(--inner_gap_s);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                border: 1px solid var(--border_color_secondary);
+                border-radius: var(--border_radius_s);
+                background: linear-gradient(90deg, #194b4d 0%, #12333a 100%);
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: calc(var(--inner_gap_xs) + .5lh);
+                    left: var(--inner_gap_s);
+
+                    display: block;
+
+                    width: 19px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    background: url(../../../images/ic_check_primary.svg) 50%/13px auto no-repeat;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .desc
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 135%;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .alimony_amount
+    {
+        .info
+        {
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_l);
+
+
+            .image
+            {
+                height: 150px;
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .items
+            {
+                & > *
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .info2
+        {
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_l);
+
+
+            .items
+            {
+                gap: var(--inner_gap_xxs);
+
+
+                & > *
+                {
+                    font-size: var(--font_size);
+                }
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .alimony_amount
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 488px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .info
+        {
+            .image
+            {
+                height: 188px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .alimony_amount
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .info
+        {
+            gap: var(--inner_gap);
+
+            padding: var(--inner_gap);
+
+
+            .image
+            {
+                height: 100px;
+            }
+
+
+            .items
+            {
+                & > *
+                {
+                    font-size: 15px;
+                }
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .info2
+        {
+            gap: var(--inner_gap);
+
+            padding: var(--inner_gap);
+
+
+            .items
+            {
+                & > *
+                {
+                    font-size: 15px;
+                }
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

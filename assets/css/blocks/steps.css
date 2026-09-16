@@ -41,6 +41,20 @@
     }
 
 
+    .grid
+    {
+        position: relative;
+
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+
     .block_head
     {
         position: sticky;
@@ -50,6 +64,7 @@
 
         width: 376px;
         max-width: 100%;
+        margin-bottom: 0;
 
 
         .pre_title
@@ -200,6 +215,29 @@
             }
 
 
+            .tags
+            {
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_m);
+
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+
+                & > *
+                {
+                    padding: 5px 6px;
+
+                    border: 1px solid var(--border_color_secondary);
+                    border-radius: var(--border_radius_xs);
+                }
+            }
+
+
             .exp
             {
                 padding: var(--inner_gap_s);
@@ -327,6 +365,27 @@
             }
         }
     }
+
+
+    .action
+    {
+        padding: var(--inner_gap_m) 0 0;
+
+        border-radius: 0;
+        background: none;
+
+
+        .info
+        {
+            width: 788px;
+
+
+            .desc
+            {
+                color: #c8c8c8;
+            }
+        }
+    }
 }
 
 
@@ -377,7 +436,8 @@
                 }
 
 
-                .desc
+                .desc,
+                .tags
                 {
                     font-size: var(--font_size);
                 }
@@ -422,6 +482,7 @@
             top: 0;
 
             width: 100%;
+            margin-bottom: var(--block_head_offset);
 
 
             .pre_title
@@ -452,7 +513,8 @@
             {
                 .name,
                 .desc,
-                .exp
+                .exp,
+                .tags
                 {
                     font-size: var(--font_size_s);
                     line-height: 140%;

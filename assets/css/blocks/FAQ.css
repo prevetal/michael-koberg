@@ -61,7 +61,7 @@
 
             &.dark
             {
-                color: #404040;
+                color: var(--grey_color_strong);
             }
         }
 

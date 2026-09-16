@@ -1,0 +1,373 @@
+/*-----------------------
+    Divorce scenarios
+-----------------------*/
+.divorce_scenarios
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 986px;
+            }
+        }
+    }
+
+
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        grid-template-columns: auto 541px;
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        padding: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: radial-gradient(58.3% 82.94% at 100.13% 121.61%, rgba(59, 191, 168, .20) 0%, rgba(59, 191, 168, .00) 100%), var(--light_color);
+
+
+        &:nth-child(2)
+        {
+            background: radial-gradient(58.3% 61.95% at 100% 90.82%, rgba(215, 241, 142, .30) 0%, rgba(215, 241, 142, .00) 100%), var(--light_color);
+
+
+            &:after
+            {
+                width: 210px;
+                height: 74px;
+
+                background: url(../../../images/bg_divorce_scenarios_corner2.png) 0 0/100% 100% no-repeat, var(--bg_grey);
+            }
+
+
+            .items
+            {
+                & > *
+                {
+                    .icon
+                    {
+                        color: var(--secondary_color);
+                        background: var(--primary_color);
+                    }
+                }
+            }
+        }
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 275px;
+            height: 74px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_divorce_scenarios_corner1.png) 0 0/100% no-repeat, var(--bg_grey);
+        }
+
+
+        .label
+        {
+            position: absolute;
+            z-index: 3;
+            top: -1px;
+            right: -1px;
+
+            padding-block: 6px;
+            padding-inline: 14px;
+
+            line-height: 135%;
+
+            color: var(--light_color);
+            border-radius: 30px;
+            background: var(--gradient, linear-gradient(90deg, #194b4d 0%, #12333a 100%));
+        }
+
+
+        .name
+        {
+            width: 320px;
+            max-width: 100%;
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: #10313d;
+        }
+
+
+        .items
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+
+            & > *
+            {
+                position: relative;
+
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: var(--inner_gap_xs);
+
+                padding-block: var(--inner_gap_xs);
+                padding-inline: var(--inner_gap_s);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: #2f2f2f;
+                border: 1px solid var(--border_color);
+                border-radius: var(--border_radius_s);
+                background: var(--light_color);
+            }
+
+
+            .icon
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 19px;
+                margin-block: 1px;
+
+                border-radius: 50%;
+                background: var(--secondary_color);
+
+                aspect-ratio: 1 / 1;
+
+
+                img
+                {
+                    display: block;
+
+                    width: 9px;
+                    height: 7px;
+                }
+
+
+                & + *
+                {
+                    width: calc(100% - 19px - var(--inner_gap_xs));
+                }
+            }
+        }
+    }
+
+
+    .action
+    {
+        .info
+        {
+            width: 488px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .divorce_scenarios
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 688px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto 430px;
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap_l);
+
+
+            &:after
+            {
+                width: 240px;
+                height: 64px;
+            }
+
+
+            &:nth-child(2)
+            {
+                &:after
+                {
+                    width: 184px;
+                    height: 66px;
+                }
+            }
+
+
+            .label
+            {
+                font-size: var(--font_size_s);
+            }
+
+
+            .name
+            {
+                width: 232px;
+            }
+
+
+            .items
+            {
+                & > *
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+
+
+        .action
+        {
+            .info
+            {
+                width: 436px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .divorce_scenarios
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 472px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .action
+        {
+            .info
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .divorce_scenarios
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            padding-block: 48px var(--inner_gap);
+            padding-inline: var(--inner_gap);
+
+
+            &:after
+            {
+                width: 212px;
+                height: 56px;
+            }
+
+
+            &:nth-child(2)
+            {
+                &:after
+                {
+                    width: 162px;
+                    height: 60px;
+                }
+            }
+
+
+            .label
+            {
+                font-size: var(--font_size_xs);
+            }
+
+
+            .items
+            {
+                & > *
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

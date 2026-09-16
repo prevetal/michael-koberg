@@ -289,7 +289,7 @@
             {
                 white-space: nowrap;
 
-                color: #296668;
+                color: var(--border_color_secondary);
 
 
                 &:before

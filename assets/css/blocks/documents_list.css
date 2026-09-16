@@ -129,7 +129,7 @@
             line-height: 130%;
             letter-spacing: -.54px;
 
-            color: #404040;
+            color: var(--grey_color_strong);
         }
     }
 

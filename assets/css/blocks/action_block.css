@@ -71,11 +71,21 @@
         {
             width: 624px;
         }
+
+
+        &.xxl_w
+        {
+            width: 660px;
+        }
     }
 
 
     .desc
     {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
         width: 556px;
         max-width: 100%;
 
@@ -93,6 +103,58 @@
         &.l_w
         {
             width: 624px;
+        }
+
+
+        &.xl_w
+        {
+            width: 660px;
+        }
+
+
+        b,
+        strong
+        {
+            font-weight: 600;
+        }
+
+
+        ul
+        {
+            color: #c8c8c8;
+
+
+            & > li
+            {
+                position: relative;
+
+                display: block;
+                overflow: hidden;
+
+                padding-left: 23px;
+
+                list-style-type: none;
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: .5lh;
+                    left: 6px;
+
+                    display: block;
+
+                    width: 5px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    border-radius: 50%;
+                    background: currentColor;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
         }
     }
 

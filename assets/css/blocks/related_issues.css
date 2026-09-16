@@ -79,7 +79,7 @@
             font-size: var(--font_size_l);
             line-height: 135%;
 
-            color: #404040;
+            color: var(--grey_color_strong);
         }
 
 
