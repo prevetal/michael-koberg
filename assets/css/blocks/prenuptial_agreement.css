@@ -1,0 +1,387 @@
+/*--------------------------
+    Prenuptial agreement
+--------------------------*/
+.prenuptial_agreement
+{
+    overflow: clip;
+
+
+    &:before
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 798px;
+        height: 745px;
+
+        content: '';
+        transform: translate(-48.872%, -33.154%);
+        pointer-events: none;
+
+        background: rgba(59, 191, 168, .20);
+
+        filter: blur(200px);
+    }
+
+
+    .cont
+    {
+        position: relative;
+        z-index: 3;
+    }
+
+
+    .row
+    {
+        position: relative;
+
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: calc(100% - 541px - var(--inner_gap_s));
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            margin-bottom: var(--var(--inner_gap_xl));
+
+
+            .title
+            {
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 110%;
+            }
+
+
+            ul
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_s);
+
+
+                li
+                {
+                    position: relative;
+
+                    display: block;
+
+                    padding-left: 39px;
+
+                    list-style-type: none;
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: .5lh;
+                        left: 0;
+
+                        display: block;
+
+                        width: 19px;
+
+                        content: '';
+                        transform: translateY(-50%);
+
+                        background: url(../../../images/ic_check_primary.svg) 50%/13px auto no-repeat;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .block_head
+    {
+        gap: var(--inner_gap_l);
+
+        width: 666px;
+        max-width: 100%;
+
+
+        .pre_title
+        {
+            position: absolute;
+            top: var(--inner_gap);
+            right: var(--inner_gap);
+
+            color: var(--light_color);
+        }
+
+
+        .title
+        {
+            width: 441px;
+
+            color: var(--light_color);
+        }
+
+
+        .desc
+        {
+            width: 666px;
+
+            color: #c8c8c8;
+        }
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        margin-top: auto;
+        padding: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color_secondary);
+        border-radius: var(--border_radius_s);
+        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 40%);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_direct_communication_corner_secondary.png) 0 0/100% 100% no-repeat, var(--secondary_color);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border: 1px solid var(--border_color_secondary);
+            border-radius: 50%;
+            border-radius: 40px;
+            background: var(--gradient-diagonal, linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%));
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .desc
+        {
+            width: calc(100% - 46px);
+
+            font-size: var(--font_size_l);
+            line-height: 130%;
+            letter-spacing: -.54px;
+        }
+
+
+        .link
+        {
+            display: block;
+
+            width: fit-content;
+
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            color: currentColor;
+
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 6.5%;
+            text-underline-offset: 0;
+            text-underline-position: from-font;
+        }
+    }
+
+
+    .image_wrap
+    {
+        position: relative;
+
+        width: 541px;
+        max-width: 100%;
+
+
+        .whatsapp_link
+        {
+            position: absolute;
+            z-index: 3;
+            right: var(--inner_gap_l);
+            bottom: var(--inner_gap_l);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            min-height: 60px;
+            padding-block: 6px;
+            padding-inline: 60px var(--inner_gap_s);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            white-space: nowrap;
+            text-decoration: none;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_max);
+            background: var(--primary_color);
+
+
+            .icon
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 6px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 48px;
+                min-width: 48px;
+                height: 48px;
+                margin-block: auto;
+
+                transition: .2s linear;
+
+                color: var(--primary_color);
+                border-radius: 50%;
+                background: var(--secondary_color);
+
+
+                svg
+                {
+                    display: block;
+
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+
+            span
+            {
+                margin-inline: auto;
+                padding-inline: var(--inner_gap_xxs);
+
+                transition: transform .2s linear;
+            }
+
+
+            @media (hover: hover) and (pointer: fine)
+            {
+                &:hover
+                {
+                    .icon
+                    {
+                        left: calc(100% - 54px);
+
+                        transform: rotate(360deg);
+                    }
+
+
+                    span
+                    {
+                        transform: translateX(-54px);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .image
+    {
+        position: relative;
+
+        display: block;
+        overflow: hidden;
+
+        border: 1px solid var(--border_color_secondary);
+        border-radius: var(--border_radius);
+
+
+        &:before
+        {
+            position: absolute;
+            z-index: 2;
+            inset: 0;
+
+            display: block;
+
+            content: '';
+
+            background: linear-gradient(198deg, rgba(0, 0, 0, .40) 0%, rgba(0, 0, 0, .00) 29.09%);
+        }
+    }
+}

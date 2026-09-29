@@ -300,6 +300,40 @@
 
         pointer-events: none;
     }
+
+
+    .bottom
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: var(--block_padding_l);
+
+        font-family: var(--font_family_tertiary);
+        font-size: var(--font_size_l);
+        line-height: 135%;
+
+        color: #7d7d7d;
+
+
+
+        & > *
+        {
+            width: calc(50% - var(--block_padding_l));
+        }
+
+
+        b,
+        strong
+        {
+            font-weight: 600;
+
+            color: var(--grey_color_strong);
+        }
+    }
 }
 
 

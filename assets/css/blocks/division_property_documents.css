@@ -1,0 +1,160 @@
+/*---------------------------------
+    Division property documents
+---------------------------------*/
+.division_property_documents
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 687px;
+            }
+
+
+            .desc
+            {
+                width: 627px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: var(--inner_gap_m);
+
+        min-height: 170px;
+        padding: var(--inner_gap);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: var(--bg);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_your_situation_corner.png) 0 0/100% 100% no-repeat, var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border-radius: 50%;
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 135%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+
+
+            ul
+            {
+                li
+                {
+                    position: relative;
+
+                    display: block;
+                    overflow: hidden;
+
+                    padding-left: 20px;
+
+                    list-style-type: none;
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: .5lh;
+                        left: 4px;
+
+                        display: block;
+
+                        width: 5px;
+
+                        content: '';
+                        transform: translateY(-50%);
+
+                        border-radius: 50%;
+                        background: currentColor;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+    }
+}

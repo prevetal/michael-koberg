@@ -1,0 +1,138 @@
+/*--------------------------
+    Needed after breakup
+--------------------------*/
+.needed_after_breakup
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 677px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--inner_gap_m);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        padding: var(--inner_gap_m);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+
+
+        .thumb
+        {
+            display: block;
+
+            height: 150px;
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius);
+            background: var(--bg);
+        }
+
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_xs);
+
+            padding: var(--inner_gap_m);
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--grey_color_strong);
+
+
+            ul
+            {
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: var(--inner_gap_xxs);
+
+
+                li
+                {
+                    position: relative;
+
+                    display: block;
+
+                    width: calc(50% - var(--inner_gap_xxs));
+                    padding-left: 23px;
+
+                    list-style: none;
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: .5lh;
+                        left: 0;
+
+                        display: block;
+
+                        width: 15px;
+
+                        content: '';
+                        transform: translateY(-50%);
+
+                        border-radius: 50%;
+                        background: url(../../../images/ic_check_white.svg) 50%/7px auto no-repeat, var(--secondary_color);
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .action
+    {
+        .info
+        {
+            width: 740px;
+        }
+    }
+}
