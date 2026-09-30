@@ -567,10 +567,28 @@
             }
 
 
+            &.s_offset
+            {
+                gap: var(--inner_gap_l);
+            }
+
+
             .desc,
             .info
             {
                 font-size: var(--font_size);
+            }
+
+
+            .items
+            {
+                gap: var(--inner_gap_l);
+
+
+                & > *
+                {
+                    padding-left: 30px;
+                }
             }
 
 
@@ -609,6 +627,14 @@
 
                     font-size: var(--font_size);
                 }
+            }
+
+
+            .text
+            {
+                padding-top: var(--inner_gap_l);
+
+                font-size: var(--font_size);
             }
 
 
@@ -705,6 +731,16 @@
             }
 
 
+            .items
+            {
+                display: none;
+                gap: var(--inner_gap);
+
+                font-size: 15px;
+                line-height: 140%;
+            }
+
+
             .btns
             {
                 .whatsapp_link,
@@ -712,6 +748,15 @@
                 {
                     width: 100%;
                 }
+            }
+
+
+            .text
+            {
+                padding-top: var(--inner_gap);
+
+                font-size: 15px;
+                line-height: 140%;
             }
         }
     }

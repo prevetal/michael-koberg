@@ -141,6 +141,8 @@
 
             .name
             {
+                max-width: calc(100% - 56px);
+
                 font-family: var(--font_family_secondary);
                 font-size: var(--font_size_title_xs);
                 font-weight: 600;
@@ -393,17 +395,36 @@
 @media print,
 (max-width: 1279px)
 {
-    .steps
+    .steps_division_property
     {
-        .block_head
+        &:before
         {
-            width: 360px;
+            width: 600px;
+            height: 600px;
+        }
+
+
+        .col
+        {
+            width: 400px;
+
+
+            .info
+            {
+                padding: var(--inner_gap_l);
+
+
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
         }
 
 
         .data
         {
-            width: calc(100% - 440px);
+            width: calc(100% - 480px);
         }
 
 
@@ -426,43 +447,10 @@
                 }
 
 
-                .row
-                {
-                    .desc,
-                    .exp
-                    {
-                        width: 100%;
-                    }
-                }
-
-
                 .desc,
                 .tags
                 {
                     font-size: var(--font_size);
-                }
-
-
-                .whatsapp_link
-                {
-                    min-height: 56px;
-                    padding-inline: 64px var(--inner_gap_s);
-
-                    font-size: var(--font_size);
-
-
-                    .icon
-                    {
-                        width: 46px;
-                        min-width: 46px;
-                        height: 46px;
-                    }
-
-
-                    span
-                    {
-                        padding-inline: 0;
-                    }
                 }
             }
         }
@@ -474,14 +462,23 @@
 @media print,
 (max-width: 1023px)
 {
-    .steps
+    .steps_division_property
     {
+        .col
+        {
+            width: 100%;
+            margin-bottom: var(--block_head_offset);
+
+
+            .info
+            {
+                background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 65%);
+            }
+        }
+
+
         .block_head
         {
-            position: static;
-            top: 0;
-
-            width: 100%;
             margin-bottom: var(--block_head_offset);
 
 
@@ -505,25 +502,41 @@
 
 @media (max-width: 767px)
 {
-    .steps
+    .steps_division_property
     {
+        &:before
+        {
+            display: none;
+        }
+
+
+        .col
+        {
+            .info
+            {
+                padding: var(--inner_gap);
+
+                background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 100%);
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
         .items
         {
             .item
             {
                 .name,
                 .desc,
-                .exp,
                 .tags
                 {
                     font-size: var(--font_size_s);
                     line-height: 140%;
-                }
-
-
-                .whatsapp_link
-                {
-                    width: 100%;
                 }
             }
         }

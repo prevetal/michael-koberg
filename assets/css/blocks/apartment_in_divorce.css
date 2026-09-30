@@ -181,3 +181,109 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .apartment_in_divorce
+    {
+        .grid
+        {
+            grid-template-columns: auto 430px;
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap_l);
+
+
+            &:after
+            {
+                width: 128px;
+                height: 66px;
+            }
+
+
+            .number
+            {
+                padding-block: 5px;
+                padding-inline: var(--inner_gap_xs);
+
+                font-size: var(--font_size_s);
+            }
+
+
+            .name
+            {
+                width: calc(100% - 96px);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .apartment_in_divorce
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 560px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .apartment_in_divorce
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap);
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}
+

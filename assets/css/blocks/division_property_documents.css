@@ -103,6 +103,8 @@
 
         .name
         {
+            max-width: calc(100% - 56px);
+
             font-family: var(--font_family_tertiary);
             font-size: var(--font_size_l);
             font-weight: 600;
@@ -154,6 +156,141 @@
                         aspect-ratio: 1 / 1;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .division_property_documents
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 600px;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .name,
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .division_property_documents
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .division_property_documents
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+
+
+        .grid_row
+        {
+            display: grid;
+            overflow: auto;
+            gap: var(--font_size_xs);
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                width: 286px;
+                margin: 0;
+
+                scroll-snap-align: start;
+            }
+        }
+
+
+        .item
+        {
+            .name,
+            .desc
+            {
+                font-size: 15px;
             }
         }
     }

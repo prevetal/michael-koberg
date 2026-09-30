@@ -188,3 +188,157 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .asset_protection
+    {
+        .grid
+        {
+            grid-template-columns: auto 400px;
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap_l);
+
+
+            .icon
+            {
+                top: var(--inner_gap_s);
+                right: var(--inner_gap_s);
+
+                width: 44px;
+            }
+
+
+            .items
+            {
+                gap: var(--inner_gap_xxs);
+
+                font-size: var(--font_size);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+
+
+                .icon ~ &
+                {
+                    width: 100%;
+                }
+            }
+
+
+            ul
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .action
+        {
+            .info
+            {
+                width: 160px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .asset_protection
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .action
+        {
+            .info
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .asset_protection
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap);
+
+
+            .icon
+            {
+                top: var(--inner_gap_m);
+                right: var(--inner_gap_m);
+
+                width: 40px;
+                padding: 7px;
+            }
+
+
+            .items
+            {
+                font-size: 15px;
+
+
+                & > *
+                {
+                    padding-block: var(--inner_gap_xxs);
+                    padding-inline: var(--inner_gap_xs);
+                }
+            }
+
+
+            .desc,
+            ul
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

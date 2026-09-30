@@ -210,7 +210,7 @@
 @media print,
 (max-width: 1279px)
 {
-    .how_we_help
+    .how_we_help_two
     {
         .data
         {
@@ -236,13 +236,21 @@
         }
 
 
-        .items
+        .list
         {
             width: calc(100% - 400px);
 
 
             .item
             {
+                .items
+                {
+                    & > *
+                    {
+                        font-size: var(--font_size);
+                    }
+                }
+
                 .number,
                 .name,
                 .desc
@@ -259,7 +267,7 @@
 @media print,
 (max-width: 1023px)
 {
-    .how_we_help
+    .how_we_help_two
     {
         .data
         {
@@ -277,7 +285,7 @@
         }
 
 
-        .items
+        .list
         {
             width: 100%;
         }
@@ -288,7 +296,7 @@
 
 @media (max-width: 767px)
 {
-    .how_we_help
+    .how_we_help_two
     {
         .data
         {
@@ -317,11 +325,8 @@
         }
 
 
-        .items
+        .list
         {
-            width: 100%;
-
-
             .item
             {
                 .number
@@ -330,6 +335,18 @@
                     {
                         width: 100%;
                         margin-top: var(--inner_gap_s);
+                    }
+                }
+
+
+                .items
+                {
+                    gap: var(--inner_gap_xxs);
+
+
+                    & > *
+                    {
+                        font-size: 15px;
                     }
                 }
 

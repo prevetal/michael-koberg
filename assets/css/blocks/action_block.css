@@ -397,6 +397,20 @@
                 font-size: var(--font_size);
             }
         }
+
+
+        .bottom
+        {
+            margin-top: var(--block_padding);
+
+            font-size: var(--font_size);
+
+
+            & > *
+            {
+                width: calc(50% - var(--inner_gap));
+            }
+        }
     }
 }
 
@@ -431,6 +445,22 @@
         {
             .whatsapp_link,
             .btn
+            {
+                width: 100%;
+            }
+        }
+
+
+        .bottom
+        {
+            gap: var(--inner_gap_s);
+
+            padding-inline: var(--inner_gap_l);
+
+            font-size: 15px;
+
+
+            & > *
             {
                 width: 100%;
             }

@@ -248,7 +248,7 @@
 @media print,
 (max-width: 1279px)
 {
-    .alimony_calc
+    .not_divided
     {
         .cont
         {
@@ -264,40 +264,31 @@
             padding: var(--inner_gap_xl);
 
 
-            .bottom
+            .action
             {
-                & > .desc
+                flex-wrap: wrap;
+
+
+                .info
                 {
-                    font-size: var(--font_size);
+                    display: none;
+
+
+                    .desc
+                    {
+                        br
+                        {
+                            display: none;
+                        }
+                    }
                 }
 
 
-                .action
+                .whatsapp_link
                 {
-                    flex-wrap: wrap;
+                    width: 100%;
 
-
-                    .info
-                    {
-                        display: none;
-
-
-                        .desc
-                        {
-                            br
-                            {
-                                display: none;
-                            }
-                        }
-                    }
-
-
-                    .whatsapp_link
-                    {
-                        width: 100%;
-
-                        white-space: normal;
-                    }
+                    white-space: normal;
                 }
             }
         }
@@ -305,29 +296,23 @@
 
         .list
         {
+            gap: var(--inner_gap_m);
+
             width: calc(100% - 430px - var(--inner_gap_s));
 
 
             .item
             {
-                .items
-                {
-                    gap: 4px;
-
-                    margin-top: 4px;
-
-
-                    & > *
-                    {
-                        font-size: var(--font_size);
-                    }
-                }
-
-
                 .desc
                 {
                     font-size: var(--font_size);
                 }
+            }
+
+
+            .text
+            {
+                font-size: var(--font_size);
             }
         }
     }
@@ -338,7 +323,7 @@
 @media print,
 (max-width: 1023px)
 {
-    .alimony_calc
+    .not_divided
     {
         .data,
         .list
@@ -352,7 +337,7 @@
 
 @media (max-width: 767px)
 {
-    .alimony_calc
+    .not_divided
     {
         .data
         {
@@ -370,15 +355,6 @@
                     margin-top: 0;
                 }
             }
-
-
-            .bottom
-            {
-                & > .desc
-                {
-                    font-size: 15px;
-                }
-            }
         }
 
 
@@ -386,21 +362,18 @@
         {
             .item
             {
-                .items
-                {
-                    & > *
-                    {
-                        font-size: 15px;
-                    }
-                }
-
-
                 .desc
                 {
                     max-width: 100%;
 
                     font-size: 15px;
                 }
+            }
+
+
+            .text
+            {
+                font-size: 15px;
             }
         }
     }

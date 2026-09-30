@@ -55,6 +55,9 @@
             img
             {
                 display: block;
+
+                max-width: 100%;
+                max-height: 100%;
             }
         }
 
@@ -182,7 +185,149 @@
             {
                 .desc
                 {
+                    width: 100%;
+
                     color: #c8c8c8;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .parents_agreement
+    {
+        .grid
+        {
+            grid-template-columns: 400px 1fr;
+
+
+            & > .info
+            {
+                padding: var(--inner_gap_l);
+            }
+        }
+
+
+        .info
+        {
+            .desc
+            {
+                width: 100%;
+                padding-right: var(--block_padding_l);
+
+                font-size: var(--font_size);
+            }
+
+
+            .exp
+            {
+                width: 100%;
+
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .data
+        {
+            padding: var(--inner_gap_l);
+
+
+            .items
+            {
+                gap: var(--inner_gap_xxs);
+
+                font-size: var(--font_size);
+            }
+
+
+            .exp
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .parents_agreement
+    {
+        .grid
+        {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .parents_agreement
+    {
+        .grid
+        {
+            & > .info
+            {
+                padding: var(--inner_gap);
+            }
+        }
+
+
+        .info
+        {
+            .icon
+            {
+                top: var(--inner_gap_m);
+                right: var(--inner_gap_m);
+
+                width: 40px;
+                padding: 7px;
+            }
+
+
+            .desc
+            {
+                padding-right: 0;
+
+                font-size: 15px;
+            }
+
+
+            .exp
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .data
+        {
+            padding: var(--inner_gap);
+
+
+            .items,
+            .exp
+            {
+                font-size: 15px;
+            }
+
+
+            .items
+            {
+                & > *
+                {
+                    padding-block: var(--inner_gap_xxs);
+                    padding-inline: var(--inner_gap_xs);
                 }
             }
         }

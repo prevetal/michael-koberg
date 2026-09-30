@@ -164,6 +164,25 @@
             }
 
 
+            &:after
+            {
+                position: absolute;
+                top: -1px;
+                right: -1px;
+
+                display: block;
+
+                width: 60px;
+
+                content: '';
+                pointer-events: none;
+
+                background: url(../../../images/bg_guardianship_about_corner.png) 0 0/100% 100% no-repeat, var(--bg);
+
+                aspect-ratio: 1 / 1;
+            }
+
+
             .number
             {
                 position: absolute;
@@ -197,6 +216,8 @@
 
             .name
             {
+                width: calc(100% - 48px);
+
                 font-size: var(--font_size_l);
                 font-weight: 600;
                 line-height: 120%;
@@ -266,6 +287,143 @@
                     gap: var(--inner_gap_m);
 
                     color: var(--secondary_color);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .guardianship_about
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 560px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: 400px 1fr;
+        }
+
+
+        .info
+        {
+            padding: var(--inner_gap_l);
+
+
+            .items
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_l);
+
+
+            .item
+            {
+                .name,
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .guardianship_about
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 508px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .guardianship_about
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .info
+        {
+            padding: var(--inner_gap);
+
+
+            .image
+            {
+                height: 140px;
+            }
+
+
+            .items
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap);
+
+            padding: var(--inner_gap);
+
+
+            .item
+            {
+                .name,
+                .desc
+                {
+                    font-size: 15px;
                 }
             }
         }

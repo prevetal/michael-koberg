@@ -229,3 +229,181 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .divorce_complex_assets
+    {
+        .item
+        {
+            &.m_w
+            {
+                width: 430px;
+            }
+
+
+            &.l_w
+            {
+                width: calc(100% - 430px - var(--gap_x) * 2);
+            }
+
+
+            .icon
+            {
+                top: var(--inner_gap_s);
+                right: var(--inner_gap_s);
+
+                width: 48px;
+            }
+
+
+            .image
+            {
+                width: 160px;
+            }
+
+
+            .info
+            {
+                gap: var(--inner_gap_l);
+
+                padding: var(--inner_gap);
+
+
+                .image + &
+                {
+                    width: calc(100% - 160px);
+                }
+            }
+
+
+            .desc
+            {
+                margin-top: 0;
+
+                font-size: var(--font_size);
+
+
+                .icon ~ &
+                {
+                    width: calc(100% - 48px);
+                }
+            }
+
+
+            .bottom
+            {
+                padding: var(--inner_gap_s);
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .divorce_complex_assets
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .item
+        {
+            &.m_w,
+            &.l_w
+            {
+                width: calc(100% / var(--items_per_line) * var(--width_multiplier, 1) - var(--gap_x));
+
+                --width_multiplier: 2;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .divorce_complex_assets
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .icon
+            {
+                top: var(--inner_gap_xs);
+                right: var(--inner_gap_xs);
+
+                width: 44px;
+                padding: 7px;
+            }
+
+
+            .image
+            {
+                position: relative;
+                inset: 0;
+
+                width: 100%;
+                height: 120px;
+                margin: 0;
+            }
+
+
+            .info
+            {
+                .image + &
+                {
+                    width: 100%;
+                }
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+
+
+                .icon ~ &
+                {
+                    width: 100%;
+                }
+            }
+
+
+            .bottom
+            {
+                margin-top: 0;
+
+                font-size: 15px;
+            }
+        }
+    }
+}
