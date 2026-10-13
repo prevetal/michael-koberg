@@ -7,6 +7,12 @@
     {
         --gap_x: var(--inner_gap_s);
         --gap_y: var(--inner_gap_s);
+
+
+        &.small
+        {
+            --items_per_line: 4;
+        }
     }
 
 
@@ -24,6 +30,7 @@
         line-height: 130%;
         letter-spacing: -.54px;
 
+        color: var(--secondary_color);
         border: 1px solid var(--border_color);
         border-radius: var(--border_radius_xs);
 
@@ -75,6 +82,29 @@
             gap: var(--inner_gap_s);
 
             font-size: var(--font_size);
+
+
+            br
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .service_advantages
+    {
+        .grid_row
+        {
+            &.small
+            {
+                --items_per_line: 2;
+            }
         }
     }
 }
@@ -89,6 +119,12 @@
         {
             --items_per_line: 1;
             --gap_y: var(--inner_gap_m);
+
+
+            &.small
+            {
+                --items_per_line: 1;
+            }
         }
 
 

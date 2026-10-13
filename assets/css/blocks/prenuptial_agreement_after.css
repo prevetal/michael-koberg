@@ -1,0 +1,421 @@
+/*--------------------------------
+    Prenuptial agreement after
+--------------------------------*/
+.prenuptial_agreement_after
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        grid-template-columns: 1fr 319px;
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+
+        .answer
+        {
+            position: relative;
+
+            width: fit-content;
+            padding-block: 5px;
+            padding-inline: 92px var(--inner_gap_s);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+            border: 1px solid var(--border_color);
+            border-radius: 30px;
+            background: var(--bg_grey);
+
+
+            .yes
+            {
+                position: absolute;
+                top: -1px;
+                left: -1px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+
+                width: 73px;
+                height: calc(100% + 2px);
+                padding-inline: var(--inner_gap_m);
+
+                font-weight: 500;
+                letter-spacing: -.36px;
+
+                color: var(--secondary_color);
+                border: 1px solid #d7f18e;
+                border-radius: var(--border_radius_l);
+                background: #fbffef;
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: var(--inner_gap_m);
+
+                    display: block;
+
+                    height: 19px;
+                    margin-block: auto;
+
+                    content: '';
+
+                    background: url(../../../images/ic_check.svg) 50%/11px auto no-repeat;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            width: 861px;
+            max-width: 100%;
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+        }
+
+
+        .items
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            margin-top: var(--inner_gap);
+
+
+            .title
+            {
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 135%;
+
+                color: var(--secondary_color);
+            }
+
+
+            .list
+            {
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_m);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: var(--grey_color_strong);
+
+
+                & > *
+                {
+                    position: relative;
+
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    min-height: 48px;
+                    padding-block: var(--inner_gap_m);
+                    padding-inline: 45px var(--inner_gap_s);
+
+                    border: 1px solid var(--border_color);
+                    border-radius: var(--border_radius_s);
+                    background: var(--bg_grey);
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: calc(var(--inner_gap_m) + 3px);
+                        left: var(--inner_gap_s);
+
+                        display: block;
+
+                        width: 19px;
+
+                        content: '';
+
+                        background: url(../../../images/ic_check.svg) 50%/11px auto no-repeat;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .image
+    {
+        display: block;
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+    }
+
+
+    .notice
+    {
+        position: relative;
+
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: var(--block_padding_l);
+
+        margin-top: var(--block_padding_l);
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap_l);
+
+        color: var(--light_color);
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+        .icon
+        {
+            position: absolute;
+            top: var(--inner_gap_m);
+            right: var(--inner_gap_m);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 28px;
+
+            pointer-events: none;
+
+            color: var(--secondary_color);
+            border-radius: 50%;
+            background: var(--primary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            svg
+            {
+                display: block;
+
+                width: 3px;
+                height: 12px;
+            }
+        }
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 135%;
+
+            white-space: nowrap;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            width: 100%;
+            padding-right: var(--inner_gap);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--bg_grey);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .prenuptial_agreement_after
+    {
+        .grid
+        {
+            grid-template-columns: 1fr 300px;
+        }
+
+
+        .data
+        {
+            .answer
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .desc
+            {
+                width: 100%;
+
+                font-size: var(--font_size);
+            }
+
+
+            .items
+            {
+                .list
+                {
+                    font-size: var(--font_size);
+
+
+                    & > *
+                    {
+                        min-height: 40px;
+
+
+                        &:before
+                        {
+                            top: calc(var(--inner_gap_m) + 1px);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .notice
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--block_padding);
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .prenuptial_agreement_after
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+
+
+                .title
+                {
+                    br
+                    {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .prenuptial_agreement_after
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .data
+        {
+            .answer,
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .items
+        {
+            .list
+            {
+                font-size: 15px;
+            }
+        }
+
+
+        .notice
+        {
+            flex-wrap: wrap;
+            gap: var(--inner_gap);
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

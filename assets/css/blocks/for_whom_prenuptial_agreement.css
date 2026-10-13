@@ -1,0 +1,273 @@
+/*-----------------------------------
+    For whom prenuptial agreement
+-----------------------------------*/
+.for_whom_prenuptial_agreement
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        grid-template-columns: 541px 1fr;
+    }
+
+
+    .col
+    {
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+
+        padding: var(--block_padding);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: linear-gradient(180deg, rgba(255, 255, 255, .20) 0%, rgba(255, 255, 255, .00) 76.77%);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        .block_head
+        {
+            .pre_title
+            {
+                order: 2;
+
+                margin-top: 14px;
+            }
+        }
+
+
+        .action
+        {
+            margin-top: auto;
+            padding: 0;
+
+            border: none;
+            border-radius: 0;
+            background: none;
+
+
+            .info
+            {
+                color: var(--grey_color_strong);
+            }
+        }
+
+
+        .image
+        {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+
+            display: block;
+
+            pointer-events: none;
+        }
+    }
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+
+        .item
+        {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            padding: var(--inner_gap);
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_s);
+            background: var(--bg);
+
+
+            & > *
+            {
+                position: relative;
+                z-index: 3;
+            }
+
+
+            &:after
+            {
+                position: absolute;
+                top: -1px;
+                right: -1px;
+
+                display: block;
+
+                width: 60px;
+
+                content: '';
+                pointer-events: none;
+
+                background: url(../../../images/bg_situations_corner.png) 0 0/100% 100% no-repeat, var(--bg_grey);
+
+                aspect-ratio: 1 / 1;
+            }
+
+
+            .icon
+            {
+                position: absolute;
+                top: -1px;
+                right: -1px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 46px;
+
+                border-radius: 50%;
+                background: var(--secondary_color);
+
+                aspect-ratio: 1 / 1;
+
+
+                img
+                {
+                    display: block;
+
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+
+            .name
+            {
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 135%;
+
+                color: var(--secondary_color);
+            }
+
+
+            .desc
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: #2f2f2f;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .for_whom_prenuptial_agreement
+    {
+        .grid
+        {
+            grid-template-columns: 400px 1fr;
+        }
+
+
+        .col
+        {
+            padding: var(--inner_gap_xl);
+        }
+
+
+        .items
+        {
+            gap: var(--inner_gap_m);
+
+
+            .item
+            {
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .for_whom_prenuptial_agreement
+    {
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .col
+        {
+            padding: var(--inner_gap_l);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .for_whom_prenuptial_agreement
+    {
+        .col
+        {
+            padding: var(--inner_gap);
+
+
+            .block_head
+            {
+                .pre_title
+                {
+                    order: 0;
+
+                    margin-top: 0;
+                }
+            }
+        }
+
+
+        .items
+        {
+            .item
+            {
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

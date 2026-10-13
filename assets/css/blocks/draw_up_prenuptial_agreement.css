@@ -1,0 +1,241 @@
+/*----------------------------------
+    Draw up prenuptial agreement
+----------------------------------*/
+.draw_up_prenuptial_agreement
+{
+    overflow: clip;
+
+
+    &:before
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 798px;
+        height: 745px;
+
+        content: '';
+        transform: translate(-48.872%, -33.154%);
+        pointer-events: none;
+
+        background: rgba(59, 191, 168, .20);
+
+        filter: blur(200px);
+    }
+
+
+    .cont
+    {
+        position: relative;
+        z-index: 3;
+    }
+
+
+    .block_head
+    {
+        .pre_title,
+        .title,
+        .desc
+        {
+            color: var(--light_color);
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        padding: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color_secondary);
+        border-radius: var(--border_radius_s);
+        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 60%);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:after
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_direct_communication_corner_secondary.png) 0 0/100% 100% no-repeat, var(--secondary_color);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border: 1px solid var(--border_color_secondary);
+            border-radius: 50%;
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            max-width: calc(100% - 56px);
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-size: var(--font_size_l);
+            line-height: 130%;
+            letter-spacing: -.54px;
+
+            color: #c8c8c8;
+
+
+            &.border
+            {
+                margin-top: auto;
+                padding-left: var(--inner_gap);
+
+                color: var(--light_color);
+                border-left: 3px solid var(--primary_color);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .draw_up_prenuptial_agreement
+    {
+        &:before
+        {
+            width: 500px;
+            height: 500px;
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap_l);
+
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 72%);
+
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .draw_up_prenuptial_agreement
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 48%);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .draw_up_prenuptial_agreement
+    {
+        &:before
+        {
+            width: 400px;
+            height: 400px;
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap);
+
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 100%);
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

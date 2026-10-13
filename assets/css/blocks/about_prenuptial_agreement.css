@@ -1,0 +1,301 @@
+/*--------------------------------
+    About prenuptial agreement
+--------------------------------*/
+.about_prenuptial_agreement
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        grid-template-columns: 430px 1fr;
+    }
+
+
+    .info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        padding: var(--inner_gap_xl);
+
+        color: var(--light_color);
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: linear-gradient(315deg, #113138 9.34%, #194c4d 94.77%);
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+        }
+
+
+        .image
+        {
+            display: block;
+
+            height: 150px;
+
+            border-radius: var(--border_radius);
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+        }
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        padding: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--bg);
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .items
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+
+            .list
+            {
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_m);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: var(--grey_color_strong);
+
+
+                & > *
+                {
+                    position: relative;
+
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    min-height: 48px;
+                    padding-block: var(--inner_gap_m);
+                    padding-inline: 45px var(--inner_gap_s);
+
+                    border: 1px solid var(--border_color);
+                    border-radius: var(--border_radius_s);
+                    background: var(--bg_grey);
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: calc(var(--inner_gap_m) + 2px);
+                        left: var(--inner_gap_s);
+
+                        display: block;
+
+                        width: 19px;
+
+                        content: '';
+
+                        background: url(../../../images/ic_check.svg) 50%/11px auto no-repeat;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 135%;
+
+            color: #3e3e3e;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .about_prenuptial_agreement
+    {
+        .grid
+        {
+            grid-template-columns: 360px 1fr;
+        }
+
+
+        .info
+        {
+            padding: var(--inner_gap_l);
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .image
+            {
+                height: 140px;
+            }
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_l);
+
+
+            .items
+            {
+                .list
+                {
+                    font-size: var(--font_size);
+
+
+                    & > *
+                    {
+                        min-height: 40px;
+
+
+                        &:before
+                        {
+                            top: calc(var(--inner_gap_m) + 1px);
+                        }
+                    }
+                }
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .about_prenuptial_agreement
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .about_prenuptial_agreement
+    {
+        .info
+        {
+            padding: var(--inner_gap);
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+
+
+            .image
+            {
+                height: 120px;
+            }
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap);
+
+            padding: var(--inner_gap);
+
+
+            .items
+            {
+                .list
+                {
+                    font-size: 15px;
+                }
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

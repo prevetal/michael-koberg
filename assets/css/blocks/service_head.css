@@ -148,6 +148,12 @@
             }
 
 
+            &.middle
+            {
+                width: 579px;
+            }
+
+
             &.big
             {
                 width: 618px;
@@ -157,6 +163,30 @@
             &.full_w
             {
                 width: 100%;
+            }
+        }
+
+
+        .tags
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap);
+
+            margin-top: var(--inner_gap);
+
+
+            .sep
+            {
+                width: 6px;
+
+                border-radius: 50%;
+                background: var(--primary_color);
+
+                aspect-ratio: 1 / 1;
             }
         }
 
@@ -589,6 +619,14 @@
                 {
                     padding-left: 30px;
                 }
+            }
+
+
+            .tags
+            {
+                gap: var(--inner_gap_s);
+
+                font-size: var(--font_size_s);
             }
 
 

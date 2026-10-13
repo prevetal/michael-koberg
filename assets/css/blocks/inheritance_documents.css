@@ -1,0 +1,278 @@
+/*---------------------------
+    Inheritance documents
+---------------------------*/
+.inheritance_documents
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_l);
+
+        grid-template-columns: 541px 1fr;
+    }
+
+
+    .block_head
+    {
+        position: relative;
+
+        overflow: hidden;
+
+        margin-bottom: 0;
+        padding: var(--block_padding);
+
+        border-radius: var(--border_radius);
+        background: var(--secondary_color);
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        .pre_title
+        {
+            order: 2;
+
+            margin-top: auto;
+
+            color: var(--light_color);
+        }
+
+
+        .title
+        {
+            color: var(--light_color);
+        }
+
+
+        .desc
+        {
+            width: 324px;
+
+            color: var(--light_color);
+        }
+
+
+        .image
+        {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+
+            display: block;
+
+            pointer-events: none;
+
+
+            &:before
+            {
+                position: absolute;
+                inset: 0;
+
+                display: block;
+
+                content: '';
+
+                background: linear-gradient(0deg, rgba(0, 0, 0, .20) 0%, rgba(0, 0, 0, .20) 100%), linear-gradient(90deg, rgba(59, 191, 168, .20) 0%, rgba(59, 191, 168, .00) 100%);
+            }
+        }
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block_padding_l);
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+            --gap_x: var(--inner_gap_m);
+            --gap_y: var(--inner_gap_m);
+        }
+
+
+        .item
+        {
+            position: relative;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            min-height: 48px;
+            padding-block: var(--inner_gap_m);
+            padding-inline: 45px var(--inner_gap_s);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_s);
+            background: var(--bg);
+
+
+            &.l_w
+            {
+                --width_multiplier: 2;
+            }
+
+
+            &:before
+            {
+                position: absolute;
+                top: 50%;
+                left: var(--inner_gap_s);
+
+                display: block;
+
+                width: 19px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                border-radius: 50%;
+                background: url(../../../images/ic_check_white.svg) 50%/9px auto no-repeat var(--secondary_color);
+
+                aspect-ratio: 1 / 1;
+            }
+        }
+    }
+
+
+    .action
+    {
+        margin-top: auto;
+        padding: 0;
+
+        border: none;
+        border-radius: 0;
+        background: none;
+
+
+        .info
+        {
+            color: var(--secondary_color);
+
+
+            .desc
+            {
+                width: 334px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .inheritance_documents
+    {
+        .grid
+        {
+            grid-template-columns: 360px 1fr;
+        }
+
+
+        .block_head
+        {
+            padding: var(--inner_gap_l);
+        }
+
+
+        .data
+        {
+            .item
+            {
+                min-height: 40px;
+
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .action
+        {
+            .info
+            {
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .inheritance_documents
+    {
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .block_head
+        {
+            .pre_title
+            {
+                order: 0;
+
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .inheritance_documents
+    {
+        .block_head
+        {
+            padding: var(--inner_gap);
+
+
+            .desc
+            {
+                width: 100%;
+            }
+        }
+
+
+        .data
+        {
+            .grid_row
+            {
+                --items_per_line: 1;
+            }
+
+
+            .item
+            {
+                &.l_w
+                {
+                    --width_multiplier: 1;
+                }
+            }
+        }
+    }
+}

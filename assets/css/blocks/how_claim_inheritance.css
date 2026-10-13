@@ -1,0 +1,208 @@
+/*---------------------------
+    How claim inheritance
+---------------------------*/
+.how_claim_inheritance
+{
+    .grid
+    {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        width: 373px;
+        max-width: 100%;
+        padding-block: calc(var(--inner_gap_xl) - 5px) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color);
+        border-top: 6px solid var(--primary_color);
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+
+
+        &.l_w
+        {
+            width: calc(100% - 373px * 2 - var(--inner_gap_s) * 2);
+        }
+
+
+        &:nth-child(2)
+        {
+            border-top-color: #c4d3d8;
+        }
+
+
+        &:nth-child(3)
+        {
+            border-top-color: #296668;
+        }
+
+
+        & > *
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+
+        &:after
+        {
+            position: absolute;
+            z-index: 1;
+            top: -6px;
+            right: -1px;
+
+            display: block;
+
+            width: 60px;
+
+            content: '';
+            pointer-events: none;
+
+            background: url(../../../images/bg_advantages_corner.png) 0 0/100% 100% no-repeat, var(--bg);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .icon
+        {
+            position: absolute;
+            top: -6px;
+            right: -1px;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 46px;
+
+            border: 1px solid var(--border_color);
+            border-radius: 50%;
+            background: var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            width: calc(100% - 40px);
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: #10313d;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .how_claim_inheritance
+    {
+        .item
+        {
+            width: 300px;
+            padding-block: calc(var(--inner_gap_l) - 5px) var(--inner_gap_l);
+            padding-inline: var(--inner_gap_l);
+
+
+            &.l_w
+            {
+                width: calc(100% - 300px * 2 - var(--inner_gap_s) * 2);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .how_claim_inheritance
+    {
+        .item
+        {
+            &,
+            &.l_w
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .how_claim_inheritance
+    {
+        .item
+        {
+            &,
+            &.l_w
+            {
+                padding-block: var(--inner_gap);
+                padding-inline: var(--inner_gap);
+            }
+
+
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+/*---------------------------------
+    Update prenuptial agreement
+---------------------------------*/
+.update_prenuptial_agreement
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--inner_gap_s);
+
+        grid-template-columns: 541px 1fr;
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        padding: var(--inner_gap_xl);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--bg);
+
+
+        .icon
+        {
+            position: absolute;
+            top: var(--inner_gap);
+            right: var(--inner_gap);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 50px;
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_xs);
+            background: var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .answer
+        {
+            position: relative;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            width: fit-content;
+            padding-block: 5px;
+            padding-inline: 38px var(--inner_gap_m);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -.36px;
+
+            color: #2f2f2f;
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_l);
+
+
+            &.primary
+            {
+                border-color: var(--primary_color);
+            }
+
+
+            &:before
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: var(--inner_gap_m);
+
+                display: block;
+
+                height: 19px;
+                margin-block: auto;
+
+                content: '';
+
+                background: url(../../../images/ic_check.svg) 50%/11px auto no-repeat;
+
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+
+        .name
+        {
+            max-width: calc(100% - 60px);
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: #10313d;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--grey_color_strong);
+
+
+            .border
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+                padding-left: var(--inner_gap);
+
+                border-left: 3px solid var(--primary_color);
+            }
+
+
+            b,
+            strong
+            {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .update_prenuptial_agreement
+    {
+        .grid
+        {
+            grid-template-columns: 430px 1fr;
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap_l);
+
+
+            .icon
+            {
+                width: 48px;
+            }
+
+
+            .answer,
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .update_prenuptial_agreement
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .update_prenuptial_agreement
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .item
+        {
+            padding: var(--inner_gap);
+
+
+            .icon
+            {
+                width: 44px;
+                padding: 8px;
+            }
+
+
+            .answer,
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}
