@@ -122,7 +122,14 @@
 
             &.dark
             {
-                background: linear-gradient(315deg, #113138 9.34%, #194c4d 94.77%);
+                border-color: var(--border_color_secondary);
+                background: linear-gradient(315deg, #113138 9.34%, #194c4d 33.333%);
+
+
+                &:after
+                {
+                    background: url(../../../images/bg_direct_communication_corner_secondary.png) 0 0/100% 100% no-repeat, var(--bg);
+                }
 
 
                 .name,
@@ -237,6 +244,12 @@
         {
             .item
             {
+                &.dark
+                {
+                    background: linear-gradient(315deg, #113138 9.34%, #194c4d 48%);
+                }
+
+
                 .desc
                 {
                     width: 100%;
@@ -276,6 +289,18 @@
                 }
             }
         }
+
+
+        .list
+        {
+            .item
+            {
+                &.dark
+                {
+                    background: linear-gradient(315deg, #113138 9.34%, #194c4d 33.333%);
+                }
+            }
+        }
     }
 }
 
@@ -296,6 +321,12 @@
         {
             .item
             {
+                &.dark
+                {
+                    background: linear-gradient(315deg, #113138 9.34%, #194c4d 80%);
+                }
+
+
                 .desc
                 {
                     font-size: 15px;
