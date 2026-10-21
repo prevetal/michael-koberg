@@ -104,6 +104,12 @@
             font-size: var(--font_size_title_l);
             font-weight: 500;
             line-height: 110%;
+
+
+            &.size_s
+            {
+                font-size: 42px;
+            }
         }
 
 
@@ -137,6 +143,12 @@
             }
 
 
+            &.top_offset
+            {
+                margin-top: var(--inner_gap_m);
+            }
+
+
             &.small
             {
                 width: 518px;
@@ -163,6 +175,105 @@
             &.full_w
             {
                 width: 100%;
+            }
+        }
+
+
+        .situations
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            padding-block: var(--inner_gap);
+
+
+            .label
+            {
+                font-size: var(--font_size_l);
+
+                color: #c8c8c8;
+            }
+
+
+            .list
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+
+                a
+                {
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    gap: var(--inner_gap);
+
+                    padding: var(--inner_gap_xs);
+
+                    font-size: var(--font_size_l);
+
+                    transition: color .2s linear;
+                    text-decoration: none;
+
+                    color: currentColor;
+                    border: 1px solid var(--border_color_secondary);
+                    border-radius: 7px;
+
+
+                    .icon
+                    {
+                        display: flex;
+                        align-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        width: 18px;
+
+                        aspect-ratio: 1/ 1;
+
+
+                        img
+                        {
+                            display: block;
+
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+
+                    span
+                    {
+                        width: calc(100% - 30px - var(--inner_gap) * 2);
+                    }
+
+
+                    .arr
+                    {
+                        display: block;
+
+                        width: 12px;
+                        margin-left: auto;
+
+                        color: var(--primary_color);
+
+                        aspect-ratio: 1 / 1;
+                    }
+
+
+                    @media (hover: hover) and (pointer: fine)
+                    {
+                        &:hover
+                        {
+                            color: var(--primary_color);
+                        }
+                    }
+                }
             }
         }
 
@@ -247,7 +358,7 @@
         }
 
 
-        .items
+        & > .items
         {
             display: flex;
             align-content: flex-start;
@@ -449,6 +560,15 @@
             {
                 width: 463px;
             }
+
+
+            &.l_w
+            {
+                width: 683px;
+
+                font-size: var(--font_size_s);
+                line-height: normal;
+            }
         }
 
 
@@ -504,6 +624,12 @@
                 justify-content: flex-start;
                 column-gap: var(--inner_gap_l);
                 row-gap: var(--inner_gap_s);
+
+
+                &.l_offset
+                {
+                    column-gap: var(--block_padding_l);
+                }
 
 
                 .btn
@@ -603,6 +729,15 @@
             }
 
 
+            .title
+            {
+                &.size_s
+                {
+                    font-size: 40px;
+                }
+            }
+
+
             .desc,
             .info
             {
@@ -610,7 +745,7 @@
             }
 
 
-            .items
+            & > .items
             {
                 gap: var(--inner_gap_l);
 
@@ -627,6 +762,24 @@
                 gap: var(--inner_gap_s);
 
                 font-size: var(--font_size_s);
+            }
+
+
+            .situations
+            {
+                .label
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .list
+                {
+                    a
+                    {
+                        font-size: var(--font_size);
+                    }
+                }
             }
 
 
@@ -697,6 +850,12 @@
                     {
                         font-size: var(--font_size);
                     }
+
+
+                    &.l_offset
+                    {
+                        column-gap: var(--inner_gap_xl);
+                    }
                 }
             }
         }
@@ -761,6 +920,15 @@
     {
         .data
         {
+            .title
+            {
+                &.size_s
+                {
+                    font-size: var(--font_size_title_l);
+                }
+            }
+
+
             .desc,
             .info
             {
@@ -769,13 +937,33 @@
             }
 
 
-            .items
+            & > .items
             {
                 display: none;
                 gap: var(--inner_gap);
 
                 font-size: 15px;
                 line-height: 140%;
+            }
+
+
+            .situations
+            {
+                .label
+                {
+                    font-size: 15px;
+                }
+
+
+                .list
+                {
+                    a
+                    {
+                        gap: var(--inner_gap_s);
+
+                        font-size: 15px;
+                    }
+                }
             }
 
 
@@ -795,6 +983,33 @@
 
                 font-size: 15px;
                 line-height: 140%;
+            }
+
+
+            .anchors
+            {
+                .items
+                {
+                    justify-content: center;
+
+
+                    &.l_offset
+                    {
+                        column-gap: var(--inner_gap_l);
+                    }
+
+
+                    .btn
+                    {
+                        font-size: 13px;
+
+
+                        .icon
+                        {
+                            width: 10px;
+                        }
+                    }
+                }
             }
         }
     }

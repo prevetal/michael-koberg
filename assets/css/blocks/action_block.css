@@ -22,6 +22,14 @@
         background: var(--secondary_color);
 
 
+        &.s_gap
+        {
+            gap: var(--inner_gap);
+
+            min-height: 406px;
+        }
+
+
         & > *
         {
             position: relative;
@@ -76,6 +84,12 @@
         &.xxl_w
         {
             width: 660px;
+        }
+
+
+        &.size_s
+        {
+            font-size: 35px;
         }
     }
 
@@ -290,6 +304,45 @@
     }
 
 
+    .anchors
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--inner_gap);
+
+
+        .sep
+        {
+            width: 6px;
+
+            border-radius: 50%;
+            background: var(--primary_color);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .btn
+        {
+            transition: color .2s linear;
+
+            color: #c8c8c8;
+
+
+            @media (hover: hover) and (pointer: fine)
+            {
+                &:hover
+                {
+                    color: var(--primary_color);
+                }
+            }
+        }
+    }
+
+
     .bg
     {
         position: absolute;
@@ -350,6 +403,21 @@
             min-height: 400px;
             padding-block: var(--outside_gap_s);
             padding-inline: var(--block_padding_l);
+
+
+            &.s_gap
+            {
+                min-height: 380px;
+            }
+        }
+
+
+        .title
+        {
+            &.size_s
+            {
+                font-size: 32px;
+            }
         }
 
 
@@ -429,6 +497,21 @@
             padding-inline: var(--inner_gap_l);
 
             border: none;
+
+
+            &.s_gap
+            {
+                min-height: 592px;
+            }
+        }
+
+
+        .title
+        {
+            &.size_s
+            {
+                font-size: var(--font_size_title);
+            }
         }
 
 
@@ -464,6 +547,14 @@
             {
                 width: 100%;
             }
+        }
+
+
+        .anchors
+        {
+            gap: var(--inner_gap_s);
+
+            font-size: 15px;
         }
     }
 }

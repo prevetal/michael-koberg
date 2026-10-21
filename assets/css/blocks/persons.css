@@ -244,6 +244,93 @@
     }
 
 
+    .bottom
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+
+        margin-top: var(--inner_gap_xl);
+        padding: var(--inner_gap_xl);
+
+        color: var(--light_color);
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: linear-gradient(90deg, #194b4d 0%, #14393f 100%);
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            width: 861px;
+            max-width: 100%;
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+        }
+
+
+        .divider
+        {
+            width: 100%;
+            height: 1px;
+
+            background: var(--border_color_secondary);
+        }
+
+
+        .links
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--block_padding);
+
+
+            a
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_m);
+
+                transition: color .2s linear;
+                text-decoration: none;
+
+                color: currentColor;
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 12px;
+
+                    color: var(--primary_color);
+
+                    aspect-ratio: 1 / 1;
+                }
+
+
+                @media (hover: hover) and (pointer: fine)
+                {
+                    &:hover
+                    {
+                        color: var(--primary_color);
+                    }
+                }
+            }
+        }
+    }
+
+
     .action
     {
         &.view2
@@ -361,6 +448,23 @@
                 }
             }
         }
+
+
+        .bottom
+        {
+            gap: var(--inner_gap_l);
+
+            margin-top: var(--inner_gap_l);
+            padding: var(--inner_gap_l);
+
+
+            .desc
+            {
+                width: 760px;
+
+                font-size: var(--font_size);
+            }
+        }
     }
 }
 
@@ -467,6 +571,41 @@
                 .spoler_btn
                 {
                     font-size: var(--font_size_s);
+                }
+            }
+        }
+
+
+        .bottom
+        {
+            gap: var(--inner_gap);
+
+            margin-top: var(--inner_gap);
+            padding: var(--inner_gap);
+
+
+            .desc
+            {
+                width: 100%;
+
+                font-size: 15px;
+            }
+
+
+            .links
+            {
+                gap: var(--inner_gap);
+
+
+                a
+                {
+                    font-size: 15px;
+
+
+                    .icon
+                    {
+                        width: 10px;
+                    }
                 }
             }
         }

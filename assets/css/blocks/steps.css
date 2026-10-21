@@ -67,6 +67,12 @@
         margin-bottom: 0;
 
 
+        &.l_w
+        {
+            width: 478px;
+        }
+
+
         .pre_title
         {
             color: var(--light_color);
@@ -92,6 +98,12 @@
     .data
     {
         width: calc(100% - 480px);
+
+
+        &.s_w
+        {
+            width: calc(100% - 560px);
+        }
     }
 
 
@@ -117,7 +129,7 @@
             {
                 position: absolute;
                 z-index: 2;
-                top: 6px;
+                top: 12px;
                 right: 100%;
 
                 display: block;
@@ -139,7 +151,7 @@
             {
                 position: absolute;
                 z-index: 1;
-                top: 6px;
+                top: 12px;
                 right: 100%;
 
                 display: block;
@@ -397,13 +409,21 @@
     {
         .block_head
         {
-            width: 360px;
+            &,
+            &.l_w
+            {
+                width: 360px;
+            }
         }
 
 
         .data
         {
-            width: calc(100% - 440px);
+            &,
+            &.s_w
+            {
+                width: calc(100% - 440px);
+            }
         }
 
 
@@ -478,11 +498,15 @@
     {
         .block_head
         {
-            position: static;
-            top: 0;
+            &,
+            &.l_w
+            {
+                position: static;
+                top: 0;
 
-            width: 100%;
-            margin-bottom: var(--block_head_offset);
+                width: 100%;
+                margin-bottom: var(--block_head_offset);
+            }
 
 
             .pre_title
@@ -496,7 +520,12 @@
 
         .data
         {
-            width: 100%;
+            &,
+            &.s_w
+            {
+                width: 100%;
+                padding-left: 38px;
+            }
         }
     }
 }
@@ -507,10 +536,32 @@
 {
     .steps
     {
+        .data
+        {
+            &,
+            &.s_w
+            {
+                padding-left: 28px;
+            }
+        }
+
+
         .items
         {
             .item
             {
+                &:before
+                {
+                    margin-right: var(--inner_gap);
+                }
+
+
+                &:after
+                {
+                    margin-right: 23px;
+                }
+
+
                 .name,
                 .desc,
                 .exp,

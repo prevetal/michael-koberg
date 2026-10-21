@@ -10,6 +10,24 @@
             .col
             {
                 width: 687px;
+
+
+                &.l_w
+                {
+                    width: 800px;
+
+
+                    .title
+                    {
+                        width: 100%;
+                    }
+
+
+                    .desc
+                    {
+                        width: 627px;
+                    }
+                }
             }
 
 
@@ -130,6 +148,44 @@
             letter-spacing: -.54px;
 
             color: var(--grey_color_strong);
+
+
+            ul
+            {
+                font-family: var(--font_family_tertiary);
+                line-height: 135%;
+                letter-spacing: 0;
+
+
+                li
+                {
+                    position: relative;
+
+                    display: block;
+
+                    padding-left: 20px;
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: .5lh;
+                        left: 5px;
+
+                        display: block;
+
+                        width: 5px;
+
+                        content: '';
+                        transform: translateY(-50%);
+
+                        border-radius: 50%;
+                        background: currentColor;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
         }
     }
 

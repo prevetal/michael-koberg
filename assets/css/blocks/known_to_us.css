@@ -1,0 +1,157 @@
+/*-----------------
+    Known to us
+-----------------*/
+.known_to_us
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--block_padding);
+
+        grid-template-columns: 501px 1fr;
+    }
+
+
+    .image
+    {
+        display: block;
+
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+
+        .title
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title);
+            font-weight: 600;
+            line-height: 110%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--secondary_color);
+
+
+            ul
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+
+                li
+                {
+                    position: relative;
+
+                    display: block;
+
+                    padding-block: var(--inner_gap_m);
+                    padding-inline: 31px var(--inner_gap_s);
+
+                    font-family: var(--font_family_tertiary);
+
+                    list-style-type: none;
+
+                    color: var(--grey_color_strong);
+                    border: 1px solid var(--border_color);
+                    border-radius: var(--border_radius_s);
+                    background: var(--bg_grey);
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: calc(var(--inner_gap_m) + .5lh);
+                        left: var(--inner_gap_s);
+
+                        display: block;
+
+                        width: 5px;
+
+                        content: '';
+                        transform: translateY(-50%);
+
+                        border-radius: 50%;
+                        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .known_to_us
+    {
+        .grid
+        {
+            gap: var(--inner_gap_l);
+
+            grid-template-columns: 400px 1fr;
+        }
+
+
+        .data
+        {
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .known_to_us
+    {
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .known_to_us
+    {
+        .data
+        {
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}
