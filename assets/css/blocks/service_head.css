@@ -12,6 +12,12 @@
     padding-block: 131px 56px !important;
 
 
+    &.s_h
+    {
+        min-height: 686px;
+    }
+
+
     &:after
     {
         position: absolute;
