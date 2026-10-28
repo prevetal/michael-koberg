@@ -10,6 +10,12 @@
             .title
             {
                 width: 497px;
+
+
+                &.l_w
+                {
+                    width: 754px;
+                }
             }
         }
     }
@@ -143,6 +149,27 @@
 {
     .articles
     {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 540px;
+                }
+
+
+                .title
+                {
+                    &.l_w
+                    {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+
         .grid_row.inline
         {
             display: grid;

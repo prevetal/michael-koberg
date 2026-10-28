@@ -396,6 +396,121 @@
         }
 
 
+        .warning
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap_s);
+
+            width: 450px;
+            max-width: 100%;
+            margin-top: var(--inner_gap_l);
+            padding: var(--inner_gap_m);
+
+            font-size: 15px;
+
+            border: 1px solid var(--border_color_secondary);
+            border-radius: 7px;
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+            .icon
+            {
+                display: block;
+
+                width: 33px;
+
+                color: var(--primary_color);
+
+                aspect-ratio: 1 / 1;
+            }
+
+
+            span
+            {
+                width: calc(100% - 54px - var(--inner_gap_s) * 2);
+            }
+
+
+            .tooltip
+            {
+                position: relative;
+
+                align-self: flex-start;
+
+                margin-left: 5px;
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 16px;
+
+                    cursor: help;
+                    transition: color .2s linear;
+
+                    color: #c8c8c8;
+
+                    aspect-ratio: 1 / 1;
+                }
+
+
+                .hover
+                {
+                    position: absolute;
+                    z-index: 10;
+                    top: 100%;
+                    left: 50%;
+
+                    display: none;
+                    flex-direction: column;
+                    gap: var(--inner_gap_m);
+
+                    width: 320px;
+                    margin-top: 6px;
+                    padding: var(--inner_gap_m);
+
+                    font-size: var(--font_size_xs);
+                    line-height: 135%;
+
+                    transition: opacity .35s linear, display .35s allow-discrete;
+
+                    color: var(--grey_color_strong);
+                    border-radius: var(--border_radius_xs);
+                    background: var(--bg);
+                    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+                }
+
+
+                &:hover
+                {
+                    .icon
+                    {
+                        color: var(--light_color);
+                    }
+
+
+                    .hover
+                    {
+                        display: flex;
+
+                        opacity: 1;
+
+
+                        @starting-style
+                        {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
         .btns
         {
             display: flex;
@@ -515,7 +630,7 @@
             .btn
             {
                 height: 60px;
-                padding-inline: var(--inner_gap_xl);
+                padding-inline: var(--inner_gap_l);
 
                 font-size: var(--font_size_l);
                 font-weight: 500;
@@ -535,6 +650,16 @@
                         color: var(--primary_color);
                     }
                 }
+            }
+
+
+            .exp
+            {
+                width: 274px;
+                margin-left: var(--inner_gap_m);
+
+                font-size: var(--font_size_s);
+                line-height: normal;
             }
         }
 
@@ -783,6 +908,15 @@
             }
 
 
+            .warning
+            {
+                width: 420px;
+                margin-top: var(--inner_gap);
+
+                font-size: var(--font_size_s);
+            }
+
+
             .btns
             {
                 gap: var(--inner_gap_xs);
@@ -814,9 +948,16 @@
                 .btn
                 {
                     height: 56px;
-                    padding-inline: var(--inner_gap_l);
 
                     font-size: var(--font_size);
+                }
+
+
+                .exp
+                {
+                    width: 212px;
+
+                    font-size: var(--font_size_xs);
                 }
             }
 
@@ -967,12 +1108,58 @@
             }
 
 
+            .warning
+            {
+                width: 100%;
+                margin-top: 0;
+
+                font-size: 13px;
+
+
+                .icon
+                {
+                    width: 28px;
+                }
+
+
+                span
+                {
+                    width: calc(100% - 44px - var(--inner_gap_s) * 2);
+                }
+
+
+                .tooltip
+                {
+                    margin-left: 0;
+
+
+                    .hover
+                    {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+            }
+
+
             .btns
             {
                 .whatsapp_link,
                 .btn
                 {
                     width: 100%;
+                }
+
+
+                .exp
+                {
+                    width: 287px;
+                    margin-inline: auto;
+                    margin-top: 5px;
+
+                    font-size: 13px;
+
+                    text-align: center;
                 }
             }
 

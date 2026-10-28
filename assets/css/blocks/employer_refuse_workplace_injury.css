@@ -1,0 +1,222 @@
+/*--------------------------------------
+    Employer refuse workplace injury
+--------------------------------------*/
+.employer_refuse_workplace_injury
+{
+    overflow: clip;
+
+
+    &:before
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 798px;
+        height: 745px;
+
+        content: '';
+        transform: translate(-48.872%, -33.154%);
+        pointer-events: none;
+
+        background: rgba(59, 191, 168, .20);
+
+        filter: blur(200px);
+    }
+
+
+    .cont
+    {
+        position: relative;
+        z-index: 3;
+    }
+
+
+    .grid
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .data
+    {
+        width: calc(100% - 542px);
+    }
+
+
+    .block_head
+    {
+        .title,
+        .desc
+        {
+            color: var(--light_color);
+        }
+    }
+
+
+    .border
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        padding-left: var(--inner_gap);
+
+        font-size: var(--font_size_l);
+        line-height: 130%;
+        letter-spacing: -.54px;
+
+        border-left: 3px solid var(--primary_color);
+    }
+
+
+    .notice
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        margin-top: var(--inner_gap_xl);
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap) 60px;
+
+        font-size: var(--font_size_l);
+        line-height: 130%;
+        letter-spacing: -.54px;
+
+        border: 1px solid var(--border_color_secondary);
+        border-radius: var(--border_radius_s);
+        background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+        .icon
+        {
+            position: absolute;
+            top: var(--inner_gap_m);
+            right: var(--inner_gap_m);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 28px;
+
+            pointer-events: none;
+
+            color: var(--secondary_color);
+            border-radius: 50%;
+            background: var(--primary_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            svg
+            {
+                display: block;
+
+                width: 3px;
+                height: 12px;
+            }
+        }
+    }
+
+
+    .image
+    {
+        display: block;
+
+        width: 445px;
+        max-width: 100%;
+
+        border: 1px solid var(--border_color_secondary);
+        border-radius: var(--border_radius);
+    }
+
+
+    .action
+    {
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+
+
+        .info
+        {
+            width: 460px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .employer_refuse_workplace_injury
+    {
+        .data
+        {
+            width: calc(100% - 400px);
+        }
+
+
+        .border,
+        .notice
+        {
+            font-size: var(--font_size);
+        }
+
+
+        .image
+        {
+            width: 360px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .employer_refuse_workplace_injury
+    {
+        .data
+        {
+            width: 100%;
+        }
+
+
+        .image
+        {
+            width: 100%;
+            margin-top: var(--block_padding);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .employer_refuse_workplace_injury
+    {
+        .border,
+        .notice
+        {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,195 @@
+/*-----------------------------
+    Workplace injury stages
+-----------------------------*/
+.workplace_injury_stages
+{
+    .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--inner_gap_m);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        padding: var(--inner_gap);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+
+
+        &.size_l
+        {
+            --width_multiplier: 1.5;
+        }
+
+
+        .number
+        {
+            width: fit-content;
+            margin-bottom: 5px;
+            padding-block: 6px;
+            padding-inline: var(--inner_gap_s);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--light_color);
+            border-radius: 30px;
+            background: linear-gradient(90deg, #194b4d 0%, #12333a 100%);
+
+
+            span
+            {
+                &:before
+                {
+                    content: counter(number);
+                    counter-increment: number;
+                }
+            }
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            font-weight: 600;
+            line-height: 135%;
+
+            color: var(--secondary_color);
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #2f2f2f;
+
+
+            ul
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+
+                li
+                {
+                    position: relative;
+
+                    display: block;
+
+                    padding-left: 31px;
+
+                    list-style-type: none;
+
+
+                    &:before
+                    {
+                        position: absolute;
+                        top: 1px;
+                        left: 0;
+
+                        display: block;
+
+                        width: 19px;
+
+                        content: '';
+
+                        background: url(../../../images/ic_check.svg) 50%/11px auto no-repeat;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .workplace_injury_stages
+    {
+        .item
+        {
+            .number,
+            .name,
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .workplace_injury_stages
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 520px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .workplace_injury_stages
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            .number,
+            .name,
+            .desc
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

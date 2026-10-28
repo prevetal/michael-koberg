@@ -1,0 +1,256 @@
+/*---------------------------------
+    Workplace injury foreigners
+---------------------------------*/
+.workplace_injury_foreigners
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--block_padding_l);
+
+        grid-template-columns: 334px 1fr;
+    }
+
+
+    .image
+    {
+        display: block;
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xl);
+    }
+
+
+    .block_head
+    {
+        margin-bottom: 0;
+
+
+        &.row
+        {
+            .col
+            {
+                width: 700px;
+            }
+        }
+    }
+
+
+    .message
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: var(--inner_gap);
+
+        padding: var(--inner_gap);
+
+        font-size: var(--font_size_l);
+        font-weight: 500;
+        line-height: 135%;
+
+        color: #2f2f2f;
+        border: 1px solid var(--primary_color);
+        border-radius: var(--border_radius_s);
+        background: #fbffef;
+
+
+        .yes
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_m);
+
+            padding-block: 4px;
+            padding-inline: var(--inner_gap_m);
+
+            white-space: nowrap;
+
+            color: var(--secondary_color);
+            border: 1px solid var(--primary_color);
+            border-radius: var(--border_radius_max);
+            background: var(--bg);
+
+
+            .icon
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 19px;
+                min-width: 19px;
+
+                aspect-ratio: 1 / 1;
+
+
+                svg
+                {
+                    display: block;
+
+                    width: 9px;
+                    height: 7px;
+                }
+            }
+        }
+    }
+
+
+    .text
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+        font-size: var(--font_size_l);
+        line-height: 135%;
+
+        color: #2f2f2f;
+
+
+        .border
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            padding-left: var(--inner_gap);
+
+            border-left: 3px solid var(--primary_color);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .workplace_injury_foreigners
+    {
+        .grid
+        {
+            grid-template-columns: 300px 1fr;
+        }
+
+
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 440px;
+                }
+            }
+
+
+            br
+            {
+                display: none;
+            }
+        }
+
+
+        .message
+        {
+            gap: var(--inner_gap_s);
+
+            padding: var(--inner_gap_s);
+
+            font-size: var(--font_size);
+        }
+
+
+        .text
+        {
+            font-size: var(--font_size);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1024px)
+{
+    .workplace_injury_foreigners
+    {
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .image
+        {
+            display: none;
+        }
+
+
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .workplace_injury_foreigners
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .message
+        {
+            flex-wrap: wrap;
+
+            font-size: 15px;
+
+
+            .yes + *
+            {
+                width: 100%;
+            }
+        }
+
+
+        .text
+        {
+            font-size: 15px;
+        }
+    }
+}

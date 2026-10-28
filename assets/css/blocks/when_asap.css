@@ -1,0 +1,154 @@
+/*---------------
+    When asap
+---------------*/
+.when_asap
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--block_padding);
+
+        grid-template-columns: 1fr 501px;
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--inner_gap_m);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        padding-block: var(--inner_gap_m);
+        padding-inline: 31px var(--inner_gap_s);
+
+        font-family: var(--font_family_tertiary);
+        font-size: var(--font_size_l);
+        line-height: 135%;
+
+        color: var(--grey_color_strong);
+        border: 1px solid #ffb2b2;
+        border-radius: var(--border_radius_s);
+        background: #fffbfb;
+
+
+        &:before
+        {
+            position: absolute;
+            top: calc(.5lh + var(--inner_gap_m));
+            left: 14px;
+
+            display: block;
+
+            width: 5px;
+
+            content: '';
+            transform: translateY(-50%);
+
+            border-radius: 50%;
+            background: #cd0404;
+
+            aspect-ratio: 1 / 1;
+        }
+    }
+
+
+    .image
+    {
+        display: block;
+
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .when_asap
+    {
+        .grid
+        {
+            gap: var(--inner_gap_l);
+
+            grid-template-columns: 1fr 400px;
+        }
+
+
+        .item
+        {
+            font-size: var(--font_size);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .when_asap
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        .grid
+        {
+            grid-template-columns: auto;
+        }
+
+
+        .image
+        {
+            display: none;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .when_asap
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            font-size: 15px;
+        }
+    }
+}

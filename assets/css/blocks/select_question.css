@@ -84,7 +84,7 @@
                 height: 1px;
                 margin-block: var(--inner_gap_m);
 
-                background: #c4d3d8;
+                background: var(--border_color);
             }
 
 

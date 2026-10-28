@@ -35,6 +35,12 @@
         --gap_y: var(--inner_gap_s);
 
 
+        &.three_per_line
+        {
+            --items_per_line: 3;
+        }
+
+
         .l_w
         {
             --width_multiplier: var(--items_per_line);
@@ -125,7 +131,7 @@
             line-height: 120%;
 
             color: var(--secondary_color);
-            border-bottom: 1px solid #c4d3d8;
+            border-bottom: 1px solid var(--border_color);
         }
 
 
@@ -169,6 +175,19 @@
                 }
             }
         }
+
+
+        .bottom
+        {
+            margin-top: auto;
+            padding-top: var(--inner_gap);
+
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #7d7d7d;
+            border-top: 1px solid var(--border_color);
+        }
     }
 
 
@@ -182,12 +201,31 @@
 
     .exp
     {
+        max-width: 100%;
+        margin-top: var(--inner_gap_xl);
+
+        font-size: var(--font_size_l);
+        line-height: 135%;
+    }
+
+
+    .disclaimer
+    {
+        width: 779px;
+        max-width: 100%;
         margin-top: var(--inner_gap_xl);
 
         font-size: var(--font_size_l);
         line-height: 135%;
 
-        color: #a3a3a3;
+        color: #7d7d7d;
+
+
+        b,
+        strong
+        {
+            font-weight: 600;
+        }
     }
 }
 
@@ -235,11 +273,25 @@
                     }
                 }
             }
+
+            .bottom
+            {
+                font-size: var(--font_size);
+            }
         }
 
 
         .exp
         {
+            margin-top: var(--inner_gap_l);
+
+            font-size: var(--font_size);
+        }
+
+
+        .disclaimer
+        {
+            width: 600px;
             margin-top: var(--inner_gap_l);
 
             font-size: var(--font_size);
@@ -269,6 +321,15 @@
         .grid
         {
             grid-template-columns: auto;
+        }
+
+
+        .grid_row
+        {
+            &.three_per_line
+            {
+                --items_per_line: 1;
+            }
         }
 
 
@@ -326,11 +387,25 @@
                     }
                 }
             }
+
+
+            .bottom
+            {
+                font-size: 15px;
+            }
         }
 
 
         .exp
         {
+            font-size: 15px;
+        }
+
+
+        .disclaimer
+        {
+            width: 100%;
+
             font-size: 15px;
         }
     }

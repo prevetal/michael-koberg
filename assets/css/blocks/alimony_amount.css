@@ -121,7 +121,7 @@
         padding: var(--inner_gap_xl);
 
         color: var(--light_color);
-        border: 1px solid #c4d3d8;
+        border: 1px solid var(--border_color);
         border-radius: var(--border_radius);
         background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
 

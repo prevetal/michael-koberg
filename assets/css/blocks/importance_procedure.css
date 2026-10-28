@@ -213,7 +213,7 @@
 
                     tr + tr &
                     {
-                        border-top: 1px solid #c4d3d8;
+                        border-top: 1px solid var(--border_color);
                     }
 
 
@@ -265,7 +265,7 @@
                 th + th,
                 td + td
                 {
-                    border-left: 1px solid #c4d3d8;
+                    border-left: 1px solid var(--border_color);
                 }
             }
         }

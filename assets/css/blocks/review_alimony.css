@@ -43,7 +43,7 @@
         &.secondary
         {
             color: var(--light_color);
-            border-color: #c4d3d8;
+            border-color: var(--border_color);
             background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
 
 

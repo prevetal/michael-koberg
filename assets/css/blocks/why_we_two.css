@@ -1,0 +1,182 @@
+/*----------------
+    Why we two
+----------------*/
+.why_we_two
+{
+    .grid
+    {
+        display: grid;
+        gap: var(--block_padding);
+
+        grid-template-columns: 500px 1fr;
+    }
+
+
+    .image
+    {
+        display: block;
+
+        border-radius: var(--border_radius_s);
+        background: var(--bg_grey);
+    }
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+
+        .item
+        {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_xs);
+
+            padding: var(--inner_gap);
+
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_s);
+            background: var(--bg);
+
+
+            .icon
+            {
+                position: absolute;
+                top: var(--inner_gap_m);
+                right: var(--inner_gap_m);
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 50px;
+
+                border: 1px solid var(--border_color);
+                border-radius: var(--border_radius_xs);
+                background: var(--bg_grey);
+
+                aspect-ratio: 1 / 1;
+
+
+                img
+                {
+                    display: block;
+
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+
+            .name
+            {
+                width: calc(100% - 64px);
+
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 135%;
+
+                color: var(--secondary_color);
+            }
+
+
+            .desc
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+                width: calc(100% - 54px);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: var(--grey_color_strong);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .why_we_two
+    {
+        .grid
+        {
+            gap: var(--inner_gap_l);
+
+            grid-template-columns: 400px 1fr;
+        }
+
+
+        .items
+        {
+            .item
+            {
+                .desc
+                {
+                    font-size: var(--font_size);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .why_we_two
+    {
+        .grid
+        {
+            gap: var(--inner_gap);
+
+            grid-template-columns: auto;
+        }
+
+
+        .image
+        {
+            display: none;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .why_we_two
+    {
+        .items
+        {
+            .item
+            {
+                .icon
+                {
+                    width: 44px;
+                    padding: 8px;
+                }
+
+
+                .desc
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

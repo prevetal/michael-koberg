@@ -1,0 +1,328 @@
+/*---------------------------------
+    Workplace injury directions
+---------------------------------*/
+.workplace_injury_directions
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 938px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        counter-reset: number;
+
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--bg);
+
+
+        &.secondary
+        {
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+        }
+
+
+        .thumb
+        {
+            display: block;
+
+            height: 150px;
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+        }
+
+
+        .info
+        {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            padding: var(--inner_gap_xl);
+        }
+
+
+        .name
+        {
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 130%;
+
+            color: var(--secondary_color);
+
+
+            .secondary &
+            {
+                color: var(--light_color);
+            }
+
+
+            .number
+            {
+                color: var(--border_color_secondary);
+
+
+                .secondary &
+                {
+                    color: var(--border_color);
+                }
+
+
+                &:before
+                {
+                    content: counter(number, decimal-leading-zero) '/';
+                    counter-increment: number;
+                }
+            }
+        }
+
+
+        .current
+        {
+            position: relative;
+
+            width: fit-content;
+            margin-block: 5px var(--inner_gap_m);
+            padding-block: 4px;
+            padding-inline: 35px var(--inner_gap_s);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: #c8c8c8;
+            border: 1px solid var(--border_color_secondary);
+            border-radius: var(--border_radius_max);
+
+
+            &:before
+            {
+                position: absolute;
+                top: calc(.5lh + 4px);
+                left: var(--inner_gap_s);
+
+                display: block;
+
+                width: 11px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                border: 2px solid rgba(215, 241, 142, .30);
+                border-radius: 50%;
+                background: var(--primary_color);
+                background-clip: padding-box;
+
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            margin-bottom: var(--inner_gap_m);
+
+            font-family: var(--font_family_tertiary);
+            font-size: var(--font_size_l);
+            line-height: 135%;
+
+            color: var(--grey_color_strong);
+
+
+            .secondary &
+            {
+                color: var(--light_color);
+            }
+        }
+
+
+        .link
+        {
+            display: flex;
+            align-content: flex-end;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_m);
+
+            margin-top: auto;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+
+            text-decoration: none;
+
+            color: #325f6d;
+
+
+            .secondary &
+            {
+                color: var(--light_color);
+            }
+
+
+            span
+            {
+                max-width: calc(100% - 12px - var(--inner_gap_m));
+            }
+
+
+            .icon
+            {
+                display: block;
+
+                width: 12px;
+                margin-block: 3px;
+
+                aspect-ratio: 1 / 1;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .workplace_injury_directions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 800px;
+                }
+            }
+        }
+
+
+        .item
+        {
+            .info
+            {
+                padding: var(--inner_gap);
+            }
+
+
+            .current,
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .link
+            {
+                font-size: var(--font_size);
+
+
+                span
+                {
+                    max-width: calc(100% - 10px - var(--inner_gap_m));
+                }
+
+
+                .icon
+                {
+                    width: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .workplace_injury_directions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 532px;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .workplace_injury_directions
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            .thumb
+            {
+                height: 100px;
+            }
+
+
+            .current,
+            .desc,
+            .link
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

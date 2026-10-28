@@ -1,0 +1,163 @@
+/*-------------------------------
+    Workplace injury problems
+-------------------------------*/
+.workplace_injury_problems
+{
+    .grid_row
+    {
+        --items_per_line: 4;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_m);
+
+        padding: var(--inner_gap);
+
+        color: var(--secondary_color);
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius_xs);
+        background: var(--bg_grey);
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 40px;
+            margin-bottom: var(--inner_gap);
+
+            border: 1px solid var(--border_color);
+            border-radius: 5px;
+            background: var(--light_color);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_xl);
+            font-weight: 600;
+            line-height: 130%;
+            letter-spacing: -.6px;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            font-size: var(--font_size_l);
+            line-height: 130%;
+            letter-spacing: -.54px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .workplace_injury_problems
+    {
+        .item
+        {
+            .name
+            {
+                font-size: var(--font_size_l);
+            }
+
+
+            .desc
+            {
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .workplace_injury_problems
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .workplace_injury_problems
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_y: var(--inner_gap_m);
+        }
+
+
+        .item
+        {
+            position: relative;
+
+            padding: var(--inner_gap_s);
+
+
+            .icon
+            {
+                position: absolute;
+                top: var(--inner_gap_s);
+                right: var(--inner_gap_s);
+
+                width: 30px;
+                margin: 0;
+                padding: 7px;
+            }
+
+
+            .name
+            {
+                width: calc(100% - 64px);
+
+                font-size: 15px;
+            }
+
+
+            .desc
+            {
+                width: calc(100% - 39px);
+
+                font-size: 15px;
+            }
+        }
+    }
+}

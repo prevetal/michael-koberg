@@ -54,7 +54,7 @@
 
             padding-left: var(--inner_gap);
 
-            border-left: 2px solid #c4d3d8;
+            border-left: 2px solid var(--border_color);
 
 
             &:before

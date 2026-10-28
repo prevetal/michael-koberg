@@ -160,7 +160,7 @@
             width: 100%;
             height: 1px;
 
-            background: #c4d3d8;
+            background: var(--border_color);
         }
 
 

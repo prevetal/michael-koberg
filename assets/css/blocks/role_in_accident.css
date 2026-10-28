@@ -1,0 +1,342 @@
+/*----------------------
+    Role in accident
+----------------------*/
+.role_in_accident
+{
+    .grid_row
+    {
+        counter-reset: number;
+
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_l);
+    }
+
+
+    .item
+    {
+        position: relative;
+
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: var(--inner_gap);
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--bg);
+
+
+        &.secondary
+        {
+            color: var(--light_color);
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+        }
+
+
+        .sticker
+        {
+            position: absolute;
+            z-index: 3;
+            top: var(--inner_gap_s);
+            right: var(--inner_gap_s);
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 4px;
+
+            padding: 5px 7px;
+
+            font-size: 11px;
+            line-height: 135%;
+
+            white-space: nowrap;
+
+            color: var(--secondary_color);
+            border-radius: var(--border_radius_max);
+            background: var(--primary_color);
+
+
+            .icon
+            {
+                display: block;
+
+                width: 9px;
+
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+
+        .label
+        {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: var(--inner_gap_xl);
+
+            padding-block: 5px;
+            padding-inline: 14px;
+
+            line-height: 135%;
+
+            transform: translateY(-50%);
+            white-space: nowrap;
+
+            color: var(--light_color);
+            border: 1px solid var(--border_color);
+            border-radius: var(--border_radius_max);
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+        }
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_m);
+
+            width: calc(100% - 200px);
+            padding-block: var(--block_padding_l) var(--inner_gap_xl);
+            padding-inline: var(--inner_gap_xl);
+
+
+            .name
+            {
+                font-family: var(--font_family_secondary);
+                font-size: var(--font_size_title_xs);
+                font-weight: 600;
+                line-height: 110%;
+
+                color: var(--secondary_color);
+
+
+                .secondary &
+                {
+                    color: currentColor;
+                }
+
+
+                .number
+                {
+                    color: var(--border_color_secondary);
+
+
+                    .secondary &
+                    {
+                        color: var(--border_color);
+                    }
+
+
+                    &:before
+                    {
+                        content: counter(number, decimal-leading-zero) '/';
+                        counter-increment: number;
+                    }
+                }
+            }
+
+
+            .desc
+            {
+                display: flex;
+                flex-direction: column;
+                gap: var(--inner_gap_m);
+
+                margin-bottom: var(--inner_gap);
+
+                font-family: var(--font_family_tertiary);
+                font-size: var(--font_size_l);
+                line-height: 135%;
+
+                color: var(--grey_color_strong);
+
+
+                .secondary &
+                {
+                    color: currentColor;
+                }
+            }
+
+
+            .link
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_m);
+
+                width: fit-content;
+                margin-top: auto;
+
+                font-size: var(--font_size_l);
+                font-weight: 500;
+
+                text-decoration: none;
+
+                color: #325f6d;
+
+
+                .secondary &
+                {
+                    color: var(--primary_color);
+                }
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 12px;
+                    min-width: 12px;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .thumb
+        {
+            display: block;
+
+            width: 200px;
+            max-width: 100%;
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .role_in_accident
+    {
+        .item
+        {
+            .sticker
+            {
+                top: var(--inner_gap_m);
+                right: var(--inner_gap_m);
+            }
+
+
+            .label
+            {
+                left: var(--inner_gap_l);
+            }
+
+
+            .info
+            {
+                width: calc(100% - 160px);
+                padding-block: var(--block_padding_l) var(--inner_gap_l);
+                padding-inline: var(--inner_gap_l);
+
+
+                .desc,
+                .link
+                {
+                    font-size: var(--font_size);
+                }
+
+
+                .link
+                {
+                    .icon
+                    {
+                        width: 10px;
+                    }
+                }
+            }
+
+
+            .thumb
+            {
+                width: 160px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .role_in_accident
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_y: var(--inner_gap_xs);
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .role_in_accident
+    {
+        .grid_row
+        {
+            --gap_y: var(--inner_gap_m);
+        }
+
+
+        .item
+        {
+            margin-top: 0;
+
+
+            .label
+            {
+                display: none;
+            }
+
+
+            .info
+            {
+                order: 2;
+
+                width: 100%;
+                padding-block: var(--inner_gap);
+                padding-inline: var(--inner_gap);
+
+
+                .desc
+                {
+                    margin-bottom: var(--inner_gap_m);
+                }
+
+
+                .desc,
+                .link
+                {
+                    font-size: 15px;
+                }
+            }
+
+
+            .thumb
+            {
+                width: 100%;
+                height: 100px;
+            }
+        }
+    }
+}

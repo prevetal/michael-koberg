@@ -41,7 +41,7 @@
 
         &:nth-child(2)
         {
-            border-top-color: #c4d3d8;
+            border-top-color: var(--border_color);
         }
 
 

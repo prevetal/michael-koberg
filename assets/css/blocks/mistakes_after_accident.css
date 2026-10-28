@@ -1,0 +1,243 @@
+/*-----------------------------
+    Mistakes after accident
+-----------------------------*/
+.mistakes_after_accident
+{
+    .block_head
+    {
+        &.row
+        {
+            .col
+            {
+                width: 986px;
+            }
+        }
+    }
+
+
+    .table_wrap
+    {
+        overflow: hidden;
+
+        border: 1px solid var(--border_color);
+        border-radius: var(--border_radius);
+        background: var(--bg);
+    }
+
+
+    table
+    {
+        width: 100%;
+
+        table-layout: fixed;
+        border-spacing: 0;
+        border-collapse: collapse;
+
+
+        th
+        {
+            padding: var(--inner_gap);
+
+            font-family: var(--font_family_secondary);
+            font-size: var(--font_size_title_xs);
+            font-weight: 600;
+            line-height: 120%;
+
+            text-align: left;
+            vertical-align: middle;
+
+            color: var(--light_color);
+            background: linear-gradient(315deg, var(--secondary_color) 9.34%, #194c4d 94.77%);
+
+
+            .icon
+            {
+                display: inline-block;
+
+                width: 22px;
+                margin-right: 6px;
+
+                transform: translateY(-1px);
+                vertical-align: middle;
+
+
+                img
+                {
+                    display: block;
+
+                    width: 100%;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        ер + ер
+        {
+            border-left: 1px solid var(--border_color);
+        }
+
+
+        td
+        {
+            padding: var(--inner_gap);
+
+            font-size: var(--font_size_l);
+            line-height: 130%;
+            letter-spacing: -.54px;
+
+            text-align: left;
+            vertical-align: middle;
+
+            color: var(--grey_color_strong);
+            border-top: 1px solid var(--border_color);
+
+
+            b,
+            strong
+            {
+                font-weight: 600;
+            }
+        }
+
+
+        td + td
+        {
+            border-left: 1px solid var(--border_color);
+        }
+
+
+        tr:nth-child(2n)
+        {
+            td
+            {
+                background: #f5f6f7;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .mistakes_after_accident
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 780px;
+                }
+            }
+        }
+
+
+        table
+        {
+            th
+            {
+                padding: var(--inner_gap_s);
+            }
+
+
+            td
+            {
+                padding: var(--inner_gap_s);
+
+                font-size: var(--font_size);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .mistakes_after_accident
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 520px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .mistakes_after_accident
+    {
+        .block_head
+        {
+            &.row
+            {
+                .col
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .scroll
+        {
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+            padding-bottom: var(--inner_gap_xxs);
+
+            --custom_scroll_border_radius: 4px;
+
+
+            &::-webkit-scrollbar
+            {
+                width: var(--custom_scroll_width);
+                height: var(--custom_scroll_height);
+
+                border-radius: var(--custom_scroll_border_radius);
+                background-color: var(--bg);
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                border-radius: var(--custom_scroll_border_radius);
+                background-color: var(--custom_scroll_scrollbar_thumb_color);
+            }
+        }
+
+
+        .table_wrap
+        {
+            width: 720px;
+        }
+
+
+        table
+        {
+            width: 100%;
+
+
+            td
+            {
+                font-size: 15px;
+            }
+        }
+    }
+}

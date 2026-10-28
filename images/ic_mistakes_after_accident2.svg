@@ -1,0 +1,24 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="22" height="22" rx="11" fill="white"/>
+<use xlink:href="#stroke0_4536_740" fill="url(#paint0_linear_4536_740)"/>
+<mask id="stroke1_4536_740" fill="white">
+<use xlink:href="#stroke0_4536_740"/>
+</mask>
+<path d="M10.9999 17.3685C11.307 17.3685 11.6015 17.2465 11.8187 17.0294C12.0358 16.8122 12.1578 16.5177 12.1578 16.2106C12.1578 15.9035 12.0358 15.609 11.8187 15.3919C11.6015 15.1747 11.307 15.0527 10.9999 15.0527C10.6928 15.0527 10.3983 15.1747 10.1812 15.3919C9.96403 15.609 9.84204 15.9035 9.84204 16.2106C9.84204 16.5177 9.96403 16.8122 10.1812 17.0294C10.3983 17.2465 10.6928 17.3685 10.9999 17.3685Z" stroke-width="1.15789" stroke="url(#paint1_linear_4536_740)" mask="url(#stroke1_4536_740)"/>
+<path d="M10.9999 4.63184V12.7371" stroke-width="2.31579" stroke-linecap="round" stroke-linejoin="round" stroke="url(#paint2_linear_4536_740)"/>
+<defs>
+<linearGradient id="paint0_linear_4536_740" x1="11.9155" y1="17.1788" x2="9.92696" y2="15.2103" gradientUnits="userSpaceOnUse">
+<stop stop-color="#113138"/>
+<stop offset="1" stop-color="#194C4D"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4536_740" x1="11.9155" y1="17.1788" x2="9.92696" y2="15.2103" gradientUnits="userSpaceOnUse">
+<stop stop-color="#113138"/>
+<stop offset="1" stop-color="#194C4D"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4536_740" x1="11.8953" y1="12.0729" x2="10.2202" y2="11.8683" gradientUnits="userSpaceOnUse">
+<stop stop-color="#113138"/>
+<stop offset="1" stop-color="#194C4D"/>
+</linearGradient>
+<path id="stroke0_4536_740" d="M10.9999 17.3685C11.307 17.3685 11.6015 17.2465 11.8187 17.0294C12.0358 16.8122 12.1578 16.5177 12.1578 16.2106C12.1578 15.9035 12.0358 15.609 11.8187 15.3919C11.6015 15.1747 11.307 15.0527 10.9999 15.0527C10.6928 15.0527 10.3983 15.1747 10.1812 15.3919C9.96403 15.609 9.84204 15.9035 9.84204 16.2106C9.84204 16.5177 9.96403 16.8122 10.1812 17.0294C10.3983 17.2465 10.6928 17.3685 10.9999 17.3685Z" fill-rule="evenodd" clip-rule="evenodd"/>
+</defs>
+</svg>
