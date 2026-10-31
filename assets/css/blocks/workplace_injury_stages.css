@@ -5,6 +5,8 @@
 {
     .grid_row
     {
+        counter-reset: number;
+
         --gap_x: var(--inner_gap_m);
         --gap_y: var(--inner_gap_m);
     }
